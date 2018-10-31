@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe2_Div_PopupDiv" width="800" height="580" titletext="Exe2_Div_PopupDiv" onload="Exe2_Div_PopupDiv_onload">
+    <Layouts>
+      <Layout height="580" width="800" stepcount="0">
+        <Static id="Static06" taborder="0" text="Exercise - Div / PopupDiv" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="1" text="☞ Exe 1 - PopupDiv1" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <PopupDiv id="PopupDiv1" text="PopupDiv00" visible="false" left="390" top="10" width="400" height="210">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="0" left="10" top="40" width="378" height="121" binddataset="Dataset1" autofittype="col">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="36"/>
+                      <Column size="100"/>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="24"/>
+                    </Rows>
+                    <Band id="body">
+                      <Cell text="expr:currow+1" textAlign="center"/>
+                      <Cell col="1" text="bind:DEPT_NAME"/>
+                      <Cell col="2" text="bind:FULL_NAME"/>
+                      <Cell col="3" text="bind:EMPL_ID"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Button id="btn_Exe1_Close" taborder="1" text="Exe1_Close" left="10" top="167" width="100" height="25" onclick="PopupDiv1_btn_Exe1_Close_onclick"/>
+              <Static id="Static02" taborder="2" text="Contents" left="10" top="10" width="81" height="24"/>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+        <Button id="btn_Exe1_1" taborder="4" text="Exe1_1" left="10" top="67" width="80" height="25" onclick="btn_Exe1_1_onclick"/>
+        <Edit id="edt_dept" taborder="3" left="98" top="68" width="120" height="24" displaynulltext="Dept"/>
+        <Edit id="edt_name" taborder="4" left="228" top="68" width="100" height="24" displaynulltext="Name"/>
+        <Edit id="edt_id" taborder="5" left="338" top="68" width="80" height="24" displaynulltext="ID"/>
+        <PopupDiv id="PopupDiv2" visible="false" left="390" top="230" width="400" height="210" url="Exe2::Exe2_Div_PopupDiv_Sub.xfdl" oncloseup="PopupDiv2_oncloseup"/>
+        <Button id="btn_Exe2_1" taborder="6" text="Exe2_1" left="10" top="137" width="80" height="25" onclick="btn_Exe2_1_onclick"/>
+        <Edit id="edt_dept2" taborder="7" left="98" top="138" width="120" height="24" displaynulltext="Dept"/>
+        <Edit id="edt_name2" taborder="8" left="228" top="138" width="100" height="24" displaynulltext="Name"/>
+        <Edit id="edt_id2" taborder="9" left="338" top="138" width="80" height="24" displaynulltext="ID"/>
+        <Static id="Static00" taborder="10" text="☞ Exe 2 - PopupDiv2" left="10" top="110" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="11" text="☞ Exe 3 - PopupDiv3" left="10" top="182" width="250" height="24" cssclass="sta_WF_label" positionstep="0"/>
+        <Calendar id="cal_from" taborder="12" left="10" top="210" width="150" height="24" positionstep="0" dateformat="yyyy-MM-dd" popuptype="none" ondropdown="cal_from_ondropdown"/>
+        <Calendar id="cal_to" taborder="13" left="183" top="210" width="150" height="24" positionstep="0" dateformat="yyyy-MM-dd" popuptype="none" ondropdown="cal_from_ondropdown"/>
+        <Static id="Static02" taborder="14" text="~" left="166" top="210" width="10" height="24" positionstep="0"/>
+        <PopupDiv id="PopupDiv3" left="9" top="267" width="323" height="227" positionstep="0" oncloseup="PopupDiv3_oncloseup">
+          <Layouts>
+            <Layout>
+              <Calendar id="cal_from" taborder="1" left="6" top="10" width="149" height="172" dateformat="yyyy-MM-dd" editformat="yyyy-MM-dd" type="monthonly" popuptype="none" value=""/>
+              <Calendar id="cal_to" taborder="0" left="165" top="10" height="172" dateformat="yyyy-MM-dd" editformat="yyyy-MM-dd" type="monthonly" width="149"/>
+              <Button id="btn_confirm" taborder="3" text="Confirm" left="99" top="192" width="60" height="24" uWord="popup.ok" onclick="PopupDiv3_btn_confirm_onclick"/>
+              <Button id="btn_cancel" taborder="2" text="Cancel" left="169" top="192" width="60" height="24" uWord="popup.cancel" onclick="PopupDiv3_btn_cancel_onclick"/>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset1">
+        <ColumnInfo>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="FULL_NAME" type="STRING" size="256"/>
+          <Column id="EMPL_ID" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR101</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR102</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR103</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR104</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Kate </Col>
+            <Col id="EMPL_ID">KR105</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR106</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR107</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR108</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Elsa</Col>
+            <Col id="EMPL_ID">KR109</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Ivy</Col>
+            <Col id="EMPL_ID">KR111</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR112</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR113</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.btn_Exe1_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+ 	var nX = parseInt(0);	
+ 	var nY = parseInt(obj.height);
+	this.PopupDiv1.trackPopupByComponent(obj, nX, nY);	
+};
+
+this.PopupDiv1_btn_Exe1_Close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sDept = this.Dataset1.getColumn(this.Dataset1.rowposition, "DEPT_NAME");
+	var sName = this.Dataset1.getColumn(this.Dataset1.rowposition, "FULL_NAME");
+	var sID   = this.Dataset1.getColumn(this.Dataset1.rowposition, "EMPL_ID");
+	
+ 	this.edt_dept.set_value(sDept);
+ 	this.edt_name.set_value(sName);
+ 	this.edt_id.set_value(sID);			
+	this.PopupDiv1.closePopup();	
+};
+
+this.btn_Exe2_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nX = parseInt(0);	
+	var nY = parseInt(obj.height);
+	this.PopupDiv2.trackPopupByComponent(obj
+	                                   , nX
+									   , nY
+									   , null
+									   , null
+									   , "fn_pDivCallback");	
+};
+
+this.fn_pDivCallback = function(objID, rtnValue)
+{
+	if(rtnValue == ""){
+		return;
+	}
+	if(objID == "PopupDiv2"){
+		this.edt_dept2.set_value(rtnValue[0]);
+		this.edt_name2.set_value(rtnValue[1]);
+		this.edt_id2.set_value(rtnValue[2]);
+	}
+};
+
+// Exe 3
+this.Exe2_Div_PopupDiv_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objDate = new Date();
+	var sToday = objDate.getFullYear()
+			   + ((objDate.getMonth() + 1) + "").padLeft(2, '0')
+			   + (objDate.getDate() + "").padLeft(2, '0');
+
+    this.cal_from.set_value(sToday.substring(0,6) + "01");
+    this.cal_to.set_value(sToday);
+};
+
+this.cal_from_ondropdown = function(obj:nexacro.Calendar,e:nexacro.EventInfo)
+{
+ 	this.PopupDiv3.form.cal_from.set_value(this.cal_from.value);
+ 	this.PopupDiv3.form.cal_to.set_value(this.cal_to.value);	
+	
+	this.PopupDiv3.trackPopupByComponent(this.cal_from, 0, obj.height);
+};
+
+// Confirm Button
+this.PopupDiv3_btn_confirm_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sFrom = this.PopupDiv3.form.cal_from.value;
+	var sTo   = this.PopupDiv3.form.cal_to.value;
+
+    this.cal_from.set_value(sFrom);
+    this.cal_to.set_value(sTo);
+    this.PopupDiv3.closePopup();
+};
+
+this.PopupDiv3_btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.PopupDiv3.closePopup();
+};
+
+this.PopupDiv3_oncloseup = function(obj:nexacro.PopupDiv,e:nexacro.EventInfo)
+{
+	if(this.cal_from.value > this.cal_to.value){
+		this.alert("End Date Should be later than From Date");
+		this.cal_to.set_value("");
+	}
+};
+
+]]></Script>
+  </Form>
+</FDL>

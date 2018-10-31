@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Mobile_Camera" width="480" height="640" titletext="New Form">
+    <Layouts>
+      <Layout height="640" mobileorientation="portrait" screenid="Phone_screen" width="480">
+        <Static id="sta_title" taborder="0" text="Camera" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Button id="btn_camera" taborder="1" text="Camera" top="10" width="110" height="35" icon="URL(&quot;Images::img_camera.png&quot;)" textPadding="0px 0px 0px 10px" onclick="btn_camera_onclick" right="10"/>
+        <ImageViewer id="img_picture" taborder="2" left="10" top="50" right="10" bottom="10"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_camera_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.objCamera.takePicture();
+};
+
+this.objCamera_oncapture = function(obj:nexacro.Camera,e:nexacro.CameraEventInfo)
+{
+	this.img_picture.set_image(e.imagedata);
+};
+
+this.objCamera_onerror = function(obj:nexacro.Camera,e:nexacro.CameraErrorEventInfo)
+{
+	alert(e.errormsg);
+};
+]]></Script>
+    <Objects>
+      <Camera id="objCamera" imageheight="600" imagewidth="460" oncapture="objCamera_oncapture" onerror="objCamera_onerror" gettype="imagedata"/>
+    </Objects>
+  </Form>
+</FDL>

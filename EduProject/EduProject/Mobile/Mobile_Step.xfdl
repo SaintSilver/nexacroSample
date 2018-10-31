@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Mobile_Step" width="480" height="850" titletext="New Form">
+    <Layouts>
+      <Layout height="850" mobileorientation="portrait" screenid="Phone_screen" width="480" stepcount="2">
+        <Static id="Static06" taborder="0" text="Grid Tree - State" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Grid id="grd_tree" taborder="1" left="10" top="50" width="460" bottom="10" binddataset="ds_explorer" onheadclick="Grid00_onheadclick" autofittype="col" treeusecheckbox="false" treeinitstatus="expand,null">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="206"/>
+                <Column size="53"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Project Explorer"/>
+                <Cell col="1" text="State"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:TREE_NM" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:TREE_LEVEL" treestate="bind:TREE_STATE"/>
+                <Cell col="1" text="bind:TREE_STATE"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static00" taborder="2" text="Grid" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="1"/>
+        <Grid id="grd_list" taborder="3" left="10" top="50" width="460" bottom="10" binddataset="ds_explorer" onheadclick="Grid00_onheadclick" autofittype="col" treeusecheckbox="false" treeinitstatus="expand,null" positionstep="1">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="203"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="TREE_ID"/>
+                <Cell col="1" text="TREE_NM"/>
+                <Cell col="2" text="TREE_LEVEL"/>
+                <Cell col="3" text="TREE_STATE"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:TREE_ID"/>
+                <Cell col="1" text="bind:TREE_NM"/>
+                <Cell col="2" text="bind:TREE_LEVEL"/>
+                <Cell col="3" text="bind:TREE_STATE"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_explorer">
+        <ColumnInfo>
+          <Column id="TREE_ID" type="STRING" size="256"/>
+          <Column id="TREE_NM" type="STRING" size="256"/>
+          <Column id="TREE_LEVEL" type="STRING" size="256"/>
+          <Column id="TREE_STATE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="TREE_ID">10</Col>
+            <Col id="TREE_NM">Project 'EduProject''</Col>
+            <Col id="TREE_LEVEL">0</Col>
+            <Col id="TREE_STATE">1</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">20</Col>
+            <Col id="TREE_NM">Environment</Col>
+            <Col id="TREE_LEVEL">1</Col>
+            <Col id="TREE_STATE">1</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">30</Col>
+            <Col id="TREE_NM">ScreenDefinition</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">1</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">40</Col>
+            <Col id="TREE_NM">Phone_screen "App_Phone"</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">50</Col>
+            <Col id="TREE_NM">Desktop_screen "App_Desktop"</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">60</Col>
+            <Col id="TREE_NM">Variables</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">70</Col>
+            <Col id="TREE_NM">Cookies</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">80</Col>
+            <Col id="TREE_NM">HTTP Header</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">90</Col>
+            <Col id="TREE_NM">Script</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">100</Col>
+            <Col id="TREE_NM">TypeDefinition</Col>
+            <Col id="TREE_LEVEL">1</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">110</Col>
+            <Col id="TREE_NM">Objects</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">120</Col>
+            <Col id="TREE_NM">Services</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">130</Col>
+            <Col id="TREE_NM">Protocols</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">140</Col>
+            <Col id="TREE_NM">App Information</Col>
+            <Col id="TREE_LEVEL">1</Col>
+            <Col id="TREE_STATE">1</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">150</Col>
+            <Col id="TREE_NM">AppVariables</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">160</Col>
+            <Col id="TREE_NM">Datasets</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">170</Col>
+            <Col id="TREE_NM">Variables</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">180</Col>
+            <Col id="TREE_NM">Apps</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">1</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">190</Col>
+            <Col id="TREE_NM">App_Desktop</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">200</Col>
+            <Col id="TREE_NM">mainframe</Col>
+            <Col id="TREE_LEVEL">4</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">210</Col>
+            <Col id="TREE_NM">VFrameSet0</Col>
+            <Col id="TREE_LEVEL">5</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">220</Col>
+            <Col id="TREE_NM">TopFrame</Col>
+            <Col id="TREE_LEVEL">6</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">230</Col>
+            <Col id="TREE_NM">HFrameSet0</Col>
+            <Col id="TREE_LEVEL">6</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">240</Col>
+            <Col id="TREE_NM">LeftFrame</Col>
+            <Col id="TREE_LEVEL">7</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">250</Col>
+            <Col id="TREE_NM">WorkFrame</Col>
+            <Col id="TREE_LEVEL">7</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">260</Col>
+            <Col id="TREE_NM">Script</Col>
+            <Col id="TREE_LEVEL">4</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">270</Col>
+            <Col id="TREE_NM">App_Phone</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">280</Col>
+            <Col id="TREE_NM">mainframe</Col>
+            <Col id="TREE_LEVEL">4</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">290</Col>
+            <Col id="TREE_NM">Script</Col>
+            <Col id="TREE_LEVEL">4</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">300</Col>
+            <Col id="TREE_NM">Base</Col>
+            <Col id="TREE_LEVEL">2</Col>
+            <Col id="TREE_STATE">0</Col>
+          </Row>
+          <Row>
+            <Col id="TREE_ID">310</Col>
+            <Col id="TREE_NM">Hello</Col>
+            <Col id="TREE_LEVEL">3</Col>
+            <Col id="TREE_STATE">2</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_Popup_Sub2" width="620" height="340" titletext="Form_Popup_Sub2" onload="form_onload" background="transparent">
+    <Layouts>
+      <Layout height="340" width="620">
+        <Static id="Static00" taborder="1" text="Unified Framework for Real OSMU" top="82" width="512" height="32" left="18" font="normal 700 26px/normal &quot;Verdana&quot;" textAlign="center" color="#ffffad"/>
+        <Static id="Static04" taborder="0" left="18" top="120" width="512" height="78" font="normal bold 18px/normal &quot;Verdana&quot;" text="Simple, Convenient and Fast Development&#13;&#10;for Complex Enterprise Environments" textAlign="center" color="white"/>
+        <ImageViewer id="ImageViewer00" taborder="2" left="128" top="213" width="322" height="80" image="URL(&quot;Images::img_nexacro17.png&quot;)" stretch="fixaspectratio"/>
+        <ImageViewer id="img_close" taborder="3" left="577" top="10" width="32" height="32" image="URL(&quot;Images::img_close_y32.png&quot;)" onclick="img_close_onclick" cursor="pointer"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[this.img_close_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+]]></Script>
+  </Form>
+</FDL>

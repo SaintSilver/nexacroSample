@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Static" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static02" taborder="3" text="☞ Expr" left="10" top="152" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static04" taborder="5" text="☞ Decorate" left="12" top="232" width="122" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static00" taborder="6" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="Static" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Static id="Static08" taborder="7" text="Font Color &lt;fc v='red'&gt; nexacro platform &lt;/fc&gt;" left="12" top="289" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static09" taborder="8" text="Font Face &lt;ff v='verdana'&gt; nexacro platform &lt;/ff&gt;" left="12" top="317" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static10" taborder="9" text="Bold &lt;b v='true'&gt; nexacro platform &lt;/b&gt;" left="12" top="345" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static03" taborder="4" text="nexacro platform" left="10" top="176" width="250" height="24" expr="expr:&quot;Current time : &quot; + comp.parent.fn_getTime()" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static05" taborder="10" text="Font Size &lt;fs v='14'&gt; nexacro platform &lt;/fs&gt;" left="12" top="261" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static12" taborder="11" text="italic &lt;i v='true'&gt; nexacro platform &lt;/i&gt;" left="12" top="373" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static16" taborder="12" text="under line &lt;u v='true'&gt; nexacro platform &lt;/u&gt;" left="12" top="401" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static13" taborder="1" text="nexacro platform" left="8" width="142" top="64" height="34" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static17" taborder="13" text="strike &lt;s v='true'&gt; nexacro platform &lt;/s&gt;" left="12" top="429" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static18" taborder="14" text="Link &lt;l v='http://www.tobesoft.com'&gt; HomePage &lt;/l&gt;" left="12" top="457" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static15" taborder="2" text="nexacro platform&#13;&#10;Static Component&#13;&#10;Hello World&#13;&#10;" left="155" width="170" top="64" height="68" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static19" taborder="15" text="Phone Call &lt;l v='tel:010-1234-5678'&gt; Phone Call &lt;/l&gt;" left="12" top="485" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static20" taborder="16" text="Send Mail &lt;l v='mailto:help@tobesoft.com'&gt; Mail &lt;/l&gt;" left="12" top="513" width="356" height="28" expr="" cssclass="sta_WF_tablebg" padding="0px 0px 0px 5px"/>
+        <Static id="Static21" taborder="17" text="&lt;fs v='12'&gt; nexacro platform &lt;/fs&gt;" left="Static05:5" top="261" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static22" taborder="18" text="&lt;fc v='red'&gt; nexacro platform &lt;/fc&gt;" left="Static08:5" top="289" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static23" taborder="19" text="&lt;ff v='verdana'&gt; nexacro platform &lt;/ff&gt;" left="Static09:5" top="317" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static24" taborder="20" text="&lt;b v='true'&gt; nexacro platform &lt;/b&gt;" left="Static10:5" top="345" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static25" taborder="21" text="&lt;i v='true'&gt; nexacro platform &lt;/i&gt;" left="Static12:5" top="373" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static26" taborder="22" text="&lt;u v='true'&gt; nexacro platform &lt;/u&gt;" left="Static16:5" top="401" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static27" taborder="23" text="&lt;s v='true'&gt; nexacro platform &lt;/s&gt;" left="Static17:5" top="429" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static28" taborder="24" text="&lt;l v='http://www.tobesoft.com'&gt; HomePage &lt;/l&gt;" left="Static18:5" top="457" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static29" taborder="25" text="&lt;l v='tel:010-1234-5678'&gt; Phone Call &lt;/l&gt;" left="Static19:5" top="485" width="164" height="28" expr="" usedecorate="true"/>
+        <Static id="Static30" taborder="26" text="&lt;l v='mailto:help@tobesoft.com'&gt; Send Mail &lt;/l&gt;" left="Static20:5" top="513" width="164" height="28" expr="" usedecorate="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.fn_getTime = function()
+{
+	var objDate = new Date();
+	var sTime  = objDate.getHours().toString().padLeft(2, "0")   + ":";
+		sTime += objDate.getMinutes().toString().padLeft(2, "0") + ":";
+		sTime += objDate.getSeconds().toString().padLeft(2, "0");
+
+	return sTime;
+}
+
+
+
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects/>
+  </Form>
+</FDL>

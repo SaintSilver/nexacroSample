@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe2_Dataset" width="800" height="600" titletext="Exe2_Dataset">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="3">
+        <Grid id="Grid1" taborder="1" left="10" top="64" height="265" binddataset="Dataset1" right="10" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="DEPT_CODE"/>
+                <Cell col="1" text="FULL_NAME"/>
+                <Cell col="2" text="EMPL_ID"/>
+                <Cell col="3" text="HIRE_DATE"/>
+                <Cell col="4" text="SALARY"/>
+                <Cell col="5" text="BONUS"/>
+                <Cell col="6" text="GENDER"/>
+                <Cell col="7" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CODE"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:EMPL_ID"/>
+                <Cell col="3" text="bind:HIRE_DATE"/>
+                <Cell col="4" text="bind:SALARY"/>
+                <Cell col="5" text="bind:BONUS"/>
+                <Cell col="6" text="bind:GENDER"/>
+                <Cell col="7" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="0" text="Exercise - Dataset" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="2" text="☞ Exe1, Exe2, Exe3 Base Data - Dataset1" left="10" top="40" width="350" height="24" cssclass="sta_WF_label"/>
+        <Grid id="Grid6" taborder="3" left="10" top="64" height="200" binddataset="Dataset6" positionstep="2" width="780">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMPL_ID"/>
+                <Cell col="1" text="FULL_NAME"/>
+                <Cell col="2" text="DEPT_CODE"/>
+                <Cell col="3" text="SALARY"/>
+                <Cell col="4" text="GENDER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" text="bind:FULL_NAME" edittype="normal"/>
+                <Cell col="2" text="bind:DEPT_CODE"/>
+                <Cell col="3" text="bind:SALARY"/>
+                <Cell col="4" text="bind:GENDER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe3_Filter" taborder="4" text="Exe3_Filter" left="460" top="481" width="90" height="27" positionstep="0" onclick="btn_Exe3_Filter_onclick"/>
+        <Button id="btn_Exe1_1" taborder="5" text="Exe1_1" left="10" top="363" width="80" height="25" onclick="btn_Exe1_1_onclick"/>
+        <Button id="btn_Exe1_2" taborder="6" text="Exe1_2" left="100" top="363" width="80" height="25" onclick="btn_Exe1_2_onclick"/>
+        <Static id="Static02" taborder="7" text="☞ Exe4 Base Data - Dataset4" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Grid id="Grid4" taborder="8" left="10" top="64" height="200" binddataset="Dataset4" positionstep="1" width="780">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="51"/>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+                <Column size="104"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Row"/>
+                <Cell col="1" text="EMPL_ID"/>
+                <Cell col="2" text="FULL_NAME"/>
+                <Cell col="3" text="DEPT_CODE"/>
+                <Cell col="4" text="SALARY"/>
+                <Cell col="5" text="GENDER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow"/>
+                <Cell col="1" text="bind:EMPL_ID"/>
+                <Cell col="2" text="bind:FULL_NAME"/>
+                <Cell col="3" text="bind:DEPT_CODE"/>
+                <Cell col="4" text="bind:SALARY"/>
+                <Cell col="5" text="bind:GENDER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe4_1" taborder="9" text="Exe4_1" left="10" top="274" width="80" height="25" onclick="btn_Exe4_1_onclick" positionstep="1"/>
+        <Button id="btn_Exe4_2" taborder="10" text="Exe4_2" left="100" top="275" width="80" height="25" onclick="btn_Exe4_2_onclick" positionstep="1"/>
+        <Button id="btn_Exe4_3" taborder="11" text="Exe4_3" left="190" top="275" width="80" height="25" onclick="btn_Exe4_3_onclick" positionstep="1"/>
+        <Button id="btn_Exe4_4" taborder="12" text="Exe4_4" left="280" top="275" width="80" height="25" onclick="btn_Exe4_4_onclick" positionstep="1"/>
+        <Button id="btn_Exe4_5" taborder="13" text="Exe4_5" left="370" top="275" width="80" height="25" onclick="btn_Exe4_5_onclick" positionstep="1"/>
+        <Button id="btn_Exe4_Check" taborder="14" text="Exe4_Check" left="460" top="275" width="100" height="25" onclick="btn_Exe4_Check_onclick" positionstep="1"/>
+        <Button id="btn_Exe3_1" taborder="15" text="Exe3_1" left="10" top="481" width="80" height="25" positionstep="0" onclick="btn_Exe3_1_onclick"/>
+        <Button id="btn_Exe3_2" taborder="16" text="Exe3_2" left="100" top="481" width="80" height="25" positionstep="0" onclick="btn_Exe3_2_onclick"/>
+        <Button id="btn_Exe3_3" taborder="17" text="Exe3_3" left="190" top="481" width="80" height="25" positionstep="0" onclick="btn_Exe3_3_onclick"/>
+        <Button id="btn_Exe3_4" taborder="18" text="Exe3_4" left="280" top="481" width="80" height="25" positionstep="0" onclick="btn_Exe3_4_onclick"/>
+        <Button id="btn_Exe3_05" taborder="19" text="Exe3_5" left="370" top="481" width="80" height="25" positionstep="0" onclick="btn_Exe3_5_onclick"/>
+        <Button id="btn_Exe2_1" taborder="20" text="Exe2_1" left="10" top="422" width="80" height="25" onclick="btn_Exe2_1_onclick"/>
+        <Button id="btn_Exe2_2" taborder="21" text="Exe2_2" left="102" top="422" width="80" height="25" onclick="btn_Exe2_2_onclick"/>
+        <Button id="btn_Exe2_3" taborder="22" text="Exe2_3" left="192" top="422" width="80" height="25" onclick="btn_Exe2_3_onclick"/>
+        <Grid id="Grid5" taborder="23" left="10" top="343" height="200" binddataset="Dataset5" positionstep="1" width="780">
+          <Formats>
+            <Format id="default"/>
+          </Formats>
+        </Grid>
+        <Static id="Static03" taborder="24" text="☞ Exe5 Base Data - Dataset5" left="10" top="319" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Button id="btn_Exe5_1" taborder="25" text="Exe5_1" left="10" top="553" width="80" height="25" positionstep="1" onclick="btn_Exe5_1_onclick"/>
+        <Button id="btn_Exe5_2" taborder="26" text="Exe5_2" left="100" top="553" width="80" height="25" positionstep="1" onclick="btn_Exe5_2_onclick"/>
+        <Button id="btn_Exe5_3" taborder="27" text="Exe5_3" left="190" top="553" width="80" height="25" positionstep="1" onclick="btn_Exe5_3_onclick"/>
+        <Button id="btn_Exe5_4" taborder="28" text="Exe5_4" left="280" top="553" width="80" height="25" positionstep="1" onclick="btn_Exe5_4_onclick"/>
+        <Static id="Static00" taborder="29" text="☞ Exe6 Base Data - Dataset6" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="2"/>
+        <Button id="btn_Exe6_3" taborder="30" text="Exe6_3" left="10" top="275" width="80" height="25" positionstep="2" onclick="btn_Exe6_3_onclick"/>
+        <Button id="btn_Exe6_5" taborder="31" text="Exe6_5" left="100" top="275" width="80" height="25" positionstep="2" onclick="btn_Exe6_5_onclick"/>
+        <Static id="Static01" taborder="32" text="Exe1" left="10" top="339" width="60" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static04" taborder="33" text="Exe2" left="10" top="398" width="60" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static05" taborder="34" text="Exe3" left="10" top="457" width="60" height="24" cssclass="sta_WF_label"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset1">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="BONUS" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="E_MAIL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">John@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR020</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Jackson@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR030</Col>
+            <Col id="HIRE_DATE">20030805</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Adamr@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Melon@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+            <Col id="HIRE_DATE">20180201</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Kein@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="HIRE_DATE">20171020</Col>
+            <Col id="SALARY"/>
+            <Col id="BONUS"/>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Ivy@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="HIRE_DATE">20130102</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Kara@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Bts@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Andrew@nexacro.com</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR230</Col>
+            <Col id="HIRE_DATE">20161120</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Belle@nexacro.com</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset4" keystring="">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="SALARY"/>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset5" keystring=""/>
+      <Dataset id="Dataset6" keystring="" cancolumnchange="Dataset6_cancolumnchange" oncolumnchanged="Dataset6_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="SALARY"/>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="GENDER">W</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew</Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// Exercise 1 ================================================================
+// Exe 1-1
+this.btn_Exe1_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nColCount = this.Dataset1.getColCount(); // this.Dataset1.colcount;
+	var nRowCount = this.Dataset1.getRowCount(); // this.Dataset1.rowcount;
+	trace("Col Count=" + nColCount + " : Row Count=" + nRowCount);	
+    
+	for(var i=0; i<nColCount; i++){
+		var sColID = this.Dataset1.getColID(i);
+		trace("Col ID=" + sColID);
+        
+//      var objCol = this.Dataset1.getColumnInfo(i);
+//      trace(objCol.id + " : " + objCol.type + " : " + objCol.size);
+	}    
+};
+
+// Exe 1-2
+this.btn_Exe1_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset1.addColumn("COL_CHK", "STRING");
+	this.btn_Exe1_1_onclick();
+};
+
+// Exercise 2 ================================================================
+// Exe 2-1
+this.btn_Exe2_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.Dataset1.findRow("EMPL_ID", "KR120");
+	var sVal = this.Dataset1.getColumn(nRow, "FULL_NAME");
+//	var sVal = this.Dataset1.lookup("EMPL_ID", "KR120", "FULL_NAME");
+	trace(sVal);	
+};
+
+// Exe 2-2
+this.btn_Exe2_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.Dataset1.findRowExpr("DEPT_CODE == 'K10' && SALARY <= 5000");
+	var sVal = this.Dataset1.getColumn(nRow, "FULL_NAME");
+	trace(sVal);	
+};
+
+// Exe 2-3
+this.btn_Exe2_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrRow = this.Dataset1.extractRows("DEPT_CODE=='K10'");
+	for(var i=0; i<arrRow.length; i++){
+		var sValue = this.Dataset1.getColumn(arrRow[i], "FULL_NAME");
+		trace(sValue);
+	}
+};
+
+// Exercise 3 ================================================================
+// Exe 3-1
+this.btn_Exe3_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nAvgM  = this.Dataset1.getCaseAvg("GENDER=='M'", "SALARY");
+	var nAvgW1 = this.Dataset1.getCaseAvg("GENDER=='W'", "SALARY");
+	var nAvgW2 = this.Dataset1.getCaseAvg("GENDER=='W'", "SALARY",0, -1, false);
+	trace("Man Avg=" + Math.round(nAvgM, 2) + " : Woman Avg=" + nAvgW1 + " : " + nAvgW2);
+};
+
+// Exe 3-2
+this.btn_Exe3_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nAvg = this.Dataset1.getAvg("SALARY+BONUS");
+	trace("Salary+Bonus AVG=" + nAvg);
+};
+
+// Exe 3-3
+this.btn_Exe3_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset1.set_keystring("S:-HIRE_DATE");	
+};
+
+// Exe 3-4
+this.btn_Exe3_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset1.filter("GENDER == 'M' && MARRIED == '1'");	
+};
+
+// Exe 3-5
+this.btn_Exe3_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nCnt   = this.Dataset1.getRowCount();
+	var nCntNF = this.Dataset1.getRowCountNF();
+	trace(nCnt + " : " + nCntNF);
+};
+
+
+this.btn_Exe3_Filter_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sText = "E";
+	this.Dataset1.filter("FULL_NAME.toUpperCase().indexOf('" + sText.toUpperCase() + "') >= 0");
+};
+
+
+// Exercise 4 ================================================================
+// Exe 4-1
+this.btn_Exe4_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow  = this.Dataset4.insertRow(0);
+	var nType = this.Dataset4.getRowType(nRow);
+	trace("Insert Rowtype: " + nType);
+};
+
+// Exe 4-2
+this.btn_Exe4_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset4.setColumn(1, "FULL_NAME", "Nexacro");
+	var nType = this.Dataset4.getRowType(1);
+	trace("Update Rowtype: " + nType);
+};
+
+// Exe 4-3
+this.btn_Exe4_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sCurData = this.Dataset4.getColumn(1, "FULL_NAME");
+	var sOrgData = this.Dataset4.getOrgColumn(1, "FULL_NAME");	
+	trace("Cur Data=" + sCurData + " : Org Data=" + sOrgData);	
+};
+
+// Exe 4-4
+this.btn_Exe4_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrRow = [3,4,5]; 
+//	var arrRow = this.Grid4.getSelectedDatasetRows();	
+	this.Dataset4.deleteMultiRows(arrRow);
+};
+
+// Exe 4-5
+this.btn_Exe4_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nDelCnt  = this.Dataset4.getDeletedRowCount();	
+	var sDelData = this.Dataset4.getDeletedColumn(0, "FULL_NAME");
+	trace("Del Count=" + nDelCnt + " Del Data=" + sDelData);	
+	
+	var arrDel = this.Dataset4.getDeletedRowset();
+	trace(arrDel[0]);
+	
+};
+
+
+// Exe4 - Data Check
+this.btn_Exe4_Check_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var rtn = this.fn_dataCheck(this.Dataset4);
+    this.alert(rtn);
+};
+
+this.fn_dataCheck = function(objDs)
+{
+	if(objDs.getDeletedRowCount() > 0){
+		return true;
+	}
+	
+	for(var i=0;  i<objDs.rowcount; i++)
+	{
+		var nRowType = objDs.getRowType(i);
+		if(nRowType == 2 || nRowType == 4){
+			return true;
+		}
+	}
+	return false;	        
+};
+
+// Exercise 5 ================================================================
+// Exe 5-1
+this.btn_Exe5_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset5.copyData(this.Dataset4);
+	this.Grid5.createFormat();
+};
+
+// Exe 5-2
+this.btn_Exe5_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset5.assign(this.Dataset4);
+	this.Grid5.createFormat();
+};
+
+// Exe 5-3
+this.btn_Exe5_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nFromRow = this.Dataset4.findRow("EMPL_ID", "KR040");
+	var nToRow   = this.Dataset5.addRow();
+	this.Dataset5.copyRow(nToRow, this.Dataset4, nFromRow);	
+};
+
+// Exe 5-4
+this.btn_Exe5_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nFromRow = this.Dataset4.findRow("EMPL_ID", "KR210");
+	var nToRow   = this.Dataset5.addRow();
+	var sCol = "EMPL_ID=EMPL_ID, FULL_NAME=FULL_NAME";	
+	this.Dataset5.copyRow(nToRow, this.Dataset4, nFromRow, sCol);
+};
+
+
+// Exercise 6 ================================================================
+this.Dataset6_cancolumnchange = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	var nCnt = obj.findRowExpr("FULL_NAME == '" + e.newvalue + "' && currow != " + e.row);
+	if(nCnt > -1){
+		this.alert("Data Duplication");
+		return false;
+	}
+	trace("cancolumnchange");
+//	return false;
+};
+
+this.Dataset6_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	trace("oncolumnchanged");
+};
+
+// Exe 6-3
+this.btn_Exe6_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset6.setColumn(0, "FULL_NAME", "Modify1");
+};
+
+// Exe 6-5
+this.btn_Exe6_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset6.set_enableevent(false);
+	this.Dataset6.setColumn(1, "FULL_NAME", "Modify2");
+	this.Dataset6.set_enableevent(true);
+};
+
+]]></Script>
+  </Form>
+</FDL>

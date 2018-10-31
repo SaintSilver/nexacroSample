@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[.Grid .body .row .cell.cell_style1
+{
+	color : #3da2df;
+	-nexa-color-odd : #3da2df;
+	font : bold italic 12pt/normal "Arial";
+}
+
+.Grid .body .row .cell.grd_fix_left
+{
+	background : #f6edc5;
+	-nexa-background-odd : #f6edc5;
+
+}
+.Grid .body .row .cell.grd_fix_right
+{
+	background : #f8d2e3;
+	-nexa-background-odd : #f8d2e3;
+
+}]]></XCSS>

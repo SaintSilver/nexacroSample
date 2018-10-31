@@ -1,0 +1,30 @@
+﻿-P
+"C:\EduProject\EduProject.xprj"
+-O
+"C:\Users\jojo\Documents\nexacro\17\outputs\EduProject"
+-B
+"C:\Program Files (x86)\nexacro\17\nexacro17lib\"
+-FILE
+"C:\EduProject\environment.xml","C:\EduProject\App_Desktop.xadl","C:\EduProject\App_Phone.xadl","C:\EduProject\_resource_\_images_\img_b_print.png","C:\EduProject\_resource_\_images_\img_b_save.png","C:\EduProject\_resource_\_images_\img_b_search.png","C:\EduProject\_resource_\_images_\img_b_setting.png","C:\EduProject\Base\Hello.xfdl","C:\EduProject\FrameBase\LeftFrame.xfdl","C:\EduProject\FrameBase\MainForm.xfdl","C:\EduProject\FrameBase\MdiFrame.xfdl","C:\EduProject\FrameBase\TopFrame.xfdl","C:\EduProject\FrameBase\WorkFrame.xfdl","C:\EduProject\Form\Form_Emp.xfdl","C:\EduProject\Form\Form_Emp_Exe.xfdl","C:\EduProject\Form\Form_EmpMLM.xfdl","C:\EduProject\Form\Form_Organization.xfdl","C:\EduProject\Popup\Pop_DeptSearch.xfdl","C:\EduProject\Popup\Pop_DeptSearch_Exe.xfdl","C:\EduProject\Popup\Pop_EmpSearch.xfdl","C:\EduProject\Comp\Comp_Base.xfdl","C:\EduProject\Comp\Comp_Base_Sub.xfdl","C:\EduProject\Comp\Comp_Button.xfdl","C:\EduProject\Comp\Comp_Calendar.xfdl","C:\EduProject\Comp\Comp_CheckBox.xfdl","C:\EduProject\Comp\Comp_Combo.xfdl","C:\EduProject\Comp\Comp_Dataset.xfdl","C:\EduProject\Comp\Comp_Div.xfdl","C:\EduProject\Comp\Comp_Div_Sub.xfdl","C:\EduProject\Comp\Comp_Edit.xfdl","C:\EduProject\Comp\Comp_Grid.xfdl","C:\EduProject\Comp\Comp_Grid_Cell.xfdl","C:\EduProject\Comp\Comp_ImageViewer.xfdl","C:\EduProject\Comp\Comp_ListBox.xfdl","C:\EduProject\Comp\Comp_MaskEdit.xfdl","C:\EduProject\Comp\Comp_ProgressBar.xfdl","C:\EduProject\Comp\Comp_Radio.xfdl","C:\EduProject\Comp\Comp_Spin.xfdl","C:\EduProject\Comp\Comp_Static.xfdl","C:\EduProject\Comp\Comp_Tab.xfdl","C:\EduProject\Comp\Comp_Tab_Sub.xfdl","C:\EduProject\Comp\Comp_TextArea.xfdl","C:\EduProject\CompCom\CompCom_Arrange.xfdl","C:\EduProject\CompCom\CompCom_Bind.xfdl","C:\EduProject\CompCom\CompCom_Event.xfdl","C:\EduProject\CompExt\CompExt_Excel.xfdl","C:\EduProject\CompExt\CompExt_FileUpDown.xfdl","C:\EduProject\CompExt\CompExt_GoogleMapr.xfdl","C:\EduProject\CompExt\CompExt_Sketch.xfdl","C:\EduProject\CompExt\CompExt_WebBrowser.xfdl","C:\EduProject\Smpl\ArrangeFit.xfdl","C:\EduProject\Smpl\ArrangeFit_Exe.xfdl","C:\EduProject\Smpl\ArrangeSplit.xfdl","C:\EduProject\Smpl\GridSum.xfdl","C:\EduProject\Smpl\GridTree.xfdl","C:\EduProject\EnvApp\EnvApp_Base.xfdl","C:\EduProject\Images\icecream.png","C:\EduProject\Images\img_b_delete.png","C:\EduProject\Images\img_b_insert.png","C:\EduProject\Images\img_b_print.png","C:\EduProject\Images\img_b_save.png","C:\EduProject\Images\img_b_search.png","C:\EduProject\Images\img_b_select.png","C:\EduProject\Images\img_b_setting.png","C:\EduProject\Images\img_comp_button.png","C:\EduProject\Images\img_comp_cal.png","C:\EduProject\Images\img_comp_check.png","C:\EduProject\Images\img_comp_combo.png","C:\EduProject\Images\img_comp_data.png","C:\EduProject\Images\img_comp_edit.png","C:\EduProject\Images\img_comp_grid.png","C:\EduProject\Images\img_comp_image.png","C:\EduProject\Images\img_comp_list.png","C:\EduProject\Images\img_comp_mask.png","C:\EduProject\Images\img_comp_menu.png","C:\EduProject\Images\img_comp_pdiv.png","C:\EduProject\Images\img_comp_progress.png","C:\EduProject\Images\img_comp_radio.png","C:\EduProject\Images\img_comp_spin.png","C:\EduProject\Images\img_comp_static.png","C:\EduProject\Images\img_comp_tab.png","C:\EduProject\Images\img_comp_txt.png","C:\EduProject\Images\img_comp_web.png","C:\EduProject\Images\img_delete.png","C:\EduProject\Images\img_icon_minus.png","C:\EduProject\Images\img_icon_plus.png","C:\EduProject\Images\img_main_nativeApp.png","C:\EduProject\Images\img_main_nexacro.png","C:\EduProject\Images\img_main_onesource.png","C:\EduProject\Images\img_main_osmu.png","C:\EduProject\Images\img_na_canada.png","C:\EduProject\Images\img_na_canada_b.png","C:\EduProject\Images\img_na_china.png","C:\EduProject\Images\img_na_china_b.png","C:\EduProject\Images\img_na_korea.png","C:\EduProject\Images\img_na_korea_b.png","C:\EduProject\Images\img_na_usa.png","C:\EduProject\Images\img_na_usa_b.png","C:\EduProject\Images\img_new.png","C:\EduProject\Images\img_print.png","C:\EduProject\Images\img_radio_n.png","C:\EduProject\Images\img_radio_s.png","C:\EduProject\Images\img_save.png","C:\EduProject\Images\img_search.png","C:\EduProject\Images\img_sign.png","C:\EduProject\Images\img_sketch.png","C:\EduProject\Images\imp_comp_div.png","C:\EduProject\Images\imp_comp_pmenu.png","C:\EduProject\Images\loading.gif","C:\EduProject\Images\m_avata.jpg","C:\EduProject\Images\m_frozen.jpg","C:\EduProject\Images\m_inception.jpg","C:\EduProject\Images\m_ironman.jpg","C:\EduProject\Images\m_starwars.jpg","C:\EduProject\Images\m_titanic.jpg","C:\EduProject\Images\nexacro_platform.png","C:\EduProject\Lib\Common.xjs","C:\EduProject\Xcss\EduProject.xcss","C:\EduProject\Mobile\Mobile_ALL.xfdl","C:\EduProject\Mobile\Mobile_Camera.xfdl","C:\EduProject\Mobile\Mobile_Main.xfdl","C:\EduProject\Mobile\Mobile_Step.xfdl","C:\EduProject\Mobile\Mobile_Top.xfdl","C:\EduProject\Mobile\Mobile_Work.xfdl","C:\EduProject\Mobile\Pop_Mobile.xfdl","C:\EduProject\_resource_\_theme_\edu_theme_d.xtheme"
+-BOOTSTRAP
+-MODULE
+-BROWSER
+Nexacro Browser,Internet Explorer 11,Internet Explorer 10,Chrome,Safari,
+-D3
+"C:\Users\jojo\Documents\nexacro\17\deploy\EduProject\_android_"
+-D4
+"C:\Users\jojo\Documents\nexacro\17\deploy\EduProject\_ios_"
+-DB3
+"C:\Program Files (x86)\nexacro\17\nexacro17lib\"
+-DB4
+"C:\Program Files (x86)\nexacro\17\nexacro17lib\"
+-DT3
+4369
+-DT4
+4369
+-IGNORECOMPRESS
+"C:\EduProject\.ignorecompress"
+-PRJURL
+C:\Program Files (x86)\nexacro\17\nexacro17lib\
+-Q
+790880

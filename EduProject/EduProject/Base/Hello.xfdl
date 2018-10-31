@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Hello" width="800" height="600" titletext="New Form" scrolltype="none">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Button id="Button00" taborder="0" text="Hello World" left="60" top="77" width="250" height="73" onclick="Button00_onclick"/>
+        <Static id="Static00" taborder="1" text="Desktop Screen" left="66" top="47" width="240" height="30" font="normal bold 14px &quot;Arial&quot;" color="red"/>
+      </Layout>
+      <Layout name="Layout0" screenid="Phone_screen" width="480" height="768" mobileorientation="portrait">
+        <Static id="Static00" text="Phone Screen" left="176" top="77" width="120" height="30"/>
+        <Button id="Button00" left="170" top="107" width="130" height="73"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.alert("Hello World");
+	trace("log Hello World");
+};]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe2_Comp" width="400" height="500" titletext="Exe2_Comp">
+    <Layouts>
+      <Layout height="500" width="400" stepcount="0">
+        <Static id="Static06" taborder="0" text="Exercise - Button" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="1" text="☞ Exe 1 - Position &amp; Arrangement" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_Exe2_1" taborder="2" text="Exe2_1" left="10" top="203" width="80" height="25" positionstep="0" onclick="btn_Exe2_1_onclick"/>
+        <Button id="btn_Exe2_5" taborder="3" text="Exe2_5" left="10" top="312" width="80" height="25" positionstep="0" onclick="btn_Exe2_5_onclick"/>
+        <Button id="btn_Exe2_6" taborder="4" text="Exe2_6" left="100" top="312" width="80" height="25" positionstep="0" onclick="btn_Exe2_6_onclick"/>
+        <Grid id="Grid00" taborder="5" left="10" positionstep="0" binddataset="Dataset2" autofittype="col" right="10" bottom="10" height="146">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="COL_NAME"/>
+                <Cell col="1" text="COL_SIZE"/>
+                <Cell col="2" text="COL_COLOR"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:COL_NAME"/>
+                <Cell col="1" text="bind:COL_SIZE"/>
+                <Cell col="2" text="bind:COL_COLOR"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe1_1" taborder="6" text="Exe1_1" left="10" top="64" height="25" onclick="fn_position" background="khaki" width="180"/>
+        <Button id="btn_Exe1_2" taborder="7" text="Exe1_2" top="64" height="25" left="210" right="10" onclick="btn_Exe1_2_onclick"/>
+        <Div id="Div2" taborder="8" text="Div2" left="190" top="232" positionstep="0" height="106" width="199"/>
+        <Button id="btn_Exe2_3" taborder="9" text="Exe2_3" left="190" top="203" width="80" height="25" positionstep="0" onclick="btn_Exe2_3_onclick"/>
+        <Button id="btn_Exe2_2" taborder="10" text="Exe2_2" left="100" top="203" width="80" height="25" positionstep="0" onclick="btn_Exe2_2_onclick"/>
+        <Button id="btn_Exe2_4" taborder="11" text="Exe2_4" left="280" top="203" width="80" height="25" positionstep="0" onclick="btn_Exe2_4_onclick"/>
+        <Button id="btn_Exe1_3" taborder="12" text="Exe1_3" left="10" top="99" height="25" background="khaki" width="180"/>
+        <Button id="btn_Exe1_4" taborder="13" text="Exe1_4" top="99" height="25" width="180" right="10" onclick="btn_Exe1_4_onclick"/>
+        <Button id="btn_Exe1_5" taborder="14" text="Exe1_5" left="10" top="134" height="25" background="khaki" width="45.00%" onclick="btn_Exe1_5_onclick"/>
+        <Button id="btn_Exe1_6" taborder="15" text="Exe1_6" top="134" height="25" left="btn_Exe1_5:20" onclick="btn_Exe1_6_onclick" width="45%"/>
+        <Static id="Static03" taborder="16" text="☞ Exe 2 - Dynamic Creation" left="10" top="179" width="250" height="24" cssclass="sta_WF_label"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset2" keystring="">
+        <ColumnInfo>
+          <Column id="COL_NAME" type="STRING" size="50"/>
+          <Column id="COL_SIZE" type="INT" size="10"/>
+          <Column id="COL_COLOR" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="COL_NAME">Olivia</Col>
+            <Col id="COL_SIZE">200</Col>
+            <Col id="COL_COLOR">gold</Col>
+          </Row>
+          <Row>
+            <Col id="COL_NAME">John</Col>
+            <Col id="COL_SIZE">150</Col>
+            <Col id="COL_COLOR">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="COL_NAME">Jackson</Col>
+            <Col id="COL_SIZE">250</Col>
+            <Col id="COL_COLOR">hotpink</Col>
+          </Row>
+          <Row>
+            <Col id="COL_NAME">Maia</Col>
+            <Col id="COL_SIZE">100</Col>
+            <Col id="COL_COLOR">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="COL_NAME">Adam</Col>
+            <Col id="COL_SIZE">80</Col>
+            <Col id="COL_COLOR">lavender</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// Exe 1-1
+this.btn_Exe1_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nW1 = obj.width;
+	var nW2 = obj.getOffsetWidth();
+	var nW3 = obj.getPixelWidth();
+	
+	trace(nW1 + " : " + nW2 + " : " + nW3);
+};
+
+// Exe 1-5
+this.btn_Exe1_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nW1 = obj.width;
+	var nW2 = obj.getOffsetWidth();
+	var nW3 = obj.getPixelWidth();
+	
+	trace(nW1 + " : " + nW2 + " : " + nW3);	
+};
+
+this.btn_Exe1_6_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nL1 = obj.left;
+	var nL2 = obj.getOffsetLeft();
+	var nL3 = obj.getPixelLeft();
+	
+	trace(nL1 + " : " + nL2 + " : " + nL3);	
+};
+
+
+// Exe 2-1(Create Components on Form)
+this.btn_Exe2_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objBtn = new Button();
+	objBtn.init("btn_Comp", 10, 250, 150, 50);
+	this.addChild("btn_Comp", objBtn);
+	objBtn.set_text("Created Button");
+	objBtn.show();	
+};
+
+// Exe 2-2(Destroy Components on Form)
+this.btn_Exe2_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objBtn = this.removeChild("btn_Comp"); 
+	objBtn.destroy(); 
+	objBtn = null;
+};
+
+
+// Exe 2-3 (Create Components on Div)
+this.btn_Exe2_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objDivBtn = new Button();
+	objDivBtn.init("btn_divComp", 10, 10, 150, 50);
+	this.Div2.form.addChild("btn_divComp", objDivBtn);
+	objDivBtn.set_text("Created Div Button");
+	objDivBtn.show();
+};
+
+
+// Exe2-4 (Destroy Components on Div)
+this.btn_Exe2_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objBtn = this.Div2.form.removeChild("btn_divComp"); 
+	objBtn.destroy(); 
+	objBtn = null;
+	
+};
+
+// Exe2-5 Add Event Handler
+this.btn_Exe2_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(!this.isValidObject(this.btn_Comp)){
+		this.btn_Exe2_1_onclick();
+	}
+	this.btn_Comp.addEventHandler("onclick", this.fn_temp, this);	
+
+};
+
+this.fn_temp = function()
+{
+	this.alert("Add Event Handler");
+};
+
+// Exe2- d Data Binding
+this.btn_Exe2_6_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objBindItem = new BindItem();
+	objBindItem.init("item00", "btn_Comp", "text", "Dataset2", "COL_NAME");
+	this.addChild("item00", objBindItem);
+	objBindItem.bind();
+
+	objBindItem = new BindItem();
+	objBindItem.init("item01", "btn_Comp", "width", "Dataset2", "COL_SIZE");
+	this.addChild("item01", objBindItem);
+	objBindItem.bind();
+
+	objBindItem = new BindItem();
+	objBindItem.init("item02", "btn_Comp", "background", "Dataset2", "COL_COLOR");
+	this.addChild("item02", objBindItem);
+	objBindItem.bind();	
+};
+
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Pop_EmpSearch" width="400" height="400" titletext="New Form" onload="Form_onload">
+    <Layouts>
+      <Layout height="400" width="400">
+        <Static id="Static00" taborder="2" text="Employees Search" left="10" top="5" width="193" height="30" cssclass="sta_WF_emptitle" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Grid id="grd_list" taborder="3" left="10" top="40" width="" height="310" right="10" bottom="" binddataset="ds_emp" autofittype="col" oncelldblclick="Grid00_oncelldblclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="140"/>
+                <Column size="80"/>
+                <Column size="150"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Dept"/>
+                <Cell col="1" text="ID"/>
+                <Cell col="2" text="Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CD" displaytype="combotext" combodataset="ds_dept" combocodecol="DEPT_CD" combodatacol="DEPT_NAME"/>
+                <Cell col="1" text="bind:EMPL_ID" textAlign="center" displaytype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="2" text="bind:FULL_NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_ok" taborder="4" text="OK" left="131" top="358" width="60" height="25" right="" bottom="" onclick="btn_ok_onclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Button id="btn_cancel" taborder="4" text="Cancel" left="201" top="358" width="60" height="25" right="" bottom="" onclick="btn_cancel_onclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Button id="btn_search" taborder="4" text="" left="" top="0" width="30" height="30" right="0" bottom="" background="URL(&quot;Images::img_search2.png&quot;)" border="0px none #ffffff" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" onclick="btn_search_onclick"/>
+        <Combo id="Combo00" taborder="5" text="Combo00" left="" top="10" width="150" height="25" right="10" bottom="" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" onitemchanged="Combo00_onitemchanged" innerdataset="@ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp" keystring="">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Dillon</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">AA003</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">BB002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Ray</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">CC002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Cameron</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">CC003</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Tyler</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">DD001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">David</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">DD002</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.ds_emp.filter("DEPT_CD == '" + e.postvalue + "'");
+};
+
+this.btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn  = this.ds_emp.getColumn(this.ds_emp.rowposition, "EMPL_ID") + "|";
+	    sRtn += this.ds_emp.getColumn(this.ds_emp.rowposition, "FULL_NAME");
+
+	this.close(sRtn);
+};
+
+this.Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	this.btn_ok_onclick();
+};
+
+this.btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

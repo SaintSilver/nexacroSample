@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Dataset" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="2">
+        <Grid id="Grid00" taborder="1" left="10" top="64" height="178" right="306" binddataset="ds_data" enable="true" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" selecttype="multirow" positionstep="-1">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMPL_ID"/>
+                <Cell col="1" text="NAME"/>
+                <Cell col="2" text="DEPT_CD"/>
+                <Cell col="3" text="SALARY"/>
+                <Cell col="4" text="GENDER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CD"/>
+                <Cell col="3" text="bind:SALARY"/>
+                <Cell col="4" text="bind:GENDER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="0" text="Dataset" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="22" text="☞ ds_data" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="-1"/>
+        <Static id="Static00" taborder="23" text="☞ Base Method" left="10" top="250" width="250" height="24" cssclass="sta_WF_label" positionstep="-1"/>
+        <Button id="btn_get" taborder="10" text="Data Get" left="10" top="276" width="120" height="35" onclick="btn_get_onclick" positionstep="1"/>
+        <Edit id="edt_rtn" taborder="11" left="135" top="281" width="110" height="24" positionstep="1"/>
+        <Button id="btn_set" taborder="12" text="Data Set" left="10" top="315" width="120" height="35" onclick="btn_set_onclick" positionstep="1"/>
+        <Button id="btn_addColumn" taborder="3" text="Add Column" left="20" top="276" width="120" height="35" onclick="btn_addColumn_onclick"/>
+        <Button id="btn_addRow" taborder="4" text="Add Row" left="20" top="315" width="120" height="35" onclick="btn_addRow_onclick"/>
+        <Button id="btn_insertRow" taborder="5" text="Insert Row" left="20" top="354" width="120" height="35" onclick="btn_insertRow_onclick"/>
+        <Static id="Static03" taborder="24" text="this.ds_data.addColumn(&quot;ADD_COL&quot;, &quot;STRING&quot;)" left="147" top="285" width="302" height="16"/>
+        <Static id="Static04" taborder="25" text="this.ds_data.addRow();" left="147" top="324" width="149" height="16"/>
+        <Static id="Static08" taborder="26" text="this.ds_data.insertRow(this.ds_data.rowposition);" left="147" top="363" width="318" height="16"/>
+        <Button id="btn_deleteRow" taborder="6" text="Delete Row" left="20" top="393" width="120" height="35" onclick="btn_deleteRow_onclick"/>
+        <Static id="Static09" taborder="27" text="this.ds_data.deleteRow(this.ds_data.rowposition);" left="147" top="402" width="322" height="16"/>
+        <Button id="btn_deleteAll" taborder="7" text="Delete All" left="20" top="432" width="120" height="35" onclick="btn_deleteAll_onclick"/>
+        <Static id="Static11" taborder="28" text="this.ds_data.deleteRow(this.ds_data.rowposition);" left="147" top="441" width="322" height="16"/>
+        <Button id="btn_deleteMulti" taborder="8" text="Delete Multi" left="20" top="471" width="120" height="35" onclick="btn_deleteMulti_onclick"/>
+        <Static id="Static12" taborder="29" text="var arrIdx = this.Grid00.getSelectedDatasetRows();&#13;&#10;this.ds_data.deleteMultiRows(arrIdx);" left="147" top="472" width="325" height="32"/>
+        <Button id="btn_reset" taborder="9" text="Data Reset" left="20" top="510" width="120" height="35" onclick="btn_reset_onclick"/>
+        <Static id="Static13" taborder="30" text="this.ds_data.reset();" left="147" top="519" width="131" height="16"/>
+        <Edit id="edt_set" taborder="13" left="135" top="320" width="110" height="24" value="nexacro" positionstep="1"/>
+        <Grid id="Grid01" taborder="2" top="64" width="287" height="178" binddataset="ds_dept" positionstep="-1" right="13">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="134"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="DEPT_CD"/>
+                <Cell col="1" text="DEPT_NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CD"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_copyRow" taborder="21" text="Copy Row" left="10" top="510" width="120" height="35" positionstep="1" onclick="btn_copyRow_onclick"/>
+        <Button id="btn_copyData" taborder="20" text="Copy Data" left="10" top="471" width="120" height="35" positionstep="1" onclick="btn_copyData_onclick"/>
+        <Button id="btn_getOrg" taborder="14" text="Data Get - Org" left="10" top="354" width="120" height="35" onclick="btn_getOrg_onclick" positionstep="1"/>
+        <Edit id="edt_rtn2" taborder="15" left="135" top="359" width="110" height="24" positionstep="1"/>
+        <Static id="Static01" taborder="31" text="var nRow = this.ds_data.rowposition;&#13;&#10;var sRtn = this.ds_data.getOrgColumn(nRow, &quot;FULL_NAME&quot;);" left="250" top="355" width="386" height="32" positionstep="1" verticalAlign="top"/>
+        <Button id="btn_getDel" taborder="16" text="Data Get - Del" left="10" top="393" width="120" height="35" onclick="btn_getDel_onclick" positionstep="1"/>
+        <Edit id="edt_rtn3" taborder="17" left="135" top="398" width="110" height="24" positionstep="1"/>
+        <Static id="Static05" taborder="32" text="var sRtn = this.ds_data.getDeletedColumn(0, &quot;FULL_NAME&quot;);" left="250" top="402" width="385" height="16" positionstep="1" verticalAlign="top"/>
+        <Static id="Static10" taborder="33" text="var nRow = this.ds_data.rowposition;&#13;&#10;var sRtn = this.ds_data.getColumn(nRow,&quot;FULL_NAME&quot;);" left="250" top="277" width="359" height="32" positionstep="1"/>
+        <Static id="Static02" taborder="34" text="var nRow = this.ds_data.rowposition;&#13;&#10;this.ds_data.setColumn(nRow, &quot;FULL_NAME&quot;, this.edt_set.value;);" left="250" top="316" width="420" height="32" positionstep="1"/>
+        <Button id="btn_findRow" taborder="18" text="FindRow" left="10" top="432" width="120" height="35" positionstep="1" onclick="btn_findRow_onclick"/>
+        <Edit id="edt_rtn4" taborder="19" left="133" top="437" width="110" height="24" positionstep="1"/>
+        <Static id="Static14" taborder="35" text="var nRow = this.ds_data.findRow(&quot;EMPL_ID&quot;, &quot;BB001&quot;);" left="248" top="441" width="385" height="16" positionstep="1" verticalAlign="top"/>
+        <Static id="Static15" taborder="36" text="var nRow = this.ds_data.addRow();&#13;&#10;var sCol = &quot;FULL_NAME=DEPT_NAME, DEPT_CD=DEPT_CD&quot;;&#13;&#10;this.ds_data.copyRow(nRow, this.ds_dept, this.ds_dept.rowposition, sCol);" left="135" top="510" width="476" height="48" positionstep="1" verticalAlign="top"/>
+        <Static id="Static16" taborder="37" text="this.ds_data.copyData(this.ds_dept);&#9;&#13;&#10;this.Grid00.createFormat();" left="136" top="472" width="536" height="32" positionstep="1" verticalAlign="top"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_data" keystring="" cancolumnchange="ds_emp_cancolumnchange" onrowsetchanged="ds_emp_onrowsetchanged" onrowposchanged="ds_emp_onrowposchanged">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">BB002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_get_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_data.rowposition;
+	var sRtn = this.ds_data.getColumn(nRow, "FULL_NAME");
+	
+	this.edt_rtn.set_value(sRtn);
+};
+
+this.btn_set_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_data.rowposition;
+	var sVal = this.edt_set.value;	
+	this.ds_data.setColumn(nRow, "FULL_NAME", sVal);
+};
+
+this.btn_addColumn_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.addColumn("ADD_COL", "STRING");
+	this.Grid00.createFormat();
+};
+
+this.btn_addRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.addRow();
+};
+
+this.btn_insertRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.insertRow(this.ds_data.rowposition);
+};
+
+this.btn_deleteRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.deleteRow(this.ds_data.rowposition);
+};
+
+this.btn_deleteColumn_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.deleteColumn("GENDER");
+	this.Grid00.createFormat();
+};
+
+this.btn_deleteAll_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.deleteAll();
+};
+
+this.btn_deleteMulti_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrIdx = this.Grid00.getSelectedDatasetRows();
+	this.ds_data.deleteMultiRows(arrIdx);
+};
+
+this.btn_reset_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_data.reset();
+};
+
+this.btn_getOrg_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_data.rowposition;
+	var sRtn = this.ds_data.getOrgColumn(nRow, "FULL_NAME");
+	this.edt_rtn2.set_value(sRtn);		
+};
+this.btn_getDel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = this.ds_data.getDeletedColumn(0, "FULL_NAME");	
+	this.edt_rtn3.set_value(sRtn);		
+};
+
+this.btn_copyRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_data.addRow();
+	var sCol = "FULL_NAME=DEPT_NAME, DEPT_CD=DEPT_CD";
+	this.ds_data.copyRow(nRow, this.ds_dept, this.ds_dept.rowposition, sCol);
+	
+};
+
+this.btn_copyData_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+		this.ds_data.copyData(this.ds_dept);	
+		this.Grid00.createFormat();
+};
+
+
+this.btn_findRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_data.findRow("EMPL_ID", "BB001");
+	this.edt_rtn4.set_value("Row Index: " + nRow);
+};
+]]></Script>
+  </Form>
+</FDL>

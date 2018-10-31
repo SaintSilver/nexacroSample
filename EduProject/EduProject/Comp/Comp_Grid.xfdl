@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Grid" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="2">
+        <Grid id="Grid00" taborder="1" left="10" top="64" height="216" right="10" binddataset="ds_emp" enable="true">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="100"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="22" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Empl ID"/>
+                <Cell col="1" text="Empl Name"/>
+                <Cell col="2" text="Dept Code"/>
+                <Cell col="3" text="Hire Date"/>
+                <Cell col="4" text="Annual Salary"/>
+                <Cell col="5" text="Gender"/>
+                <Cell col="6" text="Married"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CD"/>
+                <Cell col="3" text="bind:HIRE_DATE"/>
+                <Cell col="4" text="bind:SALARY" textAlign="right"/>
+                <Cell col="5" text="bind:GENDER"/>
+                <Cell col="6" text="bind:MARRIED"/>
+              </Band>
+              <Band id="summary">
+                <Cell text="Sum."/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+                <Cell col="4" text="expr:dataset.getSum(&quot;SALARY&quot;)" displaytype="number" textAlign="right"/>
+                <Cell col="5"/>
+                <Cell col="6"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="15" left="10" top="64" height="216" binddataset="ds_emp" enable="true" positionstep="1" width="770">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48" band="left"/>
+                <Column size="120" band="left"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="130"/>
+                <Column size="90"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="100" band="right"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell colspan="2" text="left band" background="olive"/>
+                <Cell col="2" colspan="8" text="body band"/>
+                <Cell col="10" text="right band" background="olive"/>
+                <Cell row="1" text="No" background="olive"/>
+                <Cell row="1" col="1" text="Name" background="olive"/>
+                <Cell row="1" col="2" text="Empl ID"/>
+                <Cell row="1" col="3" text="Dept Code"/>
+                <Cell row="1" col="4" text="Dept Name"/>
+                <Cell row="1" col="5" text="Position"/>
+                <Cell row="1" col="6" text="Hire Date"/>
+                <Cell row="1" col="7" text="Gender"/>
+                <Cell row="1" col="8" text="Memo"/>
+                <Cell row="1" col="9" text="Married"/>
+                <Cell row="1" col="10" text="Salary" background="olive"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow+1" cssclass="grd_fix_left"/>
+                <Cell col="1" text="bind:FULL_NAME" cssclass="grd_fix_left"/>
+                <Cell col="2" text="bind:EMPL_ID"/>
+                <Cell col="3" text="bind:DEPT_CD"/>
+                <Cell col="4" text="bind:DEPT_CD" displaytype="combotext" combodataset="ds_dept" combocodecol="DEPT_CD" combodatacol="DEPT_NAME"/>
+                <Cell col="5" text="bind:POS_CD"/>
+                <Cell col="6" text="bind:HIRE_DATE"/>
+                <Cell col="7" text="bind:GENDER"/>
+                <Cell col="8" text="bind:MEMO"/>
+                <Cell col="9" text="bind:MARRIED"/>
+                <Cell col="10" text="bind:SALARY" cssclass="grd_fix_right" textAlign="right"/>
+              </Band>
+            </Format>
+            <Format id="format1">
+              <Columns>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="100"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="22" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Empl ID"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Dept Code"/>
+                <Cell col="3" text="Hire Date"/>
+                <Cell col="4" text="Annual Salary"/>
+                <Cell col="5" text="Gender"/>
+                <Cell col="6" text="Married"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CD"/>
+                <Cell col="3" text="bind:HIRE_DATE"/>
+                <Cell col="4" text="bind:SALARY" textAlign="right"/>
+                <Cell col="5" text="bind:GENDER"/>
+                <Cell col="6" text="bind:MARRIED"/>
+              </Band>
+              <Band id="summary">
+                <Cell colspan="4" text="Avg."/>
+                <Cell col="4" text="expr:dataset.getAvg(&quot;SALARY&quot;)" displaytype="number" textAlign="right"/>
+                <Cell col="5"/>
+                <Cell col="6"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <CheckBox id="chk_cellSize" taborder="4" text="Cell Size" left="20" top="384" width="89" height="24" textPadding="0px 10px 0px 0px" iconPosition="right" onclick="chk_cellSize_onclick"/>
+        <CheckBox id="chk_cellMove" taborder="3" text="Cell Moving" left="20" top="352" width="103" height="24" textPadding="0px 10px 0px 0px" iconPosition="right" onclick="chk_cellMove_onclick"/>
+        <CheckBox id="chk_autoFit" taborder="2" text="Auto Fit" left="20" top="320" width="79" height="24" fittocontents="none" padding="" textPadding="0px 10px 0px 0px" iconPosition="right" onclick="chk_autoFit_onclick"/>
+        <Radio id="rdo_autoSizeBand" taborder="8" left="138" top="439" width="204" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="1" value="body" onitemchanged="rdo_autoSizeBand_onitemchanged" enable="true" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">body</Col>
+                <Col id="datacolumn">body</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">head</Col>
+                <Col id="datacolumn">head</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">allband</Col>
+                <Col id="datacolumn">allband</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="rdo_cellSize" taborder="5" left="chk_cellSize:5" top="384" width="160" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="1" value="col" onitemchanged="rdo_cellSize_onitemchanged" enable="false" innerdataset="innerdataset" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">col</Col>
+                <Col id="datacolumn">col</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">row</Col>
+                <Col id="datacolumn">row</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">both</Col>
+                <Col id="datacolumn">both</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="rdo_selectType" taborder="13" left="488" top="352" width="264" height="40" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="2" value="row" onitemchanged="rdo_selectType_onitemchanged" enable="true" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">row</Col>
+                <Col id="datacolumn">row</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">multirow</Col>
+                <Col id="datacolumn">multirow</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">cell</Col>
+                <Col id="datacolumn">cell</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">area</Col>
+                <Col id="datacolumn">area</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">multiarea</Col>
+                <Col id="datacolumn">multiarea</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="rdo_autoSize" taborder="7" left="138" top="416" width="272" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="1" value="none" onitemchanged="rdo_autoSize_onitemchanged" enable="true" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">col</Col>
+                <Col id="datacolumn">col</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">row</Col>
+                <Col id="datacolumn">row</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">both</Col>
+                <Col id="datacolumn">both</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static03" taborder="6" text="Auto Size Type" left="20" top="416" width="113" height="24"/>
+        <Static id="Static02" taborder="18" text="No Data Text" left="392" top="320" width="91" height="24"/>
+        <Static id="Static04" taborder="19" text="Select Type" left="392" top="352" width="91" height="24"/>
+        <Edit id="edt_noData" taborder="10" left="Static02:5" top="320" width="140" height="24" value="No Data..."/>
+        <Button id="btn_apply" taborder="11" text="Apply" left="edt_noData:5" top="320" width="48" height="24" onclick="btn_apply_onclick"/>
+        <Button id="btn_reset" taborder="12" text="reset" left="btn_apply:5" top="320" width="48" height="24" onclick="btn_reset_onclick"/>
+        <Static id="Static06" taborder="0" text="Grid" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="20" text="☞ Default" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static00" taborder="21" text="☞ Base Properties" left="10" top="296" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="22" text="☞ Column Fix" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <CheckBox id="chk_sum" taborder="9" text="Summary Top" top="472" width="112" height="24" onclick="chk_sum_onclick" iconPosition="right" textPadding="0px 10px 0px 0px" left="20"/>
+        <Static id="Static05" taborder="23" text="☞ Grid Format" left="10" top="296" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Button id="btn_format" taborder="16" text="Format" left="22" top="320" width="72" height="24" positionstep="1" onclick="btn_format_onclick"/>
+        <Button id="btn_default" taborder="17" text="Default" left="99" top="320" width="72" height="24" onclick="btn_default_onclick" positionstep="1"/>
+        <Static id="st_result" taborder="24" text="" left="488" top="429" width="264" height="53" verticalAlign="top"/>
+        <Button id="btn_select" taborder="14" text="Get Selected" left="488" top="396" width="146" height="26" onclick="btn_select_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp" keystring="" cancolumnchange="ds_emp_cancolumnchange" onrowsetchanged="ds_emp_onrowsetchanged" onrowposchanged="ds_emp_onrowposchanged">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">BB002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Ray</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">DD001</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// Auto Fit - 
+this.chk_autoFit_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	if(obj.value){
+		this.Grid00.set_autofittype("col");
+	}
+	else{
+		this.Grid00.set_autofittype("none");
+	}
+};
+
+this.chk_cellMove_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	if(obj.value){
+		this.Grid00.set_cellmovingtype("col");
+	}
+	else{
+		this.Grid00.set_cellmovingtype("none");
+	}
+};
+
+this.chk_cellSize_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	if(obj.value){
+		this.rdo_cellSize.set_enable(true);
+		this.Grid00.set_cellsizingtype("col")
+	}
+	else{
+		this.rdo_cellSize.set_enable(false);
+		this.Grid00.set_cellsizingtype("none")
+	}
+};
+
+this.rdo_cellSize_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Grid00.set_cellsizingtype(e.postvalue);
+};
+
+this.rdo_autoSize_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Grid00.set_autosizingtype(e.postvalue);
+};
+
+this.rdo_autoSizeBand_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Grid00.set_autosizebandtype(e.postvalue);
+};
+
+this.btn_apply_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_emp.deleteAll();
+	this.Grid00.set_nodatatext(this.edt_noData.value);
+};
+
+this.btn_reset_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_emp.reset();
+};
+
+this.rdo_selectType_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Grid00.set_selecttype(e.postvalue);
+};
+
+this.btn_select_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.st_result.set_text("");	
+	this.st_result.set_fittocontents("none");
+	
+	var sRtn = "";
+	if(this.rdo_selectType.value == "multirow"){
+		var arrRow = this.Grid00.getSelectedDatasetRows();
+		for(var i=0; i<arrRow.length; i++){
+			sRtn += "Selected Row Index: " + arrRow[i] + "\n";
+		}	
+	}
+	else if(this.rdo_selectType.value == "area" || this.rdo_selectType.value == "multiarea"){
+		sRtn   = "Start = row: " + this.Grid00.selectstartrow + ", Column: " + this.Grid00.selectstartcol;
+		sRtn += "\n";
+		sRtn += "End   = row: " + this.Grid00.selectendrow + ", Column: " + this.Grid00.selectendcol;
+	}
+	this.st_result.set_text(sRtn);
+	this.st_result.set_fittocontents("height");	
+};
+
+this.chk_sum_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	if(obj.value){
+		this.Grid00.set_summarytype("top");
+	}
+	else{
+		this.Grid00.set_summarytype("default");
+	}
+};
+
+this.btn_format_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid01.set_formatid("format1");
+};
+
+this.btn_default_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid01.set_formatid("default");
+};
+]]></Script>
+  </Form>
+</FDL>

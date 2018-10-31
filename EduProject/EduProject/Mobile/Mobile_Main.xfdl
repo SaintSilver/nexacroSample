@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Mobile_Main" width="480" height="768" titletext="New Form">
+    <Layouts>
+      <Layout height="768" mobileorientation="portrait" screenid="Phone_screen" width="480">
+        <Div id="div_work" taborder="0" left="0" top="88" text="" right="0" bottom="0" border="0px none" cssclass="div_MB_work" url="Mobile::Mobile_Main_Sub.xfdl"/>
+        <Static id="Static02" taborder="2" left="0" top="0" height="88" right="0" cssclass="sta_TF_bg"/>
+        <Button id="btn_menu" taborder="1" left="15" top="35" width="32" height="19" onclick="btn_menu_onclick" cssclass="btn_MB_menu"/>
+        <Button id="btn_home" taborder="3" top="24" height="41" cssclass="btn_MB_home" width="44" left="418" onclick="btn_home_onclick"/>
+        <Static id="Static00" taborder="4" left="136" top="23" width="208" height="42" cssclass="sta_MB_titlelogo"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_menu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nLeft = system.clientToScreenX(this, 10);
+	var nTop  = system.clientToScreenY(this, 10);
+
+	var objChild = new ChildFrame("popMobile", nLeft, nTop, 400, 400);
+	objChild.set_formurl("Mobile::Pop_Mobile.xfdl");
+	objChild.set_openalign("center middle");
+	objChild.set_dragmovetype("all");  
+
+    objChild.showModal(this.getOwnerFrame()
+                     , {}
+                     , this
+                     , "fn_callback_pop");
+	
+};
+
+this.fn_callback_pop = function(sPopupId, sReturn)
+{
+	if(sReturn == undefined){
+		sReturn = "";
+	}
+	if(sPopupId == "popMobile")
+	{
+		if(sReturn.length > 0){
+			var arrRtn = sReturn.split("|");
+			this.ds_data.setColumn(this.ds_data.rowposition, "MENU_ID", arrRtn[0]);
+			this.ds_data.setColumn(this.ds_data.rowposition, "MENU_NAME", arrRtn[1]);
+			this.ds_data.setColumn(this.ds_data.rowposition, "MENU_URL", arrRtn[2]);
+			this.div_work.set_url(arrRtn[2]);
+		}
+	}
+};
+this.btn_home_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_work.set_url("Mobile::Mobile_Main_Sub.xfdl");
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data" keystring="">
+        <ColumnInfo>
+          <Column id="MENU_ID" type="STRING" size="10"/>
+          <Column id="MENU_NAME" type="STRING" size="10"/>
+          <Column id="MENU_URL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="MENU_NAME">employees</Col>
+            <Col id="MENU_ID">0001</Col>
+            <Col id="MENU_URL">Mobile::MobileWork.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">camera</Col>
+            <Col id="MENU_ID">0002</Col>
+            <Col id="MENU_URL">Mobile::MobileCamera.xfdl</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

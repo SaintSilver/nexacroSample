@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Base" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="3">
+        <Static id="Static33" taborder="75" text="" left="159" top="465" height="100" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static34" taborder="76" text="" left="159" top="408" height="170" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <PopupMenu id="PopupMenu00" left="266" top="472" width="116" height="86" innerdataset="@gds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" levelcolumn="MENU_LEVEL" iconcolumn="MENU_ICON" hotkeycolumn="MENU_KEY" enablecolumn="MENU_ENABLE" positionstep="1"/>
+        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="220" top="419" width="270" height="142" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2">
+          <Layouts>
+            <Layout>
+              <Static id="Static04" taborder="0" text="Button" left="5" top="48" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static03" taborder="0" text="" left="84" top="48" width="165" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static05" taborder="0" text="Edit" left="5" top="91" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static06" taborder="0" text="" left="84" top="91" width="165" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static11" taborder="0" text="Static" left="5" top="5" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static12" taborder="0" text="" left="84" top="5" width="165" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Button id="Button00" taborder="3" text="Search" left="92" top="57" width="60" height="25" right="" bottom=""/>
+              <Edit id="Edit00" taborder="5" left="92" top="103" width="132" height="24" right="" bottom="" value="nexacro platform"/>
+              <Static id="Static25" taborder="8" text="nexacro platform" left="92" top="17" width="116" height="20" right="" bottom=""/>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+        <Static id="Static19" taborder="44" text="Spin" left="10" top="433" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static04" taborder="45" text="Button" left="10" top="89" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static03" taborder="46" text="" left="159" top="89" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static05" taborder="47" text="Edit" left="10" top="138" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static06" taborder="48" text="" left="159" top="138" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static07" taborder="49" text="MaskEdit" left="10" top="187" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static08" taborder="50" text="" left="159" top="187" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static09" taborder="51" text="TextArea" left="10" top="236" width="150" height="100" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static10" taborder="52" text="" left="159" top="236" height="100" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static11" taborder="53" text="Static" left="10" top="40" width="150" height="50" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static12" taborder="54" text="" left="159" top="40" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static15" taborder="55" text="CheckBox" left="10" top="384" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static16" taborder="56" text="" left="159" top="384" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static01" taborder="57" text="ImageViwer" left="10" top="482" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static20" taborder="58" text="" left="159" top="433" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static21" taborder="59" text="Calendar" left="10" top="335" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static22" taborder="60" text="" left="159" top="335" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static02" taborder="61" text="" left="159" top="482" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static13" taborder="62" text="ProgressBar" left="10" top="531" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static14" taborder="63" text="" left="159" top="531" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static00" taborder="0" text="Components - Base" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Button id="Button00" taborder="4" text="Save" left="170" top="98" width="100" height="32" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Edit id="Edit00" taborder="6" left="170" top="151" width="180" height="24" value="nexacro platform"/>
+        <MaskEdit id="MaskEdit00" taborder="8" left="170" top="200" width="134" height="24" value="8307011234567" type="string" textAlign="center" format="######-#######"/>
+        <MaskEdit id="MaskEdit01" taborder="9" left="315" top="200" width="116" height="24" value="12345.88" format="#,###.00"/>
+        <TextArea id="TextArea00" taborder="11" left="170" top="246" width="220" height="80" value="nexacro platform&#10;Hello World&#10;TextArea Component"/>
+        <Static id="Static25" taborder="2" text="nexacro platform" left="170" top="53" width="120" height="24"/>
+        <CheckBox id="CheckBox00" taborder="16" text="Check" left="170" top="397" width="180" height="24" value="true"/>
+        <Spin id="Spin00" taborder="18" left="170" top="446" width="68" height="24" value="17"/>
+        <Calendar id="Calendar01" taborder="14" left="360" top="348" width="190" height="24" value="20170101102030000" dateformat="yyyy-MM-dd HH:mm:ss" editformat="yyyy-MM-dd HH:mm:ss"/>
+        <Calendar id="Calendar00" taborder="13" left="170" top="348" width="180" height="24" value="20170101"/>
+        <ImageViewer id="ImageViewer00" taborder="20" text="" left="170" top="487" width="172" height="40" image="URL(&quot;Images::nexacro_platform.png&quot;)"/>
+        <ProgressBar id="ProgressBar00" taborder="22" max="100" min="0" text="" left="169" top="544" width="381" height="24" pos="70"/>
+        <Button id="Button01" taborder="1" left="15" top="56" width="19" height="19" background="url(&quot;Images::img_comp_static.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button02" taborder="3" left="15" top="105" width="19" height="19" background="URL(&quot;Images::img_comp_button.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button03" taborder="5" left="15" top="154" width="19" height="19" background="URL(&quot;Images::img_comp_edit.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button04" taborder="7" left="15" top="203" width="19" height="19" background="URL(&quot;Images::img_comp_mask.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button05" taborder="10" left="15" top="277" width="19" height="19" background="URL(&quot;Images::img_comp_txt.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button06" taborder="12" left="15" top="351" width="19" height="19" background="URL(&quot;Images::img_comp_cal.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button07" taborder="15" left="15" top="400" width="19" height="19" background="URL(&quot;Images::img_comp_check.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button08" taborder="17" left="15" top="449" width="19" height="19" background="URL(&quot;Images::img_comp_spin.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button09" taborder="19" left="15" top="498" width="19" height="19" background="URL(&quot;Images::img_comp_image.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Button id="Button10" taborder="21" left="15" top="547" width="19" height="19" background="URL(&quot;Images::img_comp_progress.png&quot;) no-repeat center center" border="0px none" onclick="fn_open"/>
+        <Static id="Static17" taborder="64" text="ListBox" left="10" top="89" width="150" height="100" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static18" taborder="65" text="Radio" left="10" top="188" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static23" taborder="66" text="Grid" left="10" top="237" width="150" height="180" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static24" taborder="67" text="Menu" left="10" top="416" width="150" height="50" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static26" taborder="68" text="PopupMenu" left="10" top="465" width="150" height="100" border="" background="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static27" taborder="69" text="Combo" left="10" top="40" width="150" height="50" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Button id="Button11" taborder="23" left="15" top="56" width="19" height="19" background="URL(&quot;Images::img_comp_combo.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Button id="Button12" taborder="26" left="15" top="130" width="19" height="19" background="URL(&quot;Images::img_comp_list.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Button id="Button13" taborder="29" left="15" top="204" width="19" height="19" background="URL(&quot;Images::img_comp_radio.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Button id="Button14" taborder="31" left="15" top="318" width="19" height="19" background="URL(&quot;Images::img_comp_grid.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Button id="Button15" taborder="33" left="15" top="432" width="19" height="19" background="URL(&quot;Images::img_comp_menu.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Button id="Button16" taborder="35" left="15" top="506" width="19" height="19" background="URL(&quot;Images::imp_comp_pmenu.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="1"/>
+        <Static id="Static28" taborder="70" text="" left="159" top="40" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static29" taborder="71" text="" left="159" top="89" height="100" right="10" border="" background="" padding="" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_tablebg" positionstep="1"/>
+        <Static id="Static30" taborder="72" text="" left="159" top="188" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static31" taborder="73" text="" left="159" top="237" height="180" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Static id="Static32" taborder="74" text="" left="159" top="416" height="50" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1"/>
+        <Combo id="Combo00" taborder="24" text="nexacro platform" left="170" top="53" width="180" height="24" codecolumn="codecolumn" datacolumn="datacolumn" value="10" index="0" innerdataset="innerdataset" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="codecolumn">SU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="codecolumn">MO</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="codecolumn">TU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="codecolumn">WE</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="codecolumn">TH</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="codecolumn">FR</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="codecolumn">SA</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <ListBox id="ListBox00" taborder="27" left="170" top="99" width="180" height="81" codecolumn="codecolumn" datacolumn="datacolumn" value="TU" innerdataset="innerdataset" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="codecolumn">SU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="codecolumn">MO</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="codecolumn">TU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="codecolumn">WE</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="codecolumn">TH</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="codecolumn">FR</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="codecolumn">SA</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Radio id="Radio00" taborder="30" left="170" top="191" width="472" height="44" codecolumn="codecolumn" datacolumn="datacolumn" columncount="4" value="FR" innerdataset="innerdataset" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="codecolumn">SU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="codecolumn">MO</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="codecolumn">TU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="codecolumn">WE</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="codecolumn">TH</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="codecolumn">FR</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="codecolumn">SA</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Grid id="Grid00" taborder="32" left="170" top="243" width="491" height="169" binddataset="ds_data" autosizingtype="" autofittype="col" fillareatype="linerow" positionstep="1">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="150"/>
+                <Column size="150"/>
+                <Column size="128"/>
+                <Column size="73"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Hire Date"/>
+                <Cell col="2" text="Annual Salary"/>
+                <Cell col="3" text="Married"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:FULL_NAME" textAlign="center"/>
+                <Cell col="1" text="bind:HIRE_DATE" textAlign="center"/>
+                <Cell col="2" text="bind:SALARY" textAlign="right"/>
+                <Cell col="3" displaytype="checkboxcontrol" edittype="checkbox" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Menu id="Menu00" taborder="34" left="170" top="430" width="603" height="23" innerdataset="@gds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" levelcolumn="MENU_LEVEL" onmenuclick="Menu00_onmenuclick" popupitemheight="30" enablecolumn="MENU_ENABLE" hotkeycolumn="MENU_KEY" iconcolumn="MENU_ICON" positionstep="1"/>
+        <Button id="btn_popMenu" taborder="36" text="Click" left="170" top="474" width="90" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="1" onclick="btn_popMenu_onclick"/>
+        <Combo id="Combo01" taborder="25" text="nexacro platform" left="358" top="53" width="180" height="24" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" value="01" index="0" innerdataset="@ds_dept" positionstep="1"/>
+        <ListBox id="ListBox01" taborder="28" left="358" top="99" width="180" height="81" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" value="02" innerdataset="@ds_dept" text="HR Team" index="1" positionstep="1"/>
+        <Static id="Static35" taborder="77" text="" left="159" top="209" height="200" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <Static id="Static36" taborder="78" text="" left="159" top="40" height="170" right="10" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <Static id="Static37" taborder="79" text="Div" left="10" top="40" width="150" height="170" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <Button id="Button18" taborder="37" left="15" top="116" width="19" height="19" background="URL(&quot;Images::imp_comp_div.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="2"/>
+        <Static id="Static38" taborder="80" text="Tab" left="10" top="209" width="150" height="200" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <Button id="Button19" taborder="40" left="15" top="300" width="19" height="19" background="URL(&quot;Images::img_comp_tab.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="2"/>
+        <Static id="Static39" taborder="81" text="PopupDiv" left="10" top="408" width="150" height="170" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2"/>
+        <Button id="Button20" taborder="42" left="15" top="484" width="19" height="19" background="URL(&quot;Images::img_comp_pdiv.png&quot;) no-repeat center center" border="0px none" onclick="fn_open" positionstep="2"/>
+        <Div id="Div00" taborder="38" text="Div00" left="168" top="50" width="302" height="150" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2">
+          <Layouts>
+            <Layout>
+              <Static id="Static04" taborder="0" text="Button" left="5" top="48" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static03" taborder="0" text="" left="84" top="48" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static05" taborder="0" text="Edit" left="5" top="91" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static06" taborder="0" text="" left="84" top="91" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static11" taborder="0" text="Static" left="5" top="5" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static12" taborder="0" text="" left="84" top="5" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Button id="Button00" taborder="3" text="Search" left="92" top="57" width="60" height="25" right="" bottom=""/>
+              <Edit id="Edit00" taborder="5" left="92" top="103" width="132" height="24" right="" bottom="" value="nexacro platform"/>
+              <Static id="Static25" taborder="8" text="nexacro platform" left="92" top="17" width="116" height="20" right="" bottom=""/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="39" text="Div00" left="475" top="50" height="150" right="23" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" url="Comp::Comp_Base_Sub.xfdl" positionstep="2"/>
+        <Tab id="Tab00" taborder="41" tabindex="0" left="168" top="222" height="176" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2" width="302">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1">
+              <Layouts>
+                <Layout>
+                  <Static id="Static04" taborder="0" text="Button" left="5" top="48" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+                  <Static id="Static03" taborder="0" text="" left="84" top="48" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+                  <Static id="Static05" taborder="0" text="Edit" left="5" top="91" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+                  <Static id="Static06" taborder="0" text="" left="84" top="91" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+                  <Static id="Static11" taborder="0" text="Static" left="5" top="5" width="80" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+                  <Static id="Static12" taborder="0" text="" left="84" top="5" width="168" height="44" right="" bottom="" border="" background="" padding="" cssclass="sta_WF_tablebg"/>
+                  <Button id="Button00" taborder="3" text="Search" left="92" top="57" width="60" height="25" right="" bottom=""/>
+                  <Edit id="Edit00" taborder="5" left="92" top="103" width="132" height="24" right="" bottom="" value="nexacro platform"/>
+                  <Static id="Static25" taborder="8" text="nexacro platform" left="92" top="17" width="116" height="20" right="" bottom=""/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="Tabpage2"/>
+          </Tabpages>
+        </Tab>
+        <Button id="btn_popDiv" taborder="43" text="Click" left="168" top="418" width="48" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2" onclick="btn_popDiv_onclick"/>
+        <Tab id="Tab01" taborder="82" tabindex="0" left="475" top="222" height="176" right="23" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="2">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1" url="Comp::Comp_Base_Sub.xfdl"/>
+            <Tabpage id="Tabpage2" text="Tabpage2"/>
+          </Tabpages>
+        </Tab>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_data" keystring="">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83490000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">KR180</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76010000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">KR190</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Dillon</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20150401</Col>
+            <Col id="SALARY">62540000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">JP110</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">99050000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">JP390</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Joseph</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070304</Col>
+            <Col id="SALARY">61220000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">lightgray</Col>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="EMPL_ID">CN300</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="POS_CD">01</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">63030000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">KR310</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88450000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">KR350</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Ray</Col>
+            <Col id="POS_CD">01</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="SALARY">67420000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">CN160</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Cameron</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20010303</Col>
+            <Col id="SALARY">86250000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">KR260</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Aladdin</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20161003</Col>
+            <Col id="SALARY">67390000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="MEMO">lightgray</Col>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="EMPL_ID">JP140</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+
+this.fn_open = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+/*
+	var sID    = obj.user_MID;
+	var sName  = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "MENU_NAME");
+	var sURL   = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "FORM_URL");	
+	
+	nexacro.getApplication().mainframe.VFrameSet0.HFrameSet0.LeftFrame.form.fn_openForm(sID, sName, sURL);
+*/	
+};
+
+this.btn_popMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nX = parseInt(obj.width);	
+	var nY = 0;
+	this.PopupMenu00.trackPopupByComponent(obj, nX, nY);	
+};
+
+this.btn_popDiv_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nX = parseInt(obj.width);	
+	var nY = 0;
+	this.PopupDiv00.trackPopupByComponent(obj, nX, nY, 270, 150);	
+};
+]]></Script>
+  </Form>
+</FDL>

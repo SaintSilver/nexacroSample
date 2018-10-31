@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="App_Desktop" screenid="Desktop_screen" onload="Application_onload">
+    <Layout>
+      <MainFrame id="mainframe" showtitlebar="true" showstatusbar="true" width="1024" height="768" titletext="nexacro17 Education" statusbarheight="25" titlebarbuttongap="4" titlebarbuttonsize="19 19" titlebarheight="28">
+        <VFrameSet id="VFrameSet0" separatesize="50,*" showtitlebar="false">
+          <Frames>
+            <ChildFrame id="TopFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::TopFrame.xfdl"/>
+            <HFrameSet id="HFrameSet0" separatesize="200,*" showtitlebar="false">
+              <Frames>
+                <ChildFrame id="LeftFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::LeftFrame.xfdl"/>
+                <VFrameSet id="VFrameSet1" separatesize="30,*" showtitlebar="false">
+                  <Frames>
+                    <ChildFrame id="MDIFrame" formurl="FrameBase::MdiFrame.xfdl" showtitlebar="false"/>
+                    <FrameSet id="WorkFrame" showtitlebar="false">
+                      <Frames>
+                        <ChildFrame id="MainForm" formurl="FrameBase::MainForm.xfdl" showtitlebar="false" openstatus="maximize"/>
+                      </Frames>
+                    </FrameSet>
+                  </Frames>
+                </VFrameSet>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <Style url="xcssrc::EduProject.xcss"/>
+  </Application>
+  <Script type="xscript5.1"><![CDATA[this.av_WorkFrame = "";
+
+this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
+{
+	this.fn_init(obj);
+
+	if(nexacro.getEnvironmentVariable("ev_runMode") == "S"){
+		var strMsg = "\n";
+		strMsg += "넥사크로 플랫폼 사용자 교육을 위해 만들어진 샘플입니다.\n\n";
+		strMsg += "실제 프로젝트에서 그대로 사용하는 것은 적합하지 않습니다.\n\n\n";
+		strMsg += "빔프로젝터 해상도를 고려하여 1024*768 기준으로 작업되었습니다.\n";
+
+		if(!this.confirm(strMsg, "주의사항", "warning")){
+			this.exit();
+		};
+	}	
+};
+
+
+this.fn_init = function (obj)
+{
+	this.gds_menu.filter("MENU_FLAG == '1'");
+	this.av_WorkFrame = this.mainframe.VFrameSet0.HFrameSet0.VFrameSet1.WorkFrame;
+};
+
+
+this.App_Script = function ()
+{
+	return "App Script Desktop";
+};]]></Script>
+</ADL>

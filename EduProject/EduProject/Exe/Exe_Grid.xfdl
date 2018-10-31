@@ -1,0 +1,1919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe_Grid" width="800" height="600" titletext="Exe_Grid">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="5">
+        <Static id="Static06" taborder="0" text="Grid" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="1" text="☞ Exe 1 - Grid1" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Grid id="Grid1" taborder="2" left="10" top="64" height="193" binddataset="Dataset1" width="474" autofittype="col" oncellclick="Grid_oncellclick" onheadclick="Grid1_onheadclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="90"/>
+                <Column size="125"/>
+                <Column size="121"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="ID"/>
+                <Cell col="1" text="NAME"/>
+                <Cell col="2" text="DEPT"/>
+                <Cell col="3" text="HIRE DATE"/>
+                <Cell col="4" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID" displaytype="mask" edittype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                <Cell col="3" text="bind:HIRE_DATE" edittype="date" displaytype="date"/>
+                <Cell col="4" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+              </Band>
+            </Format>
+            <Format id="default_00">
+              <Columns>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="SALARY"/>
+                <Cell col="1" text="GENDER"/>
+                <Cell col="2" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:SALARY"/>
+                <Cell col="1" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;"/>
+                <Cell col="2" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid3" taborder="3" top="61" width="780" height="230" binddataset="Dataset3" left="10" positionstep="1" oncelldblclick="Grid3_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="32"/>
+                <Column size="139"/>
+                <Column size="155"/>
+                <Column size="99"/>
+                <Column size="143"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="192"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell/>
+                <Cell col="1" text="Dept"/>
+                <Cell col="2" text="Name"/>
+                <Cell col="3" text="ID"/>
+                <Cell col="4" text="Date"/>
+                <Cell col="5" text="Salary"/>
+                <Cell col="6" text="Bonus"/>
+                <Cell col="7" text="Gender"/>
+                <Cell col="8" text="Married"/>
+                <Cell col="9" text="Phone No"/>
+                <Cell col="10" text="E-Mail"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow+1"/>
+                <Cell col="1" text="bind:DEPT_CODE" displaytype="combotext" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                <Cell col="2" text="bind:FULL_NAME"/>
+                <Cell col="3" text="bind:EMPL_ID"/>
+                <Cell col="4" text="bind:HIRE_DATE"/>
+                <Cell col="5" text="bind:SALARY"/>
+                <Cell col="6" text="bind:BONUS"/>
+                <Cell col="7" text="bind:GENDER"/>
+                <Cell col="8" text="bind:MARRIED"/>
+                <Cell col="9" text="bind:PHONE_NO"/>
+                <Cell col="10" text="bind:E_MAIL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid1_1" taborder="4" left="490" top="64" height="193" binddataset="Dataset1" width="300" oncellclick="Grid_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="125"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="ID"/>
+                <Cell col="1" text="DEPT"/>
+                <Cell col="2" rowspan="2" text="MARRIED"/>
+                <Cell row="1" text="NAME"/>
+                <Cell row="1" col="1" text="HIRE DATE"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID" displaytype="mask" edittype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="1" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                <Cell col="2" rowspan="2" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell row="1" text="bind:FULL_NAME"/>
+                <Cell row="1" col="1" text="bind:HIRE_DATE" edittype="date" displaytype="date"/>
+              </Band>
+            </Format>
+            <Format id="default_00">
+              <Columns>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="SALARY"/>
+                <Cell col="1" text="GENDER"/>
+                <Cell col="2" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:SALARY"/>
+                <Cell col="1" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;"/>
+                <Cell col="2" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static01" taborder="5" text="☞ Exe 1 - Grid1_1" left="490" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_Exe1_1" taborder="6" text="Exe1_1" left="10" top="267" width="80" height="25" onclick="btn_Exe1_1_onclick"/>
+        <Button id="btn_Exe1_3" taborder="7" text="Exe1_3" left="100" top="267" width="80" height="25" onclick="btn_Exe1_3_onclick"/>
+        <Static id="Static02" taborder="8" text="☞ Exe 2 - Grid2" left="10" top="320" width="250" height="24" cssclass="sta_WF_label"/>
+        <Grid id="Grid2" taborder="9" left="10" top="344" height="193" binddataset="Dataset2" width="780" onheadclick="Grid2_onheadclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="90"/>
+                <Column size="125"/>
+                <Column size="121"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="ID"/>
+                <Cell col="1" text="NAME"/>
+                <Cell col="2" text="DEPT"/>
+                <Cell col="3" text="HIRE DATE"/>
+                <Cell col="4" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID" displaytype="mask" edittype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                <Cell col="3" text="bind:HIRE_DATE" edittype="date" displaytype="date"/>
+                <Cell col="4" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+              </Band>
+            </Format>
+            <Format id="default_00">
+              <Columns>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="SALARY"/>
+                <Cell col="1" text="GENDER"/>
+                <Cell col="2" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:SALARY"/>
+                <Cell col="1" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;"/>
+                <Cell col="2" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe2_1" taborder="10" text="Exe2_1" left="10" top="544" width="80" height="25" onclick="btn_Exe2_1_onclick"/>
+        <Button id="btn_Exe2_2" taborder="11" text="Exe2_2" left="100" top="544" width="80" height="25" onclick="btn_Exe2_2_onclick"/>
+        <Static id="Static03" taborder="12" text="☞ Exe 3 - Grid3" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Button id="btn_Exe3_1" taborder="13" text="Exe3_1" left="10" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_1_onclick"/>
+        <Button id="btn_Exe3_2" taborder="14" text="Exe3_2" left="100" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_2_onclick"/>
+        <Button id="btn_Exe3_3" taborder="15" text="Exe3_3" left="190" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_3_onclick"/>
+        <Button id="btn_Exe3_4" taborder="16" text="Exe3_4" left="280" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_4_onclick"/>
+        <Button id="btn_Exe3_05" taborder="17" text="Exe3_5" left="370" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_5_onclick"/>
+        <Button id="btn_Exe3_6" taborder="18" text="Exe3_6" left="460" top="302" width="80" height="25" positionstep="1" onclick="btn_Exe3_6_onclick"/>
+        <Grid id="Grid3_1" taborder="19" top="334" width="780" height="120" binddataset="Dataset3" left="10" positionstep="1">
+          <Formats>
+            <Format id="default"/>
+            <Format id="format00"/>
+          </Formats>
+        </Grid>
+        <Grid id="Grid3_2" taborder="20" top="460" width="780" height="120" binddataset="Dataset3" left="10" positionstep="1">
+          <Formats>
+            <Format id="default"/>
+          </Formats>
+        </Grid>
+        <Button id="btn_Cancel" taborder="21" text="Cancel" left="550" top="302" width="80" height="25" positionstep="1" onclick="btn_Cancel_onclick"/>
+        <Static id="Static00" taborder="22" text="☞ Exe 4 - Grid4" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="2"/>
+        <Grid id="Grid4" taborder="23" top="61" binddataset="Dataset4" left="10" positionstep="2" right="10" bottom="250" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false" oncelldblclick="Grid4_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="251"/>
+                <Column size="159"/>
+                <Column size="80"/>
+                <Column size="131"/>
+                <Column size="200"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="ORG_NAME"/>
+                <Cell col="1" text="POSITION"/>
+                <Cell col="2" text="GENDER"/>
+                <Cell col="3" text="PHONE_NO"/>
+                <Cell col="4" text="E_MAIL"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:ORG_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:LEVEL"/>
+                <Cell col="1" text="bind:POSITION"/>
+                <Cell col="2" text="bind:GENDER"/>
+                <Cell col="3" text="bind:PHONE_NO"/>
+                <Cell col="4" text="bind:E_MAIL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static04" taborder="24" text="☞ Exe 5 - Grid5" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="3"/>
+        <Button id="btn_Exe5_1" taborder="25" text="Exe5_1" left="10" top="520" width="80" height="25" positionstep="3" onclick="btn_Exe5_1_onclick"/>
+        <Button id="btn_Exe5_2" taborder="26" text="Exe5_2" left="100" top="520" width="80" height="25" positionstep="3" onclick="btn_Exe5_2_onclick"/>
+        <Grid id="Grid5" taborder="27" left="10" top="62" height="448" positionstep="3" right="10" binddataset="Dataset5">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="202"/>
+                <Column size="162"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="93"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CORP"/>
+                <Cell col="1" text="DEPT"/>
+                <Cell col="2" text="NAME"/>
+                <Cell col="3" text="ID"/>
+                <Cell col="4" text="SALARY"/>
+                <Cell col="5" text="BONUS"/>
+                <Cell col="6" text="getRowLevel"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:(dataset.getRowLevel(currow) == 2 ? CORP + &quot; Sum&quot; : CORP)" suppress="1"/>
+                <Cell col="1" text="expr:(dataset.getRowLevel(currow) == 0 ? DEPT : (dataset.getRowLevel(currow) == 1 ? DEPT + &quot; Sum&quot; : &quot;&quot;))" suppress="1"/>
+                <Cell col="2" text="bind:NAME"/>
+                <Cell col="3" text="bind:ID"/>
+                <Cell col="4" text="bind:SALARY"/>
+                <Cell col="5" text="bind:BONUS"/>
+                <Cell col="6" text="expr:dataset.getRowLevel(currow)"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid6" taborder="28" left="10" top="62" height="313" positionstep="4" binddataset="Dataset6" treeusecheckbox="false" treeinitstatus="expand,all" width="780">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="202"/>
+                <Column size="162"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CORP"/>
+                <Cell col="1" text="DEPT"/>
+                <Cell col="2" text="NAME"/>
+                <Cell col="3" text="ID"/>
+                <Cell col="4" text="SALARY"/>
+                <Cell col="5" text="BONUS"/>
+              </Band>
+              <Band id="body">
+                <Cell treelevel="expr:comp.parent.fn_level(dataset.getRowLevel(currow))" text="bind:CORP"/>
+                <Cell col="1" text="bind:DEPT"/>
+                <Cell col="2" text="bind:NAME"/>
+                <Cell col="3" text="bind:ID"/>
+                <Cell col="4" text="bind:SALARY"/>
+                <Cell col="5" text="bind:BONUS"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe5_3" taborder="29" text="Exe5_3" left="190" top="520" width="80" height="25" positionstep="3" onclick="btn_Exe5_3_onclick"/>
+        <Button id="btn_Exe6_1" taborder="30" text="Exe6_1" left="10" top="385" width="80" height="25" positionstep="4" onclick="btn_Exe6_1_onclick"/>
+        <Static id="Static05" taborder="31" text="☞ Exe 6 - Grid6" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="4"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset1" keystring="">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR020</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR030</Col>
+            <Col id="HIRE_DATE">20030805</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+            <Col id="HIRE_DATE">20180201</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="HIRE_DATE">20171020</Col>
+            <Col id="SALARY"/>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="HIRE_DATE">20130102</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR230</Col>
+            <Col id="HIRE_DATE">20161120</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset2" keystring="" cancolumnchange="Dataset2_cancolumnchange" oncolumnchanged="Dataset2_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR020</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR030</Col>
+            <Col id="HIRE_DATE">20030805</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+            <Col id="HIRE_DATE">20180201</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="HIRE_DATE">20171020</Col>
+            <Col id="SALARY"/>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="HIRE_DATE">20130102</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR230</Col>
+            <Col id="HIRE_DATE">20161120</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset4" reversesubsum="true" oncolumnchanged="Dataset4_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="ORG_NAME" type="STRING" size="256"/>
+          <Column id="ORG_CODE" type="STRING" size="256"/>
+          <Column id="LEVEL" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="PHONE_NO" type="STRING" size="256"/>
+          <Column id="E_MAIL" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="WEDD_DAY" type="STRING" size="256"/>
+          <Column id="COL_CHK" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="ORG_NAME">nexacro</Col>
+            <Col id="ORG_CODE">NP</Col>
+            <Col id="LEVEL">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Korea Corporation</Col>
+            <Col id="ORG_CODE">KR</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Joseph</Col>
+            <Col id="ORG_CODE">KR000</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="POSITION">Chairman</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0105339755</Col>
+            <Col id="E_MAIL">Joseph@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Management Group</Col>
+            <Col id="ORG_CODE">KR1</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Anne</Col>
+            <Col id="ORG_CODE">KR010</Col>
+            <Col id="LEVEL">3</Col>
+            <Col id="POSITION">Division Manager</Col>
+            <Col id="SALARY">2000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107401829</Col>
+            <Col id="E_MAIL">Anne@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20051004</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Education Team</Col>
+            <Col id="ORG_CODE">KR11</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">John </Col>
+            <Col id="ORG_CODE">KR101</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0104293599</Col>
+            <Col id="E_MAIL">John@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19871015</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Jackson</Col>
+            <Col id="ORG_CODE">KR102</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107726763</Col>
+            <Col id="E_MAIL">Jackson@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19980502</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Adam</Col>
+            <Col id="ORG_CODE">KR103</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107314011</Col>
+            <Col id="E_MAIL">Adamr@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Melon</Col>
+            <Col id="ORG_CODE">KR104</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104316461</Col>
+            <Col id="E_MAIL">Melon@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Kate </Col>
+            <Col id="ORG_CODE">KR105</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0102320795</Col>
+            <Col id="E_MAIL">Kate@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Sales Team</Col>
+            <Col id="ORG_CODE">KR12</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Bts</Col>
+            <Col id="ORG_CODE">KR106</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0106348086</Col>
+            <Col id="E_MAIL">Bts@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Andrew </Col>
+            <Col id="ORG_CODE">KR107</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Department Manager</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0101251107</Col>
+            <Col id="E_MAIL">Andrew@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Belle</Col>
+            <Col id="ORG_CODE">KR108</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104457429</Col>
+            <Col id="E_MAIL">Belle@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19880505</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Elsa</Col>
+            <Col id="ORG_CODE">KR109</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0109825316</Col>
+            <Col id="E_MAIL">Ann@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19861022</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Marketing Team</Col>
+            <Col id="ORG_CODE">KR13</Col>
+            <Col id="LEVEL">3</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0103173402</Col>
+            <Col id="E_MAIL">Lyle@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19971030</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Kein </Col>
+            <Col id="ORG_CODE">KR111</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104643738</Col>
+            <Col id="E_MAIL">Kein@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Ivy</Col>
+            <Col id="ORG_CODE">KR112</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Department Manager</Col>
+            <Col id="SALARY">2000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0102989094</Col>
+            <Col id="E_MAIL">Ivy@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Kara</Col>
+            <Col id="ORG_CODE">KR113</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0107956572</Col>
+            <Col id="E_MAIL">Kara@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20050203</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Twice</Col>
+            <Col id="ORG_CODE">KR114</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0107903476</Col>
+            <Col id="E_MAIL">Twice@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20130416</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Japen Corporation</Col>
+            <Col id="ORG_CODE">JP</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0107903476</Col>
+            <Col id="E_MAIL">Isaiah@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20130416</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Oleg</Col>
+            <Col id="ORG_CODE">JP000</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="POSITION">Chairman</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0105339755</Col>
+            <Col id="E_MAIL">Oleg@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Management Group</Col>
+            <Col id="ORG_CODE">JP1</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Aladdin</Col>
+            <Col id="ORG_CODE">JP010</Col>
+            <Col id="LEVEL">3</Col>
+            <Col id="POSITION">Division Manager</Col>
+            <Col id="SALARY">2000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107401829</Col>
+            <Col id="E_MAIL">Aladdin@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20051004</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Education Team</Col>
+            <Col id="ORG_CODE">JP11</Col>
+            <Col id="LEVEL">3</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0106851530</Col>
+            <Col id="E_MAIL">Evelyn@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19880623</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Cameron</Col>
+            <Col id="ORG_CODE">JP101</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0104293599</Col>
+            <Col id="E_MAIL">Cameron@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19871015</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Duncan</Col>
+            <Col id="ORG_CODE">JP102</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107726763</Col>
+            <Col id="E_MAIL">Duncan@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19980502</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">September</Col>
+            <Col id="ORG_CODE">JP103</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107314011</Col>
+            <Col id="E_MAIL">September@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Daquan</Col>
+            <Col id="ORG_CODE">JP104</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104316461</Col>
+            <Col id="E_MAIL">Daquan@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Channing</Col>
+            <Col id="ORG_CODE">JP105</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0102320795</Col>
+            <Col id="E_MAIL">Channing@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Sales Team</Col>
+            <Col id="ORG_CODE">JP12</Col>
+            <Col id="LEVEL">3</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0107642474</Col>
+            <Col id="E_MAIL">Lenore@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19890505</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Curran</Col>
+            <Col id="ORG_CODE">JP106</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0106348086</Col>
+            <Col id="E_MAIL">Curran@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="WEDD_DAY">20140720</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Idona</Col>
+            <Col id="ORG_CODE">JP107</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Department Manager</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0101251107</Col>
+            <Col id="E_MAIL">Idona@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="WEDD_DAY">20150531</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Sopoline</Col>
+            <Col id="ORG_CODE">JP108</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104457429</Col>
+            <Col id="E_MAIL">Sopoline@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19880505</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Cedric</Col>
+            <Col id="ORG_CODE">JP109</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0109825316</Col>
+            <Col id="E_MAIL">Cedric@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19861022</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Lyle</Col>
+            <Col id="ORG_CODE">JP110</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Supervisor</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0103173402</Col>
+            <Col id="E_MAIL">Lyle@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19971030</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Marketing Team</Col>
+            <Col id="ORG_CODE">JP13</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Adam</Col>
+            <Col id="ORG_CODE">JP111</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0104643738</Col>
+            <Col id="E_MAIL">Adam@nexacro.com</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="WEDD_DAY">19971116</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Hyatt</Col>
+            <Col id="ORG_CODE">JP112</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Department Manager</Col>
+            <Col id="SALARY">2000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0102989094</Col>
+            <Col id="E_MAIL">Hyatt@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Melanie</Col>
+            <Col id="ORG_CODE">JP113</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0107956572</Col>
+            <Col id="E_MAIL">Melanie@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20050203</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Isaiah</Col>
+            <Col id="ORG_CODE">JP114</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Assistant Manager</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">0107903476</Col>
+            <Col id="E_MAIL">Isaiah@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20130416</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NAME">Dakota</Col>
+            <Col id="ORG_CODE">JP115</Col>
+            <Col id="LEVEL">4</Col>
+            <Col id="POSITION">Officer</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">0108938528</Col>
+            <Col id="E_MAIL">Dakota@nexacro.com</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="WEDD_DAY">20050407</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset3">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="POS_CODE" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="BONUS" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="E_MAIL" type="STRING" size="256"/>
+          <Column id="PHONE_NO" type="STRING" size="256"/>
+          <Column id="IMG_URL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="POS_CODE">10</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">John@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp10.png</Col>
+            <Col id="PHONE_NO">0104293599</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR020</Col>
+            <Col id="POS_CODE">10</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Jackson@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp11.png</Col>
+            <Col id="PHONE_NO">0107726763</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR030</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20030805</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Adamr@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp12.png</Col>
+            <Col id="PHONE_NO">0107314011</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="POS_CODE">30</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Melon@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp13.png</Col>
+            <Col id="PHONE_NO">0109086335</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="FULL_NAME">Kate </Col>
+            <Col id="EMPL_ID">KR050</Col>
+            <Col id="POS_CODE">10</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Kate@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp14.png</Col>
+            <Col id="PHONE_NO">0102320795</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20180201</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Kein@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp15.png</Col>
+            <Col id="PHONE_NO">0106348086</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Ivy</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20171020</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Ivy@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp16.png</Col>
+            <Col id="PHONE_NO">0101251107</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR130</Col>
+            <Col id="POS_CODE">30</Col>
+            <Col id="HIRE_DATE">20130102</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Kara@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp17.png</Col>
+            <Col id="PHONE_NO">0104457429</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR140</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20101109</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Twice@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp18.png</Col>
+            <Col id="PHONE_NO">0109825316</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="POS_CODE">10</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Bts@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp19.png</Col>
+            <Col id="PHONE_NO">0103173402</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">0</Col>
+            <Col id="E_MAIL">Andrew@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp20.png</Col>
+            <Col id="PHONE_NO">0104643738</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR230</Col>
+            <Col id="POS_CODE">20</Col>
+            <Col id="HIRE_DATE">20161120</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Belle@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp14.png</Col>
+            <Col id="PHONE_NO">0102989094</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="FULL_NAME">Elsa</Col>
+            <Col id="EMPL_ID">KR240</Col>
+            <Col id="POS_CODE">30</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">1</Col>
+            <Col id="E_MAIL">Ann@nexacro.com</Col>
+            <Col id="IMG_URL">Exe::img_emp10.png</Col>
+            <Col id="PHONE_NO">0107956572</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+          <Column id="CORP_CODE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">K10</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+            <Col id="CORP_CODE">K</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K20</Col>
+            <Col id="DEPT_NAME">Marketing(KR)</Col>
+            <Col id="CORP_CODE">K</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">K30</Col>
+            <Col id="DEPT_NAME">Sales(KR)</Col>
+            <Col id="CORP_CODE">K</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset5">
+        <ColumnInfo>
+          <Column id="CORP" type="STRING" size="256"/>
+          <Column id="DEPT" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="ID" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="BONUS" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">John </Col>
+            <Col id="ID">KR101</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Jackson</Col>
+            <Col id="ID">KR102</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Adam</Col>
+            <Col id="ID">KR103</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Melon</Col>
+            <Col id="ID">KR104</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Kate </Col>
+            <Col id="ID">KR105</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Bts</Col>
+            <Col id="ID">KR106</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Andrew </Col>
+            <Col id="ID">KR107</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Belle</Col>
+            <Col id="ID">KR108</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Elsa</Col>
+            <Col id="ID">KR109</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kein </Col>
+            <Col id="ID">KR110</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Ivy</Col>
+            <Col id="ID">KR111</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kara</Col>
+            <Col id="ID">KR112</Col>
+            <Col id="SALARY"/>
+            <Col id="BONUS"/>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Twice</Col>
+            <Col id="ID">KR113</Col>
+            <Col id="SALARY"/>
+            <Col id="BONUS"/>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">John </Col>
+            <Col id="ID">KR101</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Jackson</Col>
+            <Col id="ID">KR102</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Kate </Col>
+            <Col id="ID">KR105</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Bts</Col>
+            <Col id="ID">KR106</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Andrew </Col>
+            <Col id="ID">KR107</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Belle</Col>
+            <Col id="ID">KR108</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Elsa</Col>
+            <Col id="ID">KR109</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">100</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kein </Col>
+            <Col id="ID">KR110</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Ivy</Col>
+            <Col id="ID">KR111</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">300</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Twice</Col>
+            <Col id="ID">KR113</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset6" keystring="G:-CORP,+DEPT" reversesubsum="true">
+        <ColumnInfo>
+          <Column id="CORP" type="STRING" size="256"/>
+          <Column id="DEPT" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="ID" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="BONUS" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">John </Col>
+            <Col id="ID">KR101</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Jackson</Col>
+            <Col id="ID">KR102</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Adam</Col>
+            <Col id="ID">KR103</Col>
+            <Col id="SALARY">3000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Melon</Col>
+            <Col id="ID">KR104</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Kate </Col>
+            <Col id="ID">KR105</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">200</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Bts</Col>
+            <Col id="ID">KR106</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Andrew </Col>
+            <Col id="ID">KR107</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Belle</Col>
+            <Col id="ID">KR108</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Elsa</Col>
+            <Col id="ID">KR109</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kein </Col>
+            <Col id="ID">KR110</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Ivy</Col>
+            <Col id="ID">KR111</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">300</Col>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kara</Col>
+            <Col id="ID">KR112</Col>
+            <Col id="SALARY"/>
+            <Col id="BONUS"/>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Twice</Col>
+            <Col id="ID">KR113</Col>
+            <Col id="SALARY"/>
+            <Col id="BONUS"/>
+            <Col id="CORP">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">John </Col>
+            <Col id="ID">KR101</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">300</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Jackson</Col>
+            <Col id="ID">KR102</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Kate </Col>
+            <Col id="ID">KR105</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Bts</Col>
+            <Col id="ID">KR106</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">500</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Andrew </Col>
+            <Col id="ID">KR107</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">30</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Belle</Col>
+            <Col id="ID">KR108</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">50</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Elsa</Col>
+            <Col id="ID">KR109</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">100</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kein </Col>
+            <Col id="ID">KR110</Col>
+            <Col id="SALARY">1000</Col>
+            <Col id="BONUS">100</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Ivy</Col>
+            <Col id="ID">KR111</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">300</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japen Corp.</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Twice</Col>
+            <Col id="ID">KR113</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="BONUS">200</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[/************************************************************************
+Grid
+	Dataset의 내용을 격자 모양으로 표현하는 컴포넌트.
+	Grid는 항상 Dataset과 바인딩해서 사용.
+	Head, Body, Summary 영역의 Band로 구성,
+	각 Band는 Cell이라는 단위로 구성.
+	
+Property
+	•autofittype, autosizingtype , cellmovingtype, formats, selecttype…
+Method
+	•createFormat, setCellPos, setCellProperty, updateToDataset
+Event
+	•oncellclick, oncloseup, onexpandup, onheadclick
+ ************************************************************************/
+
+// Grid1과 Grid1_1의 Body 밴드 Column과 Cell의 개수.
+this.btn_Exe1_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nColCnt1  = this.Grid1.getFormatColCount();
+	var nCellCnt1 = this.Grid1.getCellCount("body");
+
+	var nColCnt1_1  = this.Grid1_1.getFormatColCount();
+	var nCellCnt1_1 = this.Grid1_1.getCellCount("body");
+
+	trace("Grid1 Col=" + nColCnt1 + " : Cell=" + nCellCnt1);
+	trace("Grid1_1 Col=" + nColCnt1_1 + " : Cell=" + nCellCnt1_1);
+};
+
+// 그리드 oncellclick 이벤트의 e.col과 e.cell의 차이?
+this.Grid_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	/* e.col : event가 발생한 컬럼 인덱스값
+	e.cel : 위치하고있는 인덱스값 */
+	trace(" e.col=" + e.col + " : e.cell=" + e.cell);	
+};
+
+/*  Cell에 바인드 되어있는 Dataset 컬럼 ID 구하기.
+	getCellCount, getFormatColCount, getCellText, getCellValue, getCellProperty */
+this.btn_Exe1_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nCellCnt = this.Grid1.getCellCount("body");
+	for(var i=0; i<nCellCnt; i++)
+	{
+		var sColID = this.Grid1.getCellProperty("body", i, "text");
+		trace(sColID);
+		var arrCol = sColID.split(":");
+		trace("ColumnID=" + arrCol[1]);
+	}	    
+};
+ 
+/* 그리드 Head 클릭시 데이터 Sort 구현*/
+this.Grid1_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var sColId = this.Grid1.getCellProperty("body", e.cell, "text").split(":")[1];
+	this.Dataset1.set_keystring("S:"+sColId);
+};
+
+
+/* 1) Dataset2에 “COL_CHK” 컬럼을 추가하고 초기값을 “0”으로 지정.
+   Grid2의 맨 앞쪽에 빈 컬럼을 추가하고 생성한 Dataset컬럼(COL_CHK) 바인딩 */
+this.btn_Exe2_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset2.addColumn("COL_CHK", "STRING");	
+	for(var i=0; i<this.Dataset2.rowcount; i++){
+		this.Dataset2.setColumn(i, "COL_CHK", "0");
+	}	
+
+	this.Grid2.insertContentsCol("body", 0);	
+	this.Grid2.setCellProperty("body", 0, "text", "bind:COL_CHK");
+    
+};
+
+/* 2) 해당 컬럼의 Head와 Body Cell을 “checkbox” 형태로 표현.
+   ☞ insertContentsCol, setCellProperty */
+this.btn_Exe2_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid2.setCellProperty("body", 0, "displaytype", "checkboxcontrol");
+	this.Grid2.setCellProperty("body", 0, "edittype"   , "checkbox");
+	
+	this.Grid2.setCellProperty("head", 0, "displaytype", "checkboxcontrol");
+	this.Grid2.setCellProperty("head", 0, "edittype"   , "checkbox");
+};
+
+// Head 선택시 전체 선택 기능 구현
+this.Grid2_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	if(e.cell == 0){
+		// -1 : head , 0 이상 : body의 row index
+		var nValue = this.Grid2.getCellText(-1, 0);
+		nValue = ( nValue == "1" ? "0" : "1" );
+		
+		this.Dataset2.set_enableevent(false);
+		
+		for(var i = 0; i < this.Dataset2.rowcount; i++){
+			this.Dataset2.setColumn(i, "COL_CHK", nValue);
+		}
+		this.Dataset2.set_enableevent(true);
+		
+		this.Grid2.setCellProperty("head", 0, "text", nValue);
+    }
+	
+};
+
+// Cell의 체크 박스를 하나만 선택하도록 제어
+this.Dataset2_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	if(e.columnid == "COL_CHK"){
+		var nCnt = this.Dataset2.findRowExpr("COL_CHK == '"+ e.newvalue + "' && currow != " + e.row);
+		if( nCnt > -1 ){
+			this.Dataset2.setColumn(nCnt,"COL_CHK",0);
+		}
+    }
+};
+
+// 1) 컬럼 이동, 사이즈 변경 가능하게 속성 변경.
+this.btn_Exe3_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid3.set_cellmovingtype("col");
+	this.Grid3.set_cellsizingtype("col");
+};
+
+// 2) 3번째 컬럼(Name)까지 고정, 3번째 Row까지 고정
+this.btn_Exe3_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//Column Fix
+	this.Grid3.setFormatColProperty(2, "band", "left");
+
+	//Row Fix
+	this.Grid3.setFixedRow(2);
+};
+
+// 3) 컬럼고정, Row고정 해제.
+this.btn_Exe3_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	for(var i=0; i<this.Grid3.getFormatColCount(); i++){
+		this.Grid3.setFormatColProperty(i, "band", "body");
+	}
+	
+	this.Grid3.setFixedRow(-1);	
+};
+
+// 4) 3번째 컬럼(Name) 사이즈 100px로 지정, 6번째 컬럼(Salary) 숨기기
+this.btn_Exe3_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid3.setFormatColProperty(2, "size", 100);
+	this.Grid3.setFormatColProperty(5, "size", 0);
+};
+
+/* 5) 컬럼 숨기기 취소
+☞ cellmovingtype, cellsizingtype, setFormatColProperty, setFixedRow, getCurFormatString */
+this.btn_Exe3_5_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid3.setFormatColProperty(5, "size", 80);
+};
+
+// 그리드 Cell 더블클릭시 해당 컬럼 숨기기
+this.Grid3_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    // getRealColSize()
+};
+
+// Cancel 버튼 클릭시 숨기기 취소
+this.Grid3.arrHide = [];
+this.btn_Cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+
+};
+
+// 6) 원본 그리드 포맷과 현재 변경한 그리드 포맷 비교.
+this.btn_Exe3_6_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sCurFormat = this.Grid3.getCurFormatString();
+	this.Grid3_1.set_formats("<Formats>" + sCurFormat + "</Formats>");
+	
+ 	var sOrgFormat = this.Grid3.getCurFormatString(true);
+	this.Grid3_2.set_formats("<Formats>" + sOrgFormat + "</Formats>");
+};
+
+// 1) Dataset4를 트리 그리드 형태로 구현.
+/* 2) 그리드 셀 클릭시 열림/닫힘 구현
+   ☞ getTreeRow, getTreeStatus, setTreeStatus */
+this.Grid4_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var nGridRow = this.Grid4.getTreeRow(e.row);	
+	var nStatus  = this.Grid4.getTreeStatus(nGridRow);
+	trace("e.row=" + e.row + " : TreeRow=" + nGridRow + " : Status=" + nStatus);
+
+	/* getTreeStatus(TreeRow) 
+	0 : collapse 
+	1 : expand 
+	3 : 단말row */
+	if(nStatus == 3) return;
+	nStatus = (nStatus == 0 ? 1 : 0);
+
+	this.Grid4.setTreeStatus(nGridRow, nStatus);
+
+};
+
+
+// 1) 법인(CORP), 부서(DEPT)별 소계 표현하기.
+this.btn_Exe5_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset5.set_keystring("G:-CORP,+DEPT");
+	var sExpr = "expr:(dataset.getRowLevel(currow) == 2 ? CORP+' Sum' : CORP)";
+	this.Grid5.setCellProperty("body", 0, "text", sExpr);
+	sExpr = "expr:(dataset.getRowLevel(currow) == 0 ? DEPT : (dataset.getRowLevel(currow) == 1 ? DEPT + ' Sum' : ''))";
+	this.Grid5.setCellProperty("body", 1, "text", sExpr);
+};
+
+// 2) Summary 밴드 추가하고 SALARY 컬럼 총 합계 표현.
+this.btn_Exe5_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid5.appendContentsRow("summary");
+	this.Grid5.setCellProperty("summary", 4, "text", this.Dataset5.getSum("SALARY"));
+};
+
+/*  3) 소계와 Summary 밴드를 상단에 표현하기
+	☞ keystring, expr, getRowLevel, appendContentsRow, reversesubsum, summarytype */
+this.btn_Exe5_3_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset5.set_reversesubsum(true);
+	this.Grid5.set_summarytype("top");
+};
+
+// 1) 트리 형태로 소계 표현하기 – 그룹핑한 Row Level 활용
+this.btn_Exe6_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid6.setCellProperty("body", 0, "treelevel", "expr:comp.parent.fn_level(dataset.getRowLevel(currow))");
+	this.Grid6.setCellProperty("body", 0, "displaytype", "treeitemcontrol");
+	this.Grid6.setCellProperty("body", 0, "edittype", "tree");
+	this.Grid6.setCellProperty("body", 0, "text", "expr:(dataset.getRowLevel(currow) == 2 ? CORP : (dataset.getRowLevel(currow) == 1 ? DEPT : NAME))");
+
+	this.Grid6.setFormatColProperty(1, "size", 0);
+	this.Grid6.setFormatColProperty(2, "size", 0);
+};
+
+this.fn_level = function(pRow)
+{
+	var nMaxLevel = 2;
+	var nLevel = nMaxLevel-pRow;
+	return nLevel;
+}
+
+
+
+this.CONST_NONE_MARK = "";
+this.CONST_ASC_MARK = "↑";
+this.CONST_DESC_MARK = "↓";
+this.nPrevCell = -1;
+this.fn_sort = function (obj:Grid, e:GridClickEventInfo)
+{
+    if(obj.getCellProperty("head", e.cell, "displaytype") == "checkboxcontrol") return;
+	var objDs     = obj.getBindDataset();
+	var sColId    = obj.getCellProperty("body", e.cell, "text").split(":");
+	var sHeadText = obj.getCellText(-1, e.cell);
+
+	if(sHeadText.substr(sHeadText.length-1) == this.CONST_ASC_MARK){
+		obj.setCellProperty("head", e.cell, "text", sHeadText.substr(0, sHeadText.length - 1) + this.CONST_DESC_MARK);
+		objDs.set_keystring("S:-" + sColId[1]);	
+	}
+	else if(sHeadText.substr(sHeadText.length-1) == this.CONST_DESC_MARK){
+		obj.setCellProperty("head", e.cell, "text", sHeadText.substr(0, sHeadText.length - 1) + this.CONST_ASC_MARK);
+		objDs.set_keystring("S:+" + sColId[1]);
+	}
+	else{
+		obj.setCellProperty("head", e.cell, "text", sHeadText + this.CONST_ASC_MARK);
+		objDs.set_keystring("S:+" + sColId[1]);
+	}
+	
+	if(this.nPrevCell > -1 && this.nPrevCell != e.cell){
+		var sPrevText = obj.getCellText(-1, this.nPrevCell);
+		obj.setCellProperty("head", this.nPrevCell, "text", sPrevText.substr(0, sPrevText.length - 1));
+	}
+
+	this.nPrevCell = e.cell;
+}]]></Script>
+  </Form>
+</FDL>

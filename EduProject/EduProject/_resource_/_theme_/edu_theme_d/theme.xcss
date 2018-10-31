@@ -1,0 +1,2590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[/*******************************************************
+  PROJECT NAME : Nexacro17_DesignEDU
+  CREATION DATES : 2017.5.15
+  DRAFTER : Chun Ji Young
+  DISTRIBUTION DATE : 2017. 10. 26
+  AMENDER : Chun Ji Young
+  MODIFICATION DATES : 2018. 3. 12
+*******************************************************/
+/***** Form *****/
+.Form
+{
+	-nexa-border : 0px none;
+	background : #ffffff;
+}	
+/***** ChildFrame, FrameSet  *****/
+.ChildFrame,.FrameSet,.HFrameSet,.TileFrameSet,.VFrameSet
+{
+	-nexa-border : 0px none;
+	background : #ffffff;
+}
+/***** MainFrame  *****/
+.MainFrame
+{
+	-nexa-border : 1px solid #1c2124;
+	background : #ffffff;
+}
+.MainFrame[status=deactivate]
+{
+	-nexa-border : 1px solid #5A677F;
+}
+/***** TitleBarControl  *****/
+.TitleBarControl
+{
+	-nexa-border : 0px none;
+	background : #30373b;
+	border-radius : 0px;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+	-nexa-padding : 0px 4px 0px 10px;
+}
+.TitleBarControl .minbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Titlebar_btn_min_N.png");
+	-nexa-padding : 0px 0px 3px 0px;
+	-nexa-text-align : center;
+	-nexa-vertical-align : bottom;
+	background : transparent;
+	border-radius : 0px;
+}
+.TitleBarControl .maxbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Titlebar_btn_max_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.TitleBarControl .normalbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Titlebar_btn_normal_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+
+.TitleBarControl .closebutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Titlebar_btn_close_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+	-nexa-vertical-align : middle;
+}
+
+.TitleBarControl .minbutton[status=mouseover]
+{
+	background : #595f62;
+}
+
+.TitleBarControl .maxbutton[status=mouseover]
+{
+	background : #595f62;
+}
+
+.TitleBarControl .normalbutton[status=mouseover]
+{
+	background : #595f62;
+}
+
+.TitleBarControl .closebutton[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Titlebar_btn_close_N.png");
+	-nexa-text-align : center;
+	background : #595f62;
+	border-radius : 0px;
+	-nexa-vertical-align : middle;
+}
+.TitleBarControl .minbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_min_P.png");
+	background : #ffffff;
+}
+
+.TitleBarControl .maxbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_max_P.png");
+	background : #ffffff;
+}
+
+.TitleBarControl .normalbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_normal_P.png");
+	background : #ffffff;
+}
+
+.TitleBarControl .closebutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_close_P.png");
+	background : #ffffff;
+}
+
+.TitleBarControl .minbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_min_D.png");
+}
+
+.TitleBarControl .maxbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_max_D.png");
+}
+
+.TitleBarControl .normalbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_normal_D.png");
+}
+.TitleBarControl .closebutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/Titlebar_btn_close_D.png");
+}
+/***** StatusBarControl  *****/
+.StatusBarControl
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none, 0px none;
+	background : #c1c1c1;
+	-nexa-padding : 3px 3px 3px 10px;
+	color : #30373b;
+	font : bold 12px "Verdana";
+}
+
+.StatusBarControl .progressbar
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #d6d6d6;
+	border-radius : 0px;
+	-nexa-padding : 2px;
+}
+.StatusBarControl .progressbar .progressbaritem
+{
+	background : #9c9c9c;
+}
+.StatusBarControl .resizegrip
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Statusbar_img_grip.png");
+	-nexa-vertical-align : bottom;
+	background : transparent;
+}
+/***** VScrollBarControl *****/
+.VScrollBarControl
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-padding : 1px 1px 1px 1px;
+	background : #e1e1e1;
+	border-radius : 0px;
+}
+.VScrollBarControl[status=disabled]
+{
+	opacity : 0.30;
+}
+.VScrollBarControl .incbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/vscroll_incbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.VScrollBarControl .incbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/vscroll_incbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.VScrollBarControl .incbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/vscroll_incbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.VScrollBarControl .incbutton[status=disabled]
+{
+	opacity : 0.30;
+}
+.VScrollBarControl .decbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/vscroll_decbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.VScrollBarControl .decbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/vscroll_decbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.VScrollBarControl .decbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/vscroll_decbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.VScrollBarControl .decbutton[status=disabled]
+{
+	opacity : 0.30;
+}
+.VScrollBarControl .trackbar
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	background : #898d8f;
+	border-radius : 0px;
+}
+.VScrollBarControl .trackbar[status=mouseover]
+{
+	background : #b4b4b4;
+}
+.VScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #293943;
+}
+.VScrollBarControl .trackbar[status=disabled]
+{
+	background : #d5d6d7;
+}
+/***** HScrollBarControl *****/
+.HScrollBarControl
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none;
+	-nexa-padding : 1px 1px 1px 1px;
+	background : #e1e1e1;
+	border-radius : 0px;
+}
+.HScrollBarControl[status=disabled]
+{
+	opacity : 0.30;
+}
+.HScrollBarControl .incbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/hscroll_incbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.HScrollBarControl .incbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/hscroll_incbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.HScrollBarControl .incbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/hscroll_incbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.HScrollBarControl .incbutton[status=disabled]
+{
+	opacity : 0.30;
+
+}
+.HScrollBarControl .decbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/hscroll_decbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.HScrollBarControl .decbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/hscroll_decbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;	
+}
+.HScrollBarControl .decbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/hscroll_decbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;	
+}
+.HScrollBarControl .decbutton[status=disabled]
+{
+	opacity : 0.30;
+}
+.HScrollBarControl .trackbar
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	background : #898d8f;
+	border-radius : 0px;
+}
+.HScrollBarControl .trackbar[status=mouseover]
+{
+	background : #b4b4b4;
+}
+.HScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #293943;
+}
+.HScrollBarControl .trackbar[status=disabled]
+{
+	background : #d5d6d7;
+}
+/***************************************************/
+/***** Static *****/
+.Static,.Static[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-word-wrap : english;
+	-nexa-vertical-align : middle;
+}
+
+.Static[status=disabled]
+{
+	color : #c1c1c1;
+}
+/***** Edit *****/
+.Edit
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 0px 8px 0px 8px;
+	-nexa-text-align : left;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Edit[status=mouseover],.Edit[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Edit[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.Edit[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+/***** MaskEdit *****/
+.MaskEdit
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 0px 8px 0px 8px;
+	-nexa-text-align : right;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.MaskEdit[status=mouseover],.MaskEdit[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.MaskEdit[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.MaskEdit[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+/***** TextArea *****/
+.TextArea
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 3px 3px 3px 3px;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px/18px "Verdana";
+	-nexa-word-wrap : char;
+	-nexa-text-align : left;
+}
+.TextArea[status=mouseover],.TextArea[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.TextArea[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.TextArea[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+/***** Button *****/
+.Button
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : linear-gradient(to bottom,#ffffff,#e1e1e1);
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+	font : 12px "Verdana";
+	-nexa-padding : 0px 5px;
+}
+.Button[status=mouseover],.Button[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+}
+.Button[userstatus=pushed],.Button[userstatus=selected]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #f44528;
+	color : #ffffff;
+}
+.Button[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+/***** Spin *****/
+.Spin
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Spin[status=mouseover],.Spin[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+}
+.Spin[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.Spin .spinedit
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 3px 0px 3px;
+	-nexa-text-align : left;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	background : transparent;
+}
+.Spin .spinupbutton,.Spin .spinupbutton[status=mouseover],.Spin .spinupbutton[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/spn_upbtn_N.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Spin .spinupbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/spn_upbtn_P.png");
+}
+.Spin .spinupbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/spn_upbtn_D.png");
+}
+.Spin .spindownbutton,.Spin .spindownbutton[status=mouseover],.Spin .spindownbutton[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/spn_dnbtn_N.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Spin .spindownbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/spn_dnbtn_P.png");
+}
+.Spin .spindownbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/spn_dnbtn_D.png");
+}
+/***** CheckBox *****/
+.CheckBox
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/chk_btn_N.png");
+	-nexa-icon-position : left;
+	-nexa-text-padding : 0px 6px 0px 6px;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.CheckBox[status=disabled]
+{
+	-nexa-icon : URL("theme://images/chk_btn_D.png");
+	color : #c1c1c1;
+}
+.CheckBox[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/chk_btn_M.png");
+}
+.CheckBox[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_S.png");
+}
+.CheckBox[status=mouseover][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_MS.png");
+}
+.CheckBox[status=disabled][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_DS.png");
+	color : #c1c1c1;
+}
+/***** Radio *****/
+.Radio
+{
+	-nexa-border : 0px none;
+	background : transparent;
+}
+.Radio .radioitem
+{
+	-nexa-icon : URL("theme://images/rdo_btn_N.png");
+	-nexa-icon-position : left;
+	-nexa-text-align : left;
+	-nexa-text-padding : 0px 10px 0px 6px;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Radio .radioitem[status=disabled]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_D.png");
+	color : #c1c1c1;
+}
+.Radio .radioitem[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_M.png");
+}
+.Radio .radioitem[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_S.png");
+}
+.Radio .radioitem[status=mouseover][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_MS.png");
+}
+.Radio .radioitem[status=disabled][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_DS.png");
+	color : #c1c1c1;
+}
+/***** ListBox, ListBoxControl *****/
+.ListBox,.ListBoxControl
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.ListBox[status=disabled],.ListBoxControl[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.ListBox .listboxitem,.ListBoxControl .listboxitem
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 5px 0px 5px 5px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.ListBox .listboxitem[status=mouseover],.ListBoxControl .listboxitem[status=mouseover]
+{
+	color : #f44528;
+	background : transparent;
+}
+.ListBox .listboxitem[userstatus=selected],.ListBoxControl .listboxitem[userstatus=selected]
+{
+	background : #f44528;
+	color : #ffffff;
+}
+.ListBox .listboxitem[status=disabled],.ListBoxControl .listboxitem[status=disabled]
+{
+	color : #c1c1c1;
+}
+/***** Combo *****/
+.Combo
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Combo[status=mouseover],.Combo[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+}
+.Combo[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.Combo .comboedit
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 0px 0px 3px;
+	-nexa-text-align : left;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Combo .dropbutton,.Combo .dropbutton[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+}
+.Combo .dropbutton[userstatus=pushed],.Combo .dropbutton[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_P.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+}
+.Combo .dropbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_D.png");
+	-nexa-text-align : center;
+	background : #f0f0f0;
+}
+.Combo .combolist
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Combo .combolist .listboxitem
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 5px 0px 5px 5px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Combo .combolist .listboxitem[status=mouseover]
+{
+	color : #f44528;
+	background : transparent;
+}
+.Combo .combolist .listboxitem[userstatus=selected]
+{
+	background : #f44528;
+	color : #ffffff;
+}
+/***** Calendar *****/
+.Calendar
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Calendar[status=mouseover],.Calendar[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Calendar[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.Calendar .calendaredit
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 0px 0px 3px;
+	-nexa-text-align : left;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Calendar .calendaredit[status=disabled]
+{
+	color : #c1c1c1;
+}
+.Calendar .dropbutton,.Calendar .dropbutton[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Calendar .dropbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Calendar .dropbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Calendar .calendarspinupbutton
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Calendar .calendarspinupbutton[status=mouseover],.Calendar .calendarspinupbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_M.png");
+	-nexa-text-align : center;
+	background : #c1c1c1;
+	border-radius : 0px;
+}
+.Calendar .calendarspinupbutton[status=disabled]
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #cbcbcb;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_D.png");
+	-nexa-text-align : center;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+.Calendar .calendarspindownbutton
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Calendar .calendarspindownbutton[status=mouseover],.Calendar .calendarspindownbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_M.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Calendar .calendarspindownbutton[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb , 0px none , 0px none , 1px solid #cbcbcb;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_D.png");
+	-nexa-text-align : center;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+/***** DatePickerControl *****/
+.DatePickerControl
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.DatePickerControl .head
+{
+	background : #f44528;
+}
+.DatePickerControl .head .prevbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_prevbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .prevbutton[status=mouseover],.DatePickerControl .head .prevbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_prevbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .prevbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_prevbtn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .nextbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_nextbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .nextbutton[status=mouseover],.DatePickerControl .head .nextbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_nextbtn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .nextbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_nextbtn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.DatePickerControl .head .yearstatic,.DatePickerControl .head .monthstatic
+{
+	color : #ffffff;
+	font : bold 12px "Verdana";
+}
+.DatePickerControl .head .yearspin
+{
+	-nexa-border : 0px none;
+	background : transparent;
+}
+.DatePickerControl .head .yearspin .spinedit
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.DatePickerControl .head .yearspin .spinupbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .yearspin .spinupbutton[status=mouseover],.DatePickerControl .head .yearspin .spinupbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .yearspin .spinupbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .yearspin .spindownbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .yearspin .spindownbutton[status=mouseover],.DatePickerControl .head .yearspin .spindownbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .yearspin .spindownbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin
+{
+	-nexa-border : 0px none;
+	background : transparent;
+}
+.DatePickerControl .head .monthspin .spinedit
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.DatePickerControl .head .monthspin .spinupbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin .spinupbutton[status=mouseover],.DatePickerControl .head .monthspin .spinupbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin .spinupbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspinup_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin .spindownbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin .spindownbutton[status=mouseover],.DatePickerControl .head .monthspin .spindownbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_M.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .head .monthspin .spindownbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_head_Yspindn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+	border-radius : 0px;
+}
+.DatePickerControl .body
+{
+	background : #ffffff;
+}
+.DatePickerControl .body .weekband
+{
+	-nexa-border : 0px none;
+	background : #e8e8e8;
+}
+.DatePickerControl .body .weekitem
+{
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #30373b;
+	font : 12px "Verdana","Dotum";
+}
+.DatePickerControl .body .weekitem[userstatus=saturday]
+{
+	color : #252abf;
+}
+.DatePickerControl .body .weekitem[userstatus=sunday]
+{
+	color : #ff5a00;
+}
+.DatePickerControl .body .dayitem
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.DatePickerControl .body .dayitem[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+	background : #cf270b;
+}
+.DatePickerControl .body .dayitem[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #222222;
+	font : 12px "Verdana";
+	background : #e8e8e8;
+}
+.DatePickerControl .body .dayitem[userstatus=today]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #ffffff;
+	font : 12px "Verdana";
+	background : #f16e59;
+}
+.DatePickerControl .body .dayitem[userstatus=saturday]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #252abf;
+	font : 12px "Verdana";
+}
+.DatePickerControl .body .dayitem[userstatus=sunday]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #ff5a00;
+	font : 12px "Verdana";
+}
+.DatePickerControl .body .dayitem[userstatus=trailingday]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #c2c4c6;
+	font : 12px "Verdana";
+	background : #ffffff;
+}
+/***** Tab *****/
+.Tab
+{
+	-nexa-border : 0px none;
+	background : transparent;
+}
+.Tab .tabpage
+{
+	-nexa-border : 1px solid #f44528 , 1px solid #9c9c9c , 1px solid #9c9c9c;
+	background : #ffffff;
+}
+.Tab .tabbuttonitem
+{
+	-nexa-border : 1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid #f44528,1px solid #9c9c9c;
+	-nexa-padding : 3px 5px 3px 5px;
+	background : #e0e3e5;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Tab .tabbuttonitem[status=mouseover]
+{
+	-nexa-border : 1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid #f44528,1px solid #9c9c9c;
+	-nexa-padding : 3px 5px 3px 5px;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #f44528;
+	font : 12px "Verdana";
+}
+.Tab .tabbuttonitem[userstatus=selected]
+{
+	-nexa-border : 1px solid #f44528;
+	-nexa-padding : 3px 5px 3px 5px;
+	background : #f44528;
+	border-radius : 0px;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.Tab .tabbuttonitem[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb , 1px solid #cbcbcb , 1px solid #f44528,1px solid #cbcbcb;
+	-nexa-padding : 3px 5px 3px 5px;
+	background : #f0f0f0;
+	border-radius : 0px;
+	color : #c1c1c1;
+	font : 12px "Verdana";
+}
+.Tab .tabbuttonitem .extrabutton,.Tab .tabbuttonitem .extrabutton[status=mouseover],.Tab .tabbuttonitem .extrabutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/tab_extrabtn.png");
+	-nexa-icon-position : right;
+	background : transparent;
+	-nexa-padding : 0px 0px 0px 10px;
+}
+.Tab .tabbuttonitem[status=focused][userstatus=selected]
+{
+	-nexa-border : 1px solid #f44528;
+	-nexa-padding : 3px 5px 3px 5px;
+	background : #f44528;
+	border-radius : 0px;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.Tab .prevbutton
+{
+	-nexa-border : 1px solid #d6d6d6;
+	-nexa-icon : URL("theme://images/tab_prevbtn_icon_N.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+.Tab .prevbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/tab_prevbtn_icon_M.png");
+}
+.Tab .prevbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #666666;
+	-nexa-icon : URL("theme://images/tab_prevbtn_icon_P.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #666666;
+	border-radius : 0px;
+}
+.Tab .prevbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/tab_prevbtn_icon_D.png");
+}
+.Tab .nextbutton
+{
+	-nexa-border : 1px solid #d6d6d6;
+	-nexa-icon : URL("theme://images/tab_nextbtn_icon_N.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+.Tab .nextbutton[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/tab_nextbtn_icon_M.png");
+}
+.Tab .nextbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #666666;
+	-nexa-icon : URL("theme://images/tab_nextbtn_icon_P.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #666666;
+	border-radius : 0px;
+}
+.Tab .nextbutton[status=disabled]
+{
+	-nexa-icon : URL("theme://images/tab_nextbtn_icon_D.png");
+}
+/***** Div *****/
+.Div
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Div[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+}
+/***** GroupBox *****/
+.GroupBox .groupboxcontents
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+}
+.GroupBox .groupboxcontents[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #ffffff;
+}
+.GroupBox .groupboxtitle
+{
+	background : #ffffff;
+	-nexa-padding : 0px 3px 0px 3px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-border : 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.GroupBox .groupboxtitle[status=disabled]
+{
+	background : #ffffff;
+	-nexa-padding : 0px 3px 0px 3px;
+	color : #c1c1c1;
+	font : 12px "Verdana";
+}
+/***** Menu *****/
+.Menu
+{
+	-nexa-border : 0px none;
+	background : #f5f5f5;
+}
+.Menu .menuitem
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 20px 0px 20px;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+	border-radius : 0px;
+}
+.Menu .menuitem[status=mouseover]
+{
+	background : #e0e3e5;
+}
+.Menu .menuitem[userstatus=selected]
+{
+	background : #555a5e;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+}
+/***** PopupMenu, PopupMenuControl *****/
+.PopupMenu,.PopupMenuControl
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+}
+.PopupMenu .popupmenuitem,.PopupMenuControl .popupmenuitem
+{
+	-nexa-border : 0px none;
+	background : #ffffff;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-padding : 6px 3px 6px 3px;
+}
+.PopupMenu .popupmenuitem[status=mouseover],.PopupMenuControl .popupmenuitem[status=mouseover]
+{
+	-nexa-border : 0px none;
+	color : #f44528;
+	font : 12px "Verdana";
+	background : #ffffff;
+}
+.PopupMenu .popupmenuitem[userstatus=selected],.PopupMenuControl .popupmenuitem[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : #f44528;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.PopupMenu .popupmenuitem .popupmenuitemexpandimage,.PopupMenuControl .popupmenuitem .popupmenuitemexpandimage
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Popmnu_expand.png");
+	background : transparent;
+	-nexa-padding : 0px;
+
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox,.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/Popmnu_check.png");
+	background : transparent;
+	-nexa-padding : 0px 2px 0px 0px;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext,.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #444444;
+	font : 11px "Verdana";
+	-nexa-padding : 0px 4px 0px 8px;
+	-nexa-text-align : right;
+}
+/***** PopupDiv *****/
+.PopupDiv
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.PopupDiv[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+}
+/***** ProgressBar *****/
+.ProgressBar,.ProgressBar[status=disabled]
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+	-nexa-padding : 0px;
+}
+.ProgressBar .progressbaritem
+{
+	-nexa-border : 0px none;
+	background : URL("theme://images/pgb_img_N.png");
+}
+.ProgressBar .progressbaritem[status=disabled]
+{
+	-nexa-border : 0px none;
+	background : URL("theme://images/pgb_img_D.png");
+}
+.ProgressBar .progressbartext
+{
+	color : #222222;
+	font : 11px "Verdana";
+}
+.ProgressBar .progressbartext[status=disabled]
+{
+	font : 11px "Verdana";
+	color : #c1c1c1;
+}
+/***** Grid *****/
+.Grid
+{
+	-nexa-border : 1px solid #293943;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .head
+{
+	background : #555a5e;
+	border-radius : 0px;
+}
+.Grid .head .row .cell
+{
+	-nexa-border : 0px none , 1px solid #cbcbcb , 1px solid #cbcbcb , 0px none;
+	-nexa-padding : 0px;
+	-nexa-text-align : center;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+	-nexa-vertical-align : middle;
+}
+.Grid .body
+{
+	border-radius : 0px;
+}
+.Grid .body .row .cell
+{
+	-nexa-background-odd : #f7f7f7;
+	-nexa-color-odd : #222222;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	-nexa-padding : 2px;
+	background : #ffffff;
+	-nexa-border : 0px none , 1px solid #cbcbcb , 1px solid #cbcbcb , 0px none;
+	border-radius : 0px;
+}
+.Grid .body .row .cell[status=mouseover]
+{
+	background : #fff7f6;
+}
+.Grid .body .row .cell[userstatus=selected]
+{
+	background : #f16e59;
+	color : #ffffff;
+}
+.Grid .summary
+{
+	background : #aaacae;
+	border-radius : 0px;
+}
+.Grid .summary .row .cell
+{
+	-nexa-border : 1px solid #cbcbcb , 1px solid #cbcbcb , 1px solid #cbcbcb , 0px none;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+	border-radius : 0px;
+	-nexa-padding : 0px;
+}
+/*
+.Grid .vscrollbar
+{
+	-nexa-padding : 2px;
+	background : #85898c;
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #293943;
+	border-radius : 0px;
+}
+.Grid .vscrollbar .trackbar,.Grid .vscrollbar .trackbar[status=mouseover],.Grid .vscrollbar .trackbar[userstatus=pushed]
+{
+	background : #293943;
+	border-radius : 0px;
+	-nexa-padding : 0px;
+}
+*/
+.Grid .body .row .cell.grd_cell_genderW
+{
+	color : #3da2df;
+	font : bold italic 12px "Verdana";
+	-nexa-color-odd : #3da2df;
+}
+.Grid .body .row .cell.grd_cell_genderM
+{
+	color : #1b6e44;
+	font : bold italic 12px "Verdana";
+	-nexa-color-odd : #1b6e44;
+}
+/***** MdiFrame *****/
+.Button.btn_MF_home,.Button.btn_MF_home[status=focused],.Button.btn_MF_home[status=mouseover],.Button.btn_MF_home[userstatus=pushed]
+{
+	-nexa-border : 1px solid #b4b4b4;
+	-nexa-icon : URL("theme://images/btn_MF_home.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #e1e1e1;
+	border-radius : 0px;
+}
+.Button.btn_MF_max,.Button.btn_MF_max[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_max.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Button.btn_MF_max[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_max.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #b4b4b4;
+}
+.Button.btn_MF_min,.Button.btn_MF_min[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_min.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Button.btn_MF_min[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_min.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #b4b4b4;
+}
+.Button.btn_MF_V,.Button.btn_MF_V[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_V.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Button.btn_MF_V[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_V.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #b4b4b4;
+}
+.Button.btn_MF_H,.Button.btn_MF_H[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_H.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Button.btn_MF_H[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_H.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #b4b4b4;
+}
+.Button.btn_MF_allX,.Button.btn_MF_allX[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_allX.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+}
+.Button.btn_MF_allX[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_allX.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #b4b4b4;
+}
+.Tab.tab_MF_tab
+{
+	-nexa-border : 0px none;
+	background : transparent;
+}
+.Tab.tab_MF_tab .tabpage
+{
+	-nexa-border : 0px none;
+	background : #f7f7f7;
+	color : #f7f7f7;
+}
+.Tab.tab_MF_tab .tabbuttonitem
+{
+	-nexa-border : 1px solid #b4b4b4;
+	background : #e1e1e1;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-padding : 6px 7px 6px 7px;
+}
+.Tab.tab_MF_tab .tabbuttonitem[status=mouseover]
+{
+	-nexa-border : 1px solid #b4b4b4;
+	background : #e1e1e1;
+	border-radius : 0px;
+	color : #f44528;
+	font : 12px "Verdana";
+	-nexa-padding : 6px 7px 6px 7px;
+}
+.Tab.tab_MF_tab .tabbuttonitem[userstatus=selected]
+{
+	-nexa-border : 1px solid #b4b4b4;
+	background : #b4b4b4;
+	border-radius : 0px;
+	color : #ffffff;
+	font : normal bold 12px "Verdana";
+	-nexa-padding : 6px 7px 6px 7px;
+}
+.Tab.tab_MF_tab .tabbuttonitem[status=focused][userstatus=selected]
+{
+	-nexa-border : 1px solid #b4b4b4;
+	background : #b4b4b4;
+	border-radius : 0px;
+	color : #ffffff;
+	font : normal bold 12px "Verdana";
+	-nexa-padding : 6px 7px 6px 7px;
+}
+.Tab.tab_MF_tab .tabbuttonitem .extrabutton,.Tab.tab_MF_tab .tabbuttonitem .extrabutton[status=mouseover],.Tab.tab_MF_tab .tabbuttonitem .extrabutton[userstatus=pushed],.Tab.tab_MF_tab .tabbuttonitem .extrabutton[status=disabled],.Tab.tab_MF_tab .tabbuttonitem .extrabutton[status=focused],.Tab.tab_MF_tab .tabbuttonitem .extrabutton[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_MF_tabextra.png");
+	-nexa-icon-position : right;
+	background : transparent;
+	-nexa-padding : 0px 0px 0px 10px;
+}
+.Button.btn_TF_allmnu,.Button.btn_TF_allmnu[status=focused],.Button.btn_TF_allmnu[status=mouseover],.Button.btn_TF_allmnu[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/btn_TF_icon_allM.png");
+	background : #f44528;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.Menu.mnu_TF_menu
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Menu.mnu_TF_menu .menuitem
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 20px 0px 20px;
+	background : transparent;
+	border-radius : 0px;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.Menu.mnu_TF_menu .menuitem[status=mouseover]
+{
+	background : #ffe0db;
+	font : 12px "Verdana";
+	color : #222222;
+}
+.Menu.mnu_TF_menu .menuitem[userstatus=selected]
+{
+	background : #f44528;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+}
+/***** GuideArea *****/
+.Static.sta_GA_title,.Static.sta_GA_title[status=mouseover]
+{
+
+	-nexa-border : 1px solid #b8bbc3;
+	background : #c8cdd6;
+	color : #30373b;
+	font : bold 12px "verdana";
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.Static.sta_GA_label,.Static.sta_GA_label[status=mouseover]
+{
+	-nexa-border : 1px solid #ccd0d9;
+	background : #e6e9ee;
+	color : #30373b;
+	font : 12px "verdana";
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.Static.sta_GA_area,.Static.sta_GA_area[status=mouseover]
+{
+	-nexa-border : 1px solid #ccd0d9;
+	background : #ffffff;
+}
+.Static.sta_GA_selector,.Static.sta_GA_selector[status=mouseover]
+{
+	color : #746f6f;
+	font : 11px "verdana";
+}
+.Static.sta_MF_bg,.Static.sta_MF_bg[status=mouseover]
+{
+	-nexa-border : 1px solid #b4b4b4,0px none,1px solid #b4b4b4, 0px none;
+	background : #f7f7f7;
+	border-radius : 0px;
+}
+.ImageViewer
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.ImageViewer[status=disabled]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellbutton
+{
+	-nexa-border : 1px solid #c2c2c2;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : linear-gradient(to top,#eaeaea,#ffffff);
+	color : #555555;
+	font : 12px "Verdana";
+	cursor : pointer;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellbutton[status=mouseover]
+{
+	-nexa-border : 1px solid #a0a0a0;
+	background : linear-gradient(to top,#e7e7e7,#fefefe);
+}
+.Grid .body .row .cell .cellbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #c2c2c2;
+	background : linear-gradient(to top,#fefefe,#e9e9e9);
+}
+.Grid .body .row .cell .cellbutton[status=disabled]
+{
+	-nexa-border : 1px solid #d9d9d9;
+	background : #f5f5f5;
+	color : #bbbbbb;
+}
+.Grid .body .row .cell .cellcalendar
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcalendar[status=mouseover],.Grid .body .row .cell .cellcalendar[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Grid .body .row .cell .cellcalendar[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.Grid .body .row .cell .cellcalendar .calendaredit
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 0px 0px 3px;
+	-nexa-text-align : left;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .cellcalendar .calendaredit[status=disabled]
+{
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .cellcalendar .dropbutton,.Grid .body .row .cell .cellcalendar .dropbutton[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_N.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Grid .body .row .cell .cellcalendar .dropbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_P.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Grid .body .row .cell .cellcalendar .dropbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cal_dropbtn_D.png");
+	-nexa-text-align : center;
+	background : transparent;
+}
+.Grid .body .row .cell .cellcalendar .calendarspinupbutton
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}	
+.Grid .body .row .cell .cellcalendar .calendarspinupbutton[status=mouseover],.Grid .body .row .cell .cellcalendar .calendarspinupbutton[userstatus=pushed]
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_M.png");
+	-nexa-text-align : center;
+	background : #c1c1c1;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcalendar .calendarspinupbutton[status=disabled]
+{
+	-nexa-border : 0px none , 0px none , 0px none , 1px solid #cbcbcb;
+	-nexa-icon : URL("theme://images/cal_type_spinupbtn_D.png");
+	-nexa-text-align : center;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcalendar .calendarspindownbutton
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcalendar .calendarspindownbutton[status=mouseover],.Grid .body .row .cell .cellcalendar .calendarspindownbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #9c9c9c , 0px none , 0px none , 1px solid #9c9c9c;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_M.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcalendar .calendarspindownbutton[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb , 0px none , 0px none , 1px solid #cbcbcb;
+	-nexa-icon : URL("theme://images/cal_type_spindnbtn_D.png");
+	-nexa-text-align : center;
+	background : #f0f0f0;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcheckbox
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/chk_btn_N.png");
+	-nexa-icon-position : left;
+	-nexa-text-padding : 0px 0px 0px 6px;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .cellcheckbox[status=disabled]
+{
+	-nexa-icon : URL("theme://images/chk_btn_D.png");
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .cellcheckbox[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/chk_btn_M.png");
+}
+.Grid .body .row .cell .cellcheckbox[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_S.png");
+}
+.Grid .body .row .cell .cellcheckbox[status=mouseover][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_MS.png");
+}
+.Grid .body .row .cell .cellcheckbox[status=disabled][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_DS.png");
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .celledit
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 0px 8px 0px 8px;
+	-nexa-text-align : left;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}	
+.Grid .body .row .cell .celledit[status=mouseover],.Grid .body .row .cell .celledit[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Grid .body .row .cell .celledit[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .celledit[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .cellmaskedit
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 0px 8px 0px 8px;
+	-nexa-text-align : right;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .cellmaskedit[status=mouseover],.Grid .body .row .cell .cellmaskedit[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Grid .body .row .cell .cellmaskedit[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .cellmaskedit[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .celltextarea
+{
+	-nexa-border : 1px solid #9c9c9c;
+	-nexa-padding : 3px 3px 3px 3px;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px/18px "Verdana";
+	-nexa-word-wrap : char;
+	-nexa-text-align : left;
+}
+.Grid .body .row .cell .celltextarea[status=mouseover],.Grid .body .row .cell .celltextarea[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+	background : #ffffff;
+}
+.Grid .body .row .cell .celltextarea[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .celltextarea[userstatus=nulltext]
+{
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .cellexpandbutton
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_cell_expandbtn_N.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellexpandbutton[status=mouseover],.Grid .body .row .cell .cellexpandbutton[status=focused],.Grid .body .row .cell .cellexpandbutton[userstatus=pushed]
+{
+	-nexa-icon : URL("theme://images/grd_cell_expandbtn_P.png");
+}
+.Grid .body .row .cell .cellexpandbutton[status=disabled]
+{
+	opacity : 0.40;
+}
+.Grid .body .row .cell .cellprogressbar
+{
+	-nexa-border : 0px none;
+/*
+	-nexa-padding : 1px 0px 1px 0px;
+*/
+	background : #ffffff;
+	border-radius : 0px;
+	-nexa-padding : 3px 0px;
+}
+.Grid .body .row .cell .cellprogressbar .progressbaritem
+{
+	-nexa-border : 0px none;
+	background : #008080;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellprogressbar .progressbartext
+{
+	color : #804000;
+	font : 12px "Verdana";
+	-nexa-text-align : right;
+	-nexa-vertical-align : middle;
+}
+.Grid .body .row .cell .celltreeitem .treeitembutton[userstatus=expand]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_tree_expand.png");
+	background : transparent;
+}
+.Grid .body .row .cell .celltreeitem .treeitembutton[userstatus=collapse]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_tree_collapse.png");
+	background : transparent;
+}
+.Grid .body .row .cell .celltreeitem .treeitemimage[userstatus=expand]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_tree_close.png");
+	background : transparent;
+}
+.Grid .body .row .cell .celltreeitem .treeitemimage[userstatus=collapse]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_tree_open.png");
+	background : transparent;
+}
+.Grid .body .row .cell .celltreeitem .treeitemimage[userstatus=leaf]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/grd_treeicon_leaf.png");
+	background : transparent;
+}
+.Grid .body .row .cell .celltreeitem .treeitemcheckbox
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/chk_btn_N.png");
+	-nexa-icon-position : left;
+	-nexa-text-padding : 0px 6px 0px 6px;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .celltreeitem .treeitemcheckbox[status=disabled]
+{
+	-nexa-icon : URL("theme://images/chk_btn_D.png");
+	color : #c1c1c1;
+}
+.Grid .body .row .cell .celltreeitem .treeitemcheckbox[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/chk_btn_M.png");
+}
+.Grid .body .row .cell .celltreeitem .treeitemcheckbox[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_S.png");
+}
+.Grid .body .row .cell .celltreeitem .treeitemcheckbox[status=mouseover][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_MS.png");
+}
+.Grid .body .row .cell .cellcombo
+{
+	-nexa-border : 0px none;
+/*
+	-nexa-border : 1px solid #9c9c9c;
+*/
+background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcombo[status=mouseover],.Grid .body .row .cell .cellcombo[status=focused]
+{
+	-nexa-border : 1px solid #f44528;
+}
+.Grid .body .row .cell .cellcombo[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+}
+.Grid .body .row .cell .cellcombo .comboedit
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 0px 0px 0px 3px;
+	-nexa-text-align : left;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .cellcombo .dropbutton,.Grid .body .row .cell .cellcombo .dropbutton[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_N.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+}
+.Grid .body .row .cell .cellcombo .dropbutton[userstatus=pushed],.Grid .body .row .cell .cellcombo .dropbutton[status=focused]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_P.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+}
+.Grid .body .row .cell .cellcombo .dropbutton[status=disabled]
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/cmb_dropbtn_D.png");
+	-nexa-text-align : center;
+	background : #ffffff;
+}
+.Grid .body .row .cell .cellcombo .combolist
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Grid .body .row .cell .cellcombo .combolist .listboxitem
+{
+	-nexa-border : 0px none;
+	-nexa-padding : 5px 5px 5px 5px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .body .row .cell .cellcombo .combolist .listboxitem[status=mouseover]
+{
+	color : #f44528;
+	background : transparent;
+}
+.Grid .body .row .cell .cellcombo .combolist .listboxitem[userstatus=selected]
+{
+	background : #f44528;
+	color : #ffffff;
+}
+.Grid .head .row .cell .cellbutton
+{
+	-nexa-border : 1px solid #cf270b;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : linear-gradient(to bottom,#f16e59 0%,#f44528 100%);
+	color : #ffffff;
+	font : 12px "Verdana";
+	cursor : pointer;
+	border-radius : 0px;
+}
+.Grid .head .row .cell .cellbutton[status=mouseover]
+{
+	-nexa-border : 1px solid #9a1a05;
+}
+.Grid .head .row .cell .cellbutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #9a1a05;
+	background : #9a1a05;
+}
+.Grid .head .row .cell .cellbutton[status=disabled]
+{
+	-nexa-border : 1px solid #b4b4b4;
+	background : #c1c1c1;
+	color : #e8e8e8;
+}
+.Grid .head .row .cell .cellcheckbox
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/chk_btn_N.png");
+	-nexa-icon-position : left;
+	-nexa-text-padding : 0px 0px 0px 6px;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Grid .head .row .cell .cellcheckbox[status=disabled]
+{
+	-nexa-icon : URL("theme://images/chk_btn_D.png");
+	color : #c1c1c1;
+}
+.Grid .head .row .cell .cellcheckbox[status=mouseover]
+{
+	-nexa-icon : URL("theme://images/chk_btn_M.png");
+}
+.Grid .head .row .cell .cellcheckbox[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_S.png");
+}
+.Grid .head .row .cell .cellcheckbox[status=mouseover][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_MS.png");
+}
+.Grid .head .row .cell .cellcheckbox[status=disabled][userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/chk_btn_DS.png");
+	color : #c1c1c1;
+}
+/***** WorkFrame *****/
+.Static.sta_WF_emptitle,.Static.sta_WF_emptitle[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+	color : #222222;
+	font : bold 16px "Tahoma";
+	-nexa-vertical-align : middle;
+}
+.Static.sta_WF_tablelabel,.Static.sta_WF_tablelabel[status=mouseover]
+{
+	-nexa-border : 1px solid #bdc2c9;
+	-nexa-padding : 0px 0px 0px 10px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : #e7eaee;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Static.sta_WF_tablebg,.Static.sta_WF_tablebg[status=mouseover]
+{
+	-nexa-border : 1px solid #bdc2c9;
+	background : #ffffff;
+	border-radius : 0px;
+	-nexa-padding : 5px;
+}
+.Static.sta_WF_label,.Static.sta_WF_label[status=mouseover]
+{
+	-nexa-border : 0px none;
+	color : #222222;
+	font : normal bold 12px/20px "Verdana";
+}
+.Static.sta_WF_subtitle,.Static.sta_WF_subtitle[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	background : url("theme://images/sta_WF_subtitleIcon.png") no-repeat left center;
+	border-radius : 0px;
+	color : #222222;
+	font : bold 12px "Verdana";
+	-nexa-padding : 0px 0px 0px 15px;
+	-nexa-vertical-align : middle;
+}
+.Div.div_WF_searchArea
+{
+	-nexa-border : 1px solid #c7c7c7;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.Button.btn_WF_search,.Button.btn_WF_search[status=mouseover],.Button.btn_WF_search[userstatus=pushed],.Button.btn_WF_search[status=focused]
+{
+	-nexa-border : 1px solid #3d3d3d;
+	background : #555655;
+	-nexa-icon : URL("theme://images/btn_WF_searchIcon.png");
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	border-radius : 3px;
+}
+.Button.btn_WF_save,.Button.btn_WF_save[status=mouseover],.Button.btn_WF_save[userstatus=pushed],.Button.btn_WF_save[status=focused]
+{
+	-nexa-border : 1px solid #263a7d;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : URL("theme://images/btn_WF_save.png") repeat-x;
+	border-radius : 0px;
+	color : #ffffff;
+	font : 12px "Verdana";
+}
+.Button.btn_WF_reset,.Button.btn_WF_reset[status=mouseover],.Button.btn_WF_reset[userstatus=pushed],.Button.btn_WF_reset[status=focused]
+{
+	-nexa-border : 1px solid #6c89c3;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : URL("theme://images/btn_WF_reset.png") repeat-x;
+	border-radius : 0px;
+	color : #333333;
+	font : 12px "Verdana";
+}
+/***** LeftFrame *****/
+.Button.btn_LF_mnu
+{
+	-nexa-border : 0px none;
+	background : #e1e1e1;
+	color : #8b8b8b;
+	font : 12px "Verdana";
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.Button.btn_LF_mnu[userstatus=pushed],.Button.btn_LF_mnu[status=focused],.Button.btn_LF_mnu[status=mouseover],.Button.btn_LF_mnu[userstatus=selected],.Button.btn_LF_mnu[status=disabled]
+{
+	-nexa-border : 0px none;
+	background : #293943;
+	color : #ffffff;
+	font : bold 12px "Verdana";
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+}
+.Div.div_LF_bg
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Grid.grd_LF_mnutree
+{
+	-nexa-border : 0px none;
+	background : #546169;
+	border-radius : 0px;
+}
+.Grid.grd_LF_mnutree .body
+{
+	-nexa-border : 0px none;
+	border-radius : 0px;
+}
+.Grid.grd_LF_mnutree .body .row .cell
+{
+	-nexa-background-odd : #293943;
+	background : #293943;
+	-nexa-border : 0px none , 0px none , 1px solid #546169,0px none;
+	-nexa-color-odd : #ffffff;
+	color : #ffffff;
+	font : 12px "Verdana";
+	border-radius : 0px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+}
+.Grid.grd_LF_mnutree .body .row .cell[status=mouseover]
+{
+	-nexa-background-odd : #7f888e;
+	background : #7f888e;
+}
+.Grid.grd_LF_mnutree .body .row .cell[userstatus=selected]
+{
+	-nexa-background-odd : #f44528;
+	background : #f44528;	
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeline
+{
+	-nexa-border : 0px none;
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeitem .treeitembutton[userstatus=expand]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	-nexa-icon : URL("theme://images/grd_LF_treeexpand.png");
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeitem .treeitembutton[userstatus=collapse]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	-nexa-icon : URL("theme://images/grd_LF_treecoll.png");
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeitem .treeitemimage[userstatus=expand]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	-nexa-icon : none;
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeitem .treeitemimage[userstatus=collapse]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	-nexa-icon : none;
+}
+.Grid.grd_LF_mnutree .body .row .cell .celltreeitem .treeitemimage[userstatus=leaf]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	-nexa-icon : none;
+}
+.ProgressBar.pgb_normal .progressbaritem
+{
+	-nexa-padding : 0px;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : #f16e59;
+	border-radius : 0px;
+}
+.ProgressBar.pgb_gradient .progressbaritem
+{
+	-nexa-padding : 0px;
+	-nexa-text-align : center;
+	-nexa-vertical-align : middle;
+	background : linear-gradient(to right,#ffffff,#cf270b);
+	border-radius : 0px;
+}
+.Calendar.cal_monthonly,.Calendar.cal_monthonly[status=mouseover],.Calendar.cal_monthonly[status=focused]
+{
+	-nexa-border : 0px none;
+}
+.Static.sta_TF_bg,.Static.sta_TF_bg[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : #546169;
+	border-radius : 0px;
+}
+.StepControl
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+	-nexa-padding : 0px 0px 10px 0px;
+}
+.StepControl .stepitem
+{
+	-nexa-border : 0px none;
+	-nexa-icon : URL("theme://images/rdo_btn_M.png");
+	background : transparent;
+	border-radius : 0px;
+}
+.StepControl .stepitem[userstatus=selected]
+{
+	-nexa-icon : URL("theme://images/rdo_btn_MS.png");
+}
+/***** CommonStyle Area  *****/
+.Static.sta_CS_title,.Static.sta_CS_title[status=mouseover]
+{
+	-nexa-border : 0px none;
+	color : #f44528;
+	font : bold 13px "Verdana";
+}
+.Static.sta_CS_detail,.Static.sta_CS_detail[status=mouseover]
+{
+	-nexa-border : 0px none;
+	color : #333333;
+	font : bold 18px "Verdana";
+}
+.Static.sta_CS_subdetail,.Static.sta_CS_subdetail[status=mouseover]
+{
+	-nexa-border : 1px dotted #c6cbce;
+	-nexa-text-align : center;
+	-nexa-vertical-align : bottom;
+	color : #f16e59;
+	font : 12px "Verdana";
+}
+.Static.sta_CS_line_solid,.Static.sta_CS_line_solid[status=mouseover]
+{
+	-nexa-border : 1px solid #30373b;
+	color : #333333;
+	font : 12px "Verdana";
+	-nexa-padding : 0px 0px 0px 8px;
+}
+.Static.sta_CS_line_dot,.Static.sta_CS_line_dot[status=mouseover]
+{
+	-nexa-border : 1px dotted #30373b;
+	color : #333333;
+	font : 12px "Verdana";
+	-nexa-padding : 0px 0px 0px 8px;
+}
+.Static.sta_CS_line_dashed,.Static.sta_CS_line_dashed[status=mouseover]
+{
+	-nexa-border : 1px dashed #30373b;
+	color : #333333;
+	font : 12px "Verdana";
+	-nexa-padding : 0px 0px 0px 8px;
+}
+.Static.sta_CS_line_none,.Static.sta_CS_line_none[status=mouseover]
+{
+	-nexa-border : 0px none;
+	color : #333333;
+	font : 12px "Verdana";
+	-nexa-padding : 0px 0px 0px 8px;
+}
+.Div.div_WF_back,.Div.div_WF_back[status=disabled]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemtext,.PopupMenu .popupmenuitem .popupmenuitemtext
+{
+	-nexa-padding : 0px 0px 0px 5px;
+}
+.FileUpload
+{
+	-nexa-border : 1px solid #f2f2f2;
+	background : #ffffff;
+	border-radius : 0px;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : linear-gradient(to bottom,#ffffff,#e1e1e1);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_upload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[status=mouseover]
+{
+	-nexa-border : 1px solid #cf270b;
+	background : linear-gradient(to bottom,#ffffff,#e1e1e1);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_upload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[userstatus=selected],.FileUpload .fileuploaditem .fileuploaditembutton[status=focused],.FileUpload .fileuploaditem .fileuploaditembutton[userstatus=pushed]
+{
+	-nexa-border : 1px solid #cf270b;
+	background : linear-gradient(to bottom,#e1e1e1,#ffffff);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_upload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileUpload .fileuploaditem .fileuploaditembutton[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	border-radius : 0px;
+	color : #c1c1c1;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_upload_icon_D.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit,.FileUpload .fileuploaditem .fileuploaditemedit[status=focused],.FileUpload .fileuploaditem .fileuploaditemedit[status=mouseover]
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.FileDownload
+{
+	-nexa-border : 1px solid #9c9c9c;
+	background : linear-gradient(to bottom,#ffffff,#e1e1e1);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_dnload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileDownload[status=mouseover]
+{
+	-nexa-border : 1px solid #cf270b;
+	background : linear-gradient(to bottom,#ffffff,#e1e1e1);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_dnload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer; 
+}
+.FileDownload[userstatus=pushed],.FileDownload[status=focused]
+{
+	-nexa-border : 1px solid #cf270b;
+	background : linear-gradient(to bottom,#e1e1e1,#ffffff);
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_dnload_icon_N.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer; 
+}
+.FileDownload[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #f0f0f0;
+	border-radius : 0px;
+	color : #c1c1c1;
+	font : 12px "Verdana";
+	-nexa-icon : URL("theme://images/btn_dnload_icon_D.png");
+	-nexa-icon-position : left;
+	-nexa-padding : 0px 9px 0px 9px;
+	-nexa-text-align : center;
+	-nexa-text-padding : 0px 9px 0px 9px;
+	-nexa-vertical-align : middle;
+	cursor : pointer;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=disabled]
+{
+	-nexa-border : 1px solid #cbcbcb;
+	background : #ffffff;
+	border-radius : 0px;
+	color : #c1c1c1;
+	font : 12px "Verdana";
+
+}
+.Static.sta_WF_table_required,.Static.sta_WF_table_required[status=mouseover]
+{
+	-nexa-border : 1px solid #bdc2c9;
+	-nexa-padding : 0px 0px 0px 10px;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : url("theme://images/sta_WF_table_repuired.png") no-repeat left center #e7eaee;
+	border-radius : 0px;
+	color : #222222;
+	font : 12px "Verdana";
+}
+.Static.sta_Main_title,.Static.sta_Main_title[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : transparent;
+	color : #85919e;
+	font : bold 36px "Verdana";
+	border-radius : 0px;
+}
+.Static.sta_Main_text,.Static.sta_Main_text[status=mouseover]
+{
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	-nexa-vertical-align : middle;
+	background : transparent;
+	border-radius : 0px;
+	color : #323232;
+	font : 12px/22px "Verdana";
+}
+.Static.sta_Main_img,.Static.sta_Main_img[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url("theme://images/sta_Main_img.png") no-repeat center center;
+	border-radius : 0px;
+}
+.Static.sta_Main_subtitle,.Static.sta_Main_subtitle[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url("theme://images/sta_Main_subtitle.png") no-repeat center center;
+	border-radius : 0px;
+}
+.Static.sta_Main_bottomlogo,.Static.sta_Main_bottomlogo[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url("theme://images/sta_Main_bottomLogo.png") no-repeat center center;
+	border-radius : 0px;
+}
+.Grid .body .row .cell[userstatus=blinked]
+{
+	background : #125dae;
+	color : #ffffff;
+}
+.Form[userstatus=contents]
+{
+	background : transparent;
+}
+]]></XCSS>

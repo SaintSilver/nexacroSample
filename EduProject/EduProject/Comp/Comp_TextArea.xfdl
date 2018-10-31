@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_TextArea" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static04" taborder="7" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="TextArea" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <TextArea id="TextArea05" taborder="4" left="4" top="322" width="216" height="75" value="nexacro &#10;platform&#10;" inputfilter="digit"/>
+        <TextArea id="TextArea02" taborder="6" left="231" top="451" width="216" height="75" value="auto select" autoselect="true"/>
+        <TextArea id="TextArea01" taborder="5" left="10" top="451" width="216" height="75" value="ABCD" autoskip="true" maxlength="4"/>
+        <TextArea id="TextArea00" taborder="1" left="4" top="64" width="216" height="75" value="nexacro platform&#10;TextArea Component&#10;Hello World"/>
+        <TextArea id="TextArea03" taborder="2" left="4" top="193" width="216" height="75" value="nexacro &#10;platform&#10;17" inputtype="english,digit"/>
+        <TextArea id="TextArea04" taborder="3" left="TextArea03:5" top="193" width="216" height="75" value="12345&#10;1,200.34&#10;-1,200.34" inputtype="number"/>
+        <Static id="Static00" taborder="8" text="☞ Max Length / Auto Skip / Auto Select" left="10" top="427" width="278" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="9" text="☞ Input Type - english &amp; digit / number" left="4" top="169" width="278" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static02" taborder="10" text="☞  Input Filter - digit" left="4" top="298" width="278" height="24" cssclass="sta_WF_label"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.chk_pass_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	this.edt_auto.set_password(obj.value);
+};
+
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects/>
+  </Form>
+</FDL>

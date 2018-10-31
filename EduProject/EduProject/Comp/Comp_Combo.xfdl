@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Combo" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static04" taborder="8" text="☞ Basic Usage - innerdataset" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Radio id="Radio00" taborder="3" left="16" top="139" width="420" height="24" codecolumn="codecolumn" datacolumn="datacolumn" value="dropdown" onitemchanged="Radio00_onitemchanged" index="0" innerdataset="innerdataset" rowcount="1" fittocontents="width">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">dropdown</Col>
+                <Col id="datacolumn">dropdown</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">search</Col>
+                <Col id="datacolumn">search</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">filter</Col>
+                <Col id="datacolumn">filter</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">filterlike</Col>
+                <Col id="codecolumn">filterlike</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">readonly</Col>
+                <Col id="datacolumn">readonly</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static06" taborder="0" text="Combo" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Combo id="cmb_type" taborder="4" text="" left="18" top="164" width="160" height="24" innerdataset="@ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" value="" index="-1" itemheight="22"/>
+        <Combo id="Combo00" taborder="1" text="Combo00" left="18" top="65" width="168" height="24" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="innerdataset" itemheight="22">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="Static00" taborder="9" text="☞ Combo Type - type" left="10" top="114" width="178" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="10" text="☞ Null Text - displaynulltext" left="10" top="287" width="258" height="24" cssclass="sta_WF_label"/>
+        <Combo id="Combo03" taborder="2" text="Combo00" left="192" top="65" width="168" height="24" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" innerdataset="@ds_dept" itemheight="22"/>
+        <Combo id="cmb_count" taborder="6" text="Accounting Team" left="90" top="238" width="168" height="24" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" innerdataset="@ds_dept" itemheight="22" index="0" value="01" displayrowcount="5"/>
+        <Static id="Static02" taborder="11" text="☞ Display Count - displayrowcount" left="10" top="213" width="250" height="24" cssclass="sta_WF_label"/>
+        <Spin id="spn_count" taborder="5" left="18" top="238" width="64" height="24" max="20" min="5" value="5" onchanged="spn_count_onchanged"/>
+        <Combo id="Combo01" taborder="7" text="Combo00" left="18" top="312" width="168" height="24" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="innerdataset" itemheight="22" displaynulltext="Please Select...">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	if (e.postvalue == "readonly"){
+			this.cmb_type.set_readonly(true);
+	}
+	else{
+			this.cmb_type.set_readonly(false);
+			this.cmb_type.set_type(e.postvalue);
+	}
+	
+};
+
+this.spn_count_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
+{
+	this.cmb_count.set_displayrowcount(obj.value);
+};
+
+
+
+
+this.btn_dropdown_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.cmb_event.dropdown();
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var obj = this.cmb_event.dropbutton;
+	obj.set_text("▼");
+	obj.set_background("yellow");
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Sales 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">06</Col>
+            <Col id="DEPT_NAME">Sales 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">07</Col>
+            <Col id="DEPT_NAME">Sales 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">08</Col>
+            <Col id="DEPT_NAME">Sales Management Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">09</Col>
+            <Col id="DEPT_NAME">Consulting 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">10</Col>
+            <Col id="DEPT_NAME">Consulting 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">11</Col>
+            <Col id="DEPT_NAME">Consulting 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">12</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">13</Col>
+            <Col id="DEPT_NAME">Mobile Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">14</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">15</Col>
+            <Col id="DEPT_NAME">Technical Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">16</Col>
+            <Col id="DEPT_NAME">Technical Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">17</Col>
+            <Col id="DEPT_NAME">Technical Support 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">18</Col>
+            <Col id="DEPT_NAME">Customer Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">19</Col>
+            <Col id="DEPT_NAME">Customer Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">20</Col>
+            <Col id="DEPT_NAME">Customer Support 3 Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

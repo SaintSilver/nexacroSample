@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Div" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static08" taborder="0" text="Div" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Button id="btn_fmBtn" taborder="3" text="Get" left="18" top="432" width="70" height="24" positionstep="0" onclick="btn_fmBtn_onclick"/>
+        <Static id="Static00" taborder="6" text="this.div_contents.form.edt_text.value;" left="18" top="384" width="272" height="24" positionstep="0"/>
+        <Edit id="edt_text" taborder="4" left="btn_fmBtn:5" top="432" width="167" height="24" value="Form Component" positionstep="0" text="Form Component"/>
+        <Static id="Static01" taborder="7" left="18" top="408" width="272" height="24" positionstep="0" text="this.div_linked.form.edt_text.value;"/>
+        <Div id="div_comp" taborder="5" text="Div00" left="400" top="383" height="200" positionstep="0" width="380">
+          <Layouts>
+            <Layout>
+              <Button id="btn_div" taborder="0" text=" 1. Div Color Change &gt; Yellow" left="5" top="7" width="219" height="24" onclick="div_comp_btn_div_onclick" textAlign="left"/>
+              <Button id="btn_form" taborder="1" text=" 2. Div.Form Color Change &gt; Pink" left="5" top="39" width="219" height="24" onclick="div_comp_btn_form_onclick" textAlign="left"/>
+              <Button id="btn_size" taborder="2" text=" 3. Div.Form Size Change" left="5" top="71" width="219" height="24" onclick="div_comp_btn_size_onclick" textAlign="left"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="8" text="☞ Div Structure" left="400" top="360" width="250" height="24" cssclass="sta_WF_label" positionstep="0"/>
+        <Div id="div_contents" taborder="1" text="Div00" left="10" top="40" height="300" width="380">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid01" taborder="" left="8" top="38" height="97" binddataset="ds_emp" right="9" autofittype="col">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="24" band="head"/>
+                      <Row size="24"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="Hire Date"/>
+                      <Cell col="2" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:FULL_NAME"/>
+                      <Cell col="1" text="bind:HIRE_DATE"/>
+                      <Cell col="2" text="bind:SALARY"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Edit id="Edit00" taborder="1" top="140" width="142" height="24" right="124"/>
+              <Calendar id="Calendar00" taborder="2" top="169" width="142" height="24" right="124"/>
+              <Button id="btn_divBtn" taborder="3" text="Get" left="8" top="261" width="70" height="24" onclick="div_contents_btn_divBtn_onclick"/>
+              <Static id="Static00" taborder="5" text="this.edt_form.value;" left="8" top="237" width="175" height="24"/>
+              <Edit id="edt_text" taborder="4" left="btn_divBtn:5" top="261" width="156" height="24"/>
+              <Static id="Static08" taborder="6" text="Name" left="8" top="140" width="100" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static01" taborder="7" text="Hire Date" left="8" top="169" width="100" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static03" taborder="8" text="☞ Div To Form Component" left="8" top="213" width="250" height="24" cssclass="sta_WF_label" positionstep="0"/>
+              <Static id="Static02" taborder="9" text="☞ Contents Form" left="10" top="10" width="250" height="24" cssclass="sta_WF_label" positionstep="0"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_linked" taborder="2" top="40" height="300" url="Comp::Comp_Div_Sub.xfdl" right="10" left="400"/>
+        <Static id="Static04" taborder="9" text="☞ Form To Div Component" left="10" top="360" width="250" height="24" cssclass="sta_WF_label" positionstep="0"/>
+      </Layout>
+    </Layouts>
+    <Bind>
+      <BindItem id="item2" compid="div_contents.form.Edit00" propid="value" datasetid="ds_emp" columnid="FULL_NAME"/>
+      <BindItem id="item0" compid="div_contents.form.Calendar00" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.div_comp_btn_div_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_comp.set_background("yellow");
+};
+
+this.div_comp_btn_form_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_comp.form.set_background("pink");
+};
+
+this.div_comp_btn_size_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_comp.form.set_width(350);
+	this.div_comp.form.set_height(150);
+};
+
+
+// Form Comp--> Div Comp
+this.btn_fmBtn_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = this.div_linked.form.edt_name.value;
+	this.edt_text.set_value(sRtn);
+};
+
+// Contents Div Comp--> Form Comp
+this.div_contents_btn_divBtn_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = this.edt_text.value;
+	this.div_contents.form.edt_text.set_value(sRtn);	
+};
+
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_emp" keystring="">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

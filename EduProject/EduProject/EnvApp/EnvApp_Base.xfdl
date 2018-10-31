@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="EnvApp_Base" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800" stepcount="2">
+        <Static id="Static03" taborder="0" text="☞ Environment Variable" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="1" text="Environment &amp; App Information" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static01" taborder="2" text="☞ Environment Cookies" left="10" top="150" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static04" taborder="3" text="☞ App Variables" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Static id="Static05" taborder="4" text="☞ Environment HTTP Header" left="10" top="260" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static08" taborder="5" left="260" top="65" width="243" height="26" fittocontents="both" text="var objApp = nexacro.getApplication();&#13;&#10;objApp.App_Var1;" positionstep="1"/>
+        <Button id="btn_varGet" taborder="6" text="Get" left="20" top="66" width="60" height="24" onclick="btn_varGet_onclick"/>
+        <Static id="Static00" taborder="7" left="265" top="72" width="292" height="13" fittocontents="both" text="nexacro.getEnvironmentVariable(&quot;Env_Var1&quot;);" positionstep="0"/>
+        <Edit id="edt_var1" taborder="8" left="85" top="66" width="170" height="24" readonly="true"/>
+        <Edit id="edt_var2" taborder="9" left="20" top="94" width="170" height="24" value="nexacro platform" text="nexacro platform"/>
+        <Button id="btn_varSet" taborder="10" text="Set" left="195" top="94" width="60" height="24" onclick="btn_varSet_onclick"/>
+        <Static id="Static17" taborder="11" left="265" top="100" width="417" height="13" fittocontents="both" text="nexacro.setEnvironmentVariable(&quot;Env_Var1&quot;, &quot;nexacro platform&quot;);" positionstep="0"/>
+        <Button id="btn_cookieGet" taborder="12" text="Get" left="20" top="176" width="60" height="24" onclick="btn_cookieGet_onclick"/>
+        <Static id="Static02" taborder="13" left="265" top="182" width="278" height="13" fittocontents="both" text="nexacro.getCookieVariable(&quot;Env_Cookie1&quot;);" positionstep="0"/>
+        <Edit id="edt_cookie1" taborder="14" left="85" top="176" width="170" height="24" readonly="true"/>
+        <Edit id="edt_cookie2" taborder="15" left="20" top="204" width="170" height="24" value="nexacro platform" text="nexacro platform"/>
+        <Button id="btn_cookieSet" taborder="16" text="Set" left="195" top="204" width="60" height="24" onclick="btn_cookieSet_onclick"/>
+        <Static id="Static18" taborder="17" left="265" top="210" width="403" height="13" fittocontents="both" text="nexacro.setCookieVariable(&quot;Env_Cookie1&quot;, &quot;nexacro platform&quot;);" positionstep="0"/>
+        <Button id="btn_httpGet" taborder="18" text="Get" left="20" top="286" width="60" height="24" onclick="btn_httpGet_onclick"/>
+        <Static id="Static19" taborder="19" left="265" top="292" width="296" height="13" fittocontents="both" text="nexacro.getHTTPHeaderVariable(&quot;Env_Http1&quot;);" positionstep="0"/>
+        <Edit id="edt_http1" taborder="20" left="85" top="286" width="170" height="24" readonly="true"/>
+        <Edit id="edt_http2" taborder="21" left="20" top="314" width="170" height="24" value="nexacro platform" text="nexacro platform"/>
+        <Button id="btn_httpSet" taborder="22" text="Set" left="195" top="314" width="60" height="24" onclick="btn_httpSet_onclick"/>
+        <Static id="Static20" taborder="23" left="265" top="320" width="421" height="13" fittocontents="both" text="nexacro.setHTTPHeaderVariable(&quot;Env_Http1&quot;, &quot;nexacro platform&quot;);" positionstep="0"/>
+        <Button id="btn_appVar" taborder="24" text="Get" left="20" top="66" width="60" height="24" onclick="btn_appVar_onclick" positionstep="1"/>
+        <Edit id="edt_appVar" taborder="25" left="85" top="66" width="170" height="24" readonly="true" positionstep="1"/>
+        <Static id="Static07" taborder="26" text="☞ App Datasets" left="10" top="228" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Button id="btn_appDs" taborder="27" text="Get" left="20" top="254" width="60" height="24" onclick="btn_appDs_onclick" positionstep="1"/>
+        <Grid id="grd_ds" taborder="28" left="85" top="254" width="270" height="125" positionstep="1" autofittype="col"/>
+        <Static id="Static21" taborder="29" left="365" top="254" width="243" height="26" fittocontents="both" text="var objApp = nexacro.getApplication();&#13;&#10;objApp.App_Dataset;" positionstep="1"/>
+        <Static id="Static22" taborder="30" text="☞ Environment Script" left="8" top="370" width="250" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_envScript" taborder="31" text="Call" left="20" top="396" width="60" height="24" onclick="btn_envScript_onclick"/>
+        <Edit id="edt_envScript" taborder="32" left="85" top="396" width="170" height="24" readonly="true"/>
+        <Static id="Static23" taborder="33" left="265" top="392" width="253" height="33" fittocontents="both" text="var objEnv = nexacro.getEnvironment();&#13;&#10;objEnv.Env_Script();" positionstep="0"/>
+        <Static id="Static24" taborder="34" text="☞ App Script - Launch Only" left="10" top="130" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <Static id="Static25" taborder="35" left="260" top="155" width="243" height="26" fittocontents="both" text="var objApp = nexacro.getApplication();&#13;&#10;objApp.App_Script();" positionstep="1"/>
+        <Button id="btn_appScript" taborder="36" text="Call" left="20" top="156" width="60" height="24" onclick="btn_appScript_onclick" positionstep="1"/>
+        <Edit id="edt_appScript" taborder="37" left="85" top="156" width="170" height="24" readonly="true" positionstep="1"/>
+      </Layout>
+      <Layout name="Layout0" screenid="Phone_screen" width="480" height="768" mobileorientation="portrait" stepcount="2">
+        <Edit id="edt_var2" left="20" top="122" width="170" height="24"/>
+        <Button id="btn_varSet" left="195" top="122" width="60" height="24"/>
+        <Static id="Static17" left="20" top="149" width="417" height="13"/>
+        <Static id="Static01" left="10" top="190" width="250" height="24"/>
+        <Static id="Static05" left="10" top="340" width="250" height="24"/>
+        <Button id="btn_cookieGet" left="20" top="214" width="60" height="24"/>
+        <Static id="Static02" left="20" top="242" width="278" height="13"/>
+        <Edit id="edt_cookie2" left="20" top="272" width="170" height="24"/>
+        <Button id="btn_cookieSet" left="195" top="272" width="60" height="24"/>
+        <Button id="btn_httpGet" left="20" top="364" width="60" height="24"/>
+        <Edit id="edt_cookie1" left="85" top="216" width="170" height="24"/>
+        <Static id="Static18" left="21" top="300" width="403" height="13"/>
+        <Static id="Static19" left="21" top="391" width="296" height="13"/>
+        <Edit id="edt_http1" left="85" top="364" width="170" height="24"/>
+        <Edit id="edt_http2" left="20" top="422" width="170" height="24"/>
+        <Button id="btn_httpSet" left="195" top="422" width="60" height="24"/>
+        <Static id="Static20" left="21" top="451" width="421" height="13"/>
+        <Static id="Static22" left="8" top="490" width="250" height="24"/>
+        <Button id="btn_envScript" left="20" top="514" width="60" height="24"/>
+        <Edit id="edt_envScript" left="85" top="514" width="170" height="24"/>
+        <Static id="Static23" left="21" top="542" width="253" height="26"/>
+        <Static id="Static00" left="20" top="92" width="292" height="13"/>
+        <Static id="Static08" left="21" top="92" width="243" height="26"/>
+        <Static id="Static25" left="20" top="213" width="243" height="26"/>
+        <Static id="Static21" left="21" top="342" width="243" height="26"/>
+        <Static id="Static07" left="10" top="288" width="250" height="24"/>
+        <Button id="btn_appDs" left="20" top="314" width="60" height="24"/>
+        <Grid id="grd_ds" left="21" top="391" width="270" height="125"/>
+        <Static id="Static24" left="10" top="160" width="250" height="24"/>
+        <Button id="btn_appScript" left="20" top="186" width="60" height="24"/>
+        <Edit id="edt_appScript" left="85" top="186" width="170" height="24"/>
+        <Button id="btn_varGet" left="20" top="64" width="60" height="24"/>
+        <Static id="Static04" left="10" top="40" width="250" height="24"/>
+        <Button id="btn_appVar" left="20" top="66" width="60" height="24"/>
+        <Edit id="edt_appVar" left="85" top="66" width="170" height="24"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/* Environment Variable *******************************************************/
+this.btn_varGet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = nexacro.getEnvironmentVariable("Env_Var1");
+	this.edt_var1.set_value(sRtn);
+};
+
+this.btn_varSet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sValue = this.edt_var2.value;
+	nexacro.setEnvironmentVariable("Env_Var1", sValue);
+};
+
+/* Environment Cookies *********************************************************/
+this.btn_cookieGet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = nexacro.getCookieVariable("Env_Cookie1");
+	this.edt_cookie1.set_value(sRtn);
+};
+
+this.btn_cookieSet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sValue = this.edt_cookie2.value;
+	nexacro.setCookieVariable("Env_Cookie1", sValue);
+};
+
+/* Environment HTTP Header ****************************************************/
+this.btn_httpGet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = nexacro.getHTTPHeaderVariable("Env_Http1");
+	this.edt_http1.set_value(sRtn);
+};
+
+this.btn_httpSet_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sValue = this.edt_http2.value;
+	nexacro.setHTTPHeaderVariable("Env_Http1", sValue);
+};
+
+/* Environment Script **********************************************************/
+this.btn_envScript_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objEnv = nexacro.getEnvironment();
+	var sRtn = objEnv.Env_Script();
+	this.edt_envScript.set_value(sRtn);
+};
+
+/* AppVariables **********************************************************/
+this.btn_appVar_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+	this.edt_appVar.set_value(objApp.App_Var1);
+};
+
+this.btn_appScript_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+	var sRtn = objApp.App_Script();
+	this.edt_appScript.set_value(sRtn);
+};
+
+this.btn_appDs_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+	this.grd_ds.set_binddataset(objApp.App_Dataset);
+	this.grd_ds.createFormat();
+
+};
+]]></Script>
+  </Form>
+</FDL>

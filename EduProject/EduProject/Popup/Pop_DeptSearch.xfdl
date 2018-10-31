@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Pop_EmpSearch" width="300" height="400" titletext="New Form" onload="Form_onload">
+    <Layouts>
+      <Layout height="400" width="300">
+        <Static id="Static00" taborder="0" text="Department Search" left="10" top="5" width="193" height="30" right="" bottom="" cssclass="sta_WF_emptitle" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Grid id="grd_list" taborder="1" left="10" top="40" width="" height="310" right="10" bottom="" binddataset="ds_dept" autofittype="col" oncelldblclick="fn_ok" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="185"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Dept Code"/>
+                <Cell col="1" text="Dept Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CD" textAlign="center"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_ok" taborder="3" text="OK" left="83" top="358" width="60" height="25" right="" bottom="" onclick="fn_ok" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Button id="btn_cancel" taborder="2" text="Cancel" left="153" top="358" width="60" height="25" right="" bottom="" onclick="fn_cancel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.fn_deptSearch();
+};
+
+
+this.fn_deptSearch = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.transaction("dept_search"
+				    ,"SvcURL::select_dept_code.jsp"
+					,""
+					,"ds_dept=out_dept"
+					,""
+					,"fn_callback");		
+};
+
+this.fn_callback = function(svcID, errCD, errMSG)
+{
+	if(errCD < 0){
+		this.alert("Error: " + errMSG);
+	}
+}
+
+this.fn_ok = function()
+{
+	var sRtn =  this.ds_dept.getColumn(this.ds_dept.rowposition, "DEPT_CD") + "|";
+	    sRtn += this.ds_dept.getColumn(this.ds_dept.rowposition, "DEPT_NAME");
+	this.close(sRtn);
+}
+
+this.fn_cancel = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};]]></Script>
+  </Form>
+</FDL>

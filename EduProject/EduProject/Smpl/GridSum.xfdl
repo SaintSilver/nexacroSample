@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="GridSum" width="800" height="600" titletext="New Form" scrolltype="none">
+    <Layouts>
+      <Layout height="600" width="800">
+        <Grid id="Grid00" taborder="6" left="10" top="60" right="10" bottom="10" binddataset="ds_sum">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="133"/>
+                <Column size="138"/>
+                <Column size="109"/>
+                <Column size="159"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Corp."/>
+                <Cell col="1" text="Dept."/>
+                <Cell col="2" text="Name"/>
+                <Cell col="3" text="Annual Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CORP" suppress="1" suppressalign="middle"/>
+                <Cell col="1" text="bind:DEPT" suppress="3"/>
+                <Cell col="2" text="bind:NAME"/>
+                <Cell col="3" text="bind:SALARY" textAlign="right"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="0" text="Suppress &amp; Sum" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Button id="Button00" taborder="1" text="SUM" left="517" top="27" width="50" height="25" onclick="btn_onclick"/>
+        <Button id="Button01" taborder="2" text="AVG" left="572" top="27" width="50" height="25" onclick="btn_onclick"/>
+        <Button id="Button02" taborder="3" text="MAX" left="627" top="27" width="50" height="25" onclick="btn_onclick"/>
+        <Button id="Button03" taborder="4" text="MIN" left="682" top="27" width="50" height="25" onclick="btn_onclick"/>
+        <Button id="Button04" taborder="5" text="COUNT" left="737" top="27" width="50" height="25" onclick="btn_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_sum" keystring="G:-CORP,-DEPT">
+        <ColumnInfo>
+          <Column id="CORP" type="STRING" size="256"/>
+          <Column id="DEPT" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Kylie</Col>
+            <Col id="SALARY">1000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Vivian</Col>
+            <Col id="SALARY">2000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Walter</Col>
+            <Col id="SALARY">3000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Bert</Col>
+            <Col id="SALARY">2000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Kerry</Col>
+            <Col id="SALARY">4000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Russell</Col>
+            <Col id="SALARY">6000</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Ina</Col>
+            <Col id="SALARY">100</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Bert</Col>
+            <Col id="SALARY">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Korea</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Josephine</Col>
+            <Col id="SALARY">300</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Leo</Col>
+            <Col id="SALARY">200</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Erica</Col>
+            <Col id="SALARY">400</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Sales</Col>
+            <Col id="NAME">Nicole</Col>
+            <Col id="SALARY">600</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Boris</Col>
+            <Col id="SALARY">10</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Marketing</Col>
+            <Col id="NAME">Ali</Col>
+            <Col id="SALARY">20</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Violet</Col>
+            <Col id="SALARY">30</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Indigo</Col>
+            <Col id="SALARY">20</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Oliver</Col>
+            <Col id="SALARY">40</Col>
+          </Row>
+          <Row>
+            <Col id="CORP">Japan</Col>
+            <Col id="DEPT">Education</Col>
+            <Col id="NAME">Kane</Col>
+            <Col id="SALARY">60</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objColumnInfo = this.ds_sum.getColumnInfo("SALARY");
+	objColumnInfo.set_prop(obj.text);
+
+	this.ds_sum.updateSortGroup();
+	
+};
+]]></Script>
+  </Form>
+</FDL>

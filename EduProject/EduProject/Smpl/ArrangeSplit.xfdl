@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="ArrangeSpli" width="800" height="600" titletext="New Form" ondragmove="CompBase_ArrangeSpli_ondragmove">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800" stepcount="0">
+        <ImageViewer id="img_split" taborder="4" left="313" top="151" background="red" width="10" ondrag="img_split_ondrag" onlbuttondown="img_split_onlbuttondown" height="10" cursor="move"/>
+        <Static id="Static06" taborder="0" text="Sample Split Using Arrangement - Red Icon Drag&amp;Drop" left="10" top="10" width="400" height="20" cssclass="sta_WF_subtitle"/>
+        <Div id="div_top" taborder="1" text="Top" left="10" top="50" right="10" border="1px solid pink" bottom="img_split:1" minheight="50" maxheight=""/>
+        <Div id="div_left" taborder="2" text="Left" left="10" top="img_split:1" bottom="10" border="1px solid skyblue" right="img_split:1" minwidth="100" maxwidth=""/>
+        <Div id="div_right" taborder="3" text="Right" left="img_split:1" top="img_split:1" right="10" bottom="10" minwidth="200" maxwidth="" border="1px solid gold"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.img_split_ondrag = function(obj:nexacro.ImageViewer,e:nexacro.DragEventInfo)
+{
+	return true;
+};
+
+this.img_split_onlbuttondown = function(obj:nexacro.ImageViewer,e:nexacro.MouseEventInfo)
+{
+	obj.nX = e.clientx;
+	obj.nY = e.clienty;
+};
+
+this.CompBase_ArrangeSpli_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
+{
+	this.img_split.move(e.clientx - this.img_split.nX, e.clienty - this.img_split.nY);
+	this.resetScroll();
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompCom_Bind" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="2">
+        <Grid id="Grid00" taborder="1" left="10" top="64" height="193" right="10" binddataset="ds_data" enable="true" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" positionstep="-1">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="120"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="NAME"/>
+                <Cell col="1" text="DEPT_CD"/>
+                <Cell col="2" text="ID"/>
+                <Cell col="3" text="HIRE_DATE"/>
+                <Cell col="4" text="SALARY"/>
+                <Cell col="5" text="GENDER"/>
+                <Cell col="6" text="MARRIED"/>
+                <Cell col="7" text="MEMO"/>
+                <Cell col="8" text="IMAGE"/>
+                <Cell col="9" text="PERCENT"/>
+                <Cell col="10" text="COLOR"/>
+                <Cell col="11" text="FONT"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:FULL_NAME"/>
+                <Cell col="1" text="bind:DEPT_CD"/>
+                <Cell col="2" text="bind:EMPL_ID"/>
+                <Cell col="3" text="bind:HIRE_DATE"/>
+                <Cell col="4" text="bind:SALARY"/>
+                <Cell col="5" text="bind:GENDER"/>
+                <Cell col="6" text="bind:MARRIED"/>
+                <Cell col="7" text="bind:MEMO"/>
+                <Cell col="8" text="bind:IMAGE"/>
+                <Cell col="9" text="bind:PERCENT"/>
+                <Cell col="10" text="bind:COLOR"/>
+                <Cell col="11" text="bind:FONT"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static07" taborder="20" text="☞ Grid" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="-1"/>
+        <Edit id="Edit00" taborder="3" left="153" top="326" width="190" height="24"/>
+        <Combo id="Combo00" taborder="10" text="Combo00" left="525" top="298" width="160" height="24" innerdataset="@ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME"/>
+        <MaskEdit id="MaskEdit00" taborder="4" left="153" top="354" width="190" height="24" format="AA-###" type="string"/>
+        <MaskEdit id="MaskEdit01" taborder="5" left="153" top="382" width="190" height="24" format="#,###"/>
+        <TextArea id="TextArea00" taborder="9" left="153" top="494" width="190" height="94"/>
+        <Static id="Static00" taborder="2" text="Static00" left="153" top="298" width="190" height="24"/>
+        <Radio id="Radio00" taborder="11" left="525" top="326" width="160" height="24" onitemchanged="Radio00_onitemchanged" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">M</Col>
+                <Col id="datacolumn">Male</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">W</Col>
+                <Col id="datacolumn">Female</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <CheckBox id="CheckBox00" taborder="6" text="CheckBox00" left="153" top="410" width="190" height="24"/>
+        <ListBox id="ListBox00" taborder="12" left="525" top="354" width="160" height="80" innerdataset="@ds_pos" codecolumn="POS_CD" datacolumn="POS_NAME"/>
+        <Spin id="Spin00" taborder="7" left="153" top="438" width="190" height="24"/>
+        <Calendar id="Calendar00" taborder="8" left="153" top="466" width="190" height="24"/>
+        <ImageViewer id="ImageViewer00" taborder="15" left="525" top="514" width="160" height="74" stretch="fixaspectratio" border="1px solid #9c9c9c"/>
+        <ProgressBar id="ProgressBar00" taborder="14" max="100" min="0" left="525" top="486" width="160" height="24"/>
+        <Static id="Static06" taborder="0" text="Bind" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static01" taborder="21" text="☞ Components" left="8" top="268" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static08" taborder="22" text="Edit" left="8" top="326" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static03" taborder="23" text="MaskEdit(String)" left="8" top="354" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static04" taborder="24" text="MaskEdit(Number)" left="8" top="382" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static05" taborder="25" text="Combo" left="380" top="298" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static09" taborder="26" text="List" left="380" top="354" width="140" height="80" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static10" taborder="27" text="Radio" left="380" top="326" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static11" taborder="28" text="TextArea" left="8" top="494" width="140" height="94" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static12" taborder="29" text="CheckBox" left="8" top="410" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static13" taborder="30" text="Spin" left="8" top="438" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static14" taborder="31" text="Calendar" left="8" top="466" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static15" taborder="32" text="Static" left="8" top="298" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static16" taborder="33" text="ImageViewer" left="380" top="514" width="140" height="74" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static17" taborder="34" text="Button" left="380" top="438" width="140" height="44" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static02" taborder="35" text="ProgressBar" left="380" top="486" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Button id="Button00" taborder="13" text="Button00" left="525" top="438" width="160" height="44"/>
+        <Edit id="Edit01" taborder="17" left="154" top="299" width="190" height="24" positionstep="1"/>
+        <Combo id="Combo01" taborder="19" text="Combo00" left="154" top="355" width="190" height="24" innerdataset="@ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" positionstep="1"/>
+        <MaskEdit id="MaskEdit02" taborder="18" left="154" top="327" width="190" height="24" format="AA-###" type="string" positionstep="1"/>
+        <Static id="Static19" taborder="36" text="Edit" left="9" top="299" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel" positionstep="1"/>
+        <Static id="Static20" taborder="37" text="MaskEdit(String)" left="9" top="327" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel" positionstep="1"/>
+        <Static id="Static22" taborder="38" text="Combo" left="9" top="355" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel" positionstep="1"/>
+        <Button id="btn_bind" taborder="16" text="Script Bind" left="12" top="264" width="140" height="28" positionstep="1" onclick="btn_bind_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="POS_CD" type="string" size="32"/>
+          <Column id="POS_NAME" type="string" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="POS_CD">04</Col>
+            <Col id="POS_NAME">Officer</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">03</Col>
+            <Col id="POS_NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">02</Col>
+            <Col id="POS_NAME">Division Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">01</Col>
+            <Col id="POS_NAME">Chairman</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_data" keystring="" cancolumnchange="ds_emp_cancolumnchange" onrowsetchanged="ds_emp_onrowsetchanged" onrowposchanged="ds_emp_onrowposchanged">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+          <Column id="IMAGE" type="STRING" size="256"/>
+          <Column id="PERCENT" type="INT" size="256"/>
+          <Column id="COLOR" type="STRING" size="256"/>
+          <Column id="FONT" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+            <Col id="IMAGE">Images::img_na_korea.png</Col>
+            <Col id="PERCENT">20</Col>
+            <Col id="COLOR">ivory</Col>
+            <Col id="FONT">normal 20px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+            <Col id="IMAGE">Images::img_na_canada.png</Col>
+            <Col id="PERCENT">40</Col>
+            <Col id="COLOR">greenyellow</Col>
+            <Col id="FONT">normal 18px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">BB001</Col>
+            <Col id="IMAGE">Images::img_na_china.png</Col>
+            <Col id="PERCENT">60</Col>
+            <Col id="COLOR">lightpink</Col>
+            <Col id="FONT">normal 14px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">BB002</Col>
+            <Col id="IMAGE">Images::img_na_usa.png</Col>
+            <Col id="PERCENT">70</Col>
+            <Col id="COLOR">aliceblue</Col>
+            <Col id="FONT">normal 24px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">CC001</Col>
+            <Col id="IMAGE">Images::img_na_korea.png</Col>
+            <Col id="PERCENT">100</Col>
+            <Col id="COLOR">ivory</Col>
+            <Col id="FONT">normal 12px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Ray</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">DD001</Col>
+            <Col id="IMAGE">Images::img_na_canada.png</Col>
+            <Col id="PERCENT">90</Col>
+            <Col id="COLOR">greenyellow</Col>
+            <Col id="FONT">normal 20px/normal "Verdana","Arial","sans-serif"</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+
+this.btn_bind_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objBindItem = new BindItem();
+	objBindItem.init("item00", "Edit01", "value", "ds_data", "FULL_NAME");
+	this.addChild("item00", objBindItem);
+	objBindItem.bind();
+
+	objBindItem = new BindItem();
+	objBindItem.init("item01", "Combo01", "value", "ds_data", "DEPT_CD");
+	this.addChild("item01", objBindItem);
+	objBindItem.bind();
+
+	objBindItem = new BindItem();
+	objBindItem.init("item02", "MaskEdit02", "value", "ds_data", "EMPL_ID");
+	this.addChild("item02", objBindItem);
+	objBindItem.bind();
+
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_data" columnid="FULL_NAME"/>
+      <BindItem id="item1" compid="Button00" propid="text" datasetid="ds_data" columnid="FULL_NAME"/>
+      <BindItem id="item2" compid="Combo00" propid="value" datasetid="ds_data" columnid="DEPT_CD"/>
+      <BindItem id="item3" compid="MaskEdit00" propid="value" datasetid="ds_data" columnid="EMPL_ID"/>
+      <BindItem id="item4" compid="MaskEdit01" propid="value" datasetid="ds_data" columnid="SALARY"/>
+      <BindItem id="item5" compid="TextArea00" propid="value" datasetid="ds_data" columnid="MEMO"/>
+      <BindItem id="item6" compid="Static00" propid="text" datasetid="ds_data" columnid="FULL_NAME"/>
+      <BindItem id="item7" compid="Radio00" propid="value" datasetid="ds_data" columnid="GENDER"/>
+      <BindItem id="item8" compid="CheckBox00" propid="value" datasetid="ds_data" columnid="MARRIED"/>
+      <BindItem id="item9" compid="ListBox00" propid="value" datasetid="ds_data" columnid="POS_CD"/>
+      <BindItem id="item10" compid="Spin00" propid="value" datasetid="ds_data" columnid="PERCENT"/>
+      <BindItem id="item11" compid="Calendar00" propid="value" datasetid="ds_data" columnid="HIRE_DATE"/>
+      <BindItem id="item12" compid="ImageViewer00" propid="image" datasetid="ds_data" columnid="IMAGE"/>
+      <BindItem id="item13" compid="ProgressBar00" propid="pos" datasetid="ds_data" columnid="PERCENT"/>
+      <BindItem id="item14" compid="Button00" propid="background" datasetid="ds_data" columnid="COLOR"/>
+      <BindItem id="item15" compid="Button00" propid="font" datasetid="ds_data" columnid="FONT"/>
+    </Bind>
+  </Form>
+</FDL>

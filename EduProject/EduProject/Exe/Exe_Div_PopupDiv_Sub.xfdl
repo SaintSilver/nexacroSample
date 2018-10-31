@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe_Div_PopupDiv_Sub" width="800" height="600" titletext="Exe_Div_PopupDiv_Sub">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="0">
+        <Static id="Static02" taborder="0" text="Linked" left="10" top="10" width="81" height="24"/>
+        <Grid id="Grid2" taborder="1" left="10" top="40" width="378" height="121" binddataset="Dataset2" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="36"/>
+                <Column size="100"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="expr:currow+1" textAlign="center"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+                <Cell col="2" text="bind:FULL_NAME"/>
+                <Cell col="3" text="bind:EMPL_ID"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_Exe2_Close" taborder="2" text="Exe2_Close" left="10" top="167" width="100" height="25" onclick="btn_Exe2_Close_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset2">
+        <ColumnInfo>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="FULL_NAME" type="STRING" size="256"/>
+          <Column id="EMPL_ID" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">John </Col>
+            <Col id="EMPL_ID">KR101</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR102</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR103</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">KR104</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Education</Col>
+            <Col id="FULL_NAME">Kate </Col>
+            <Col id="EMPL_ID">KR105</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">KR106</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Andrew </Col>
+            <Col id="EMPL_ID">KR107</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Belle</Col>
+            <Col id="EMPL_ID">KR108</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Sales</Col>
+            <Col id="FULL_NAME">Elsa</Col>
+            <Col id="EMPL_ID">KR109</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Kein </Col>
+            <Col id="EMPL_ID">KR110</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Ivy</Col>
+            <Col id="EMPL_ID">KR111</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Kara</Col>
+            <Col id="EMPL_ID">KR112</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_NAME">Marketing</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">KR113</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.btn_Exe2_Close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var arrRtn = [];
+    arrRtn[0] = this.Dataset2.getColumn(this.Dataset2.rowposition, "DEPT_NAME");
+    arrRtn[1] = this.Dataset2.getColumn(this.Dataset2.rowposition, "FULL_NAME");
+    arrRtn[2] = this.Dataset2.getColumn(this.Dataset2.rowposition, "EMPL_ID");
+	this.parent.parent.PopupDiv2.closePopup(arrRtn);
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

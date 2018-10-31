@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Pop_Mobile" width="400" height="400" titletext="New Form" onload="Form_onload">
+    <Layouts>
+      <Layout height="400" width="400">
+        <Static id="sta_title" taborder="2" text="Mobile Menu" left="10" top="5" width="193" height="30" cssclass="sta_WF_emptitle" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Grid id="grd_list" taborder="3" left="10" top="40" width="" height="310" right="10" bottom="" binddataset="ds_data" autofittype="col" oncelldblclick="Grid00_oncelldblclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="81"/>
+                <Column size="102"/>
+                <Column size="195"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="MENU_ID"/>
+                <Cell col="1" text="MENU_NAME"/>
+                <Cell col="2" text="MENU_URL"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MENU_ID"/>
+                <Cell col="1" text="bind:MENU_NAME"/>
+                <Cell col="2" text="bind:MENU_URL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_ok" taborder="4" text="OK" left="131" top="358" width="60" height="25" right="" bottom="" onclick="btn_ok_onclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Button id="btn_cancel" taborder="4" text="Cancel" left="201" top="358" width="60" height="25" right="" bottom="" onclick="btn_cancel_onclick" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Button id="btn_search" taborder="4" text="" left="" top="0" width="30" height="30" right="0" bottom="" background="URL(&quot;Images::img_search2.png&quot;)" border="0px none #ffffff" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" onclick="btn_search_onclick"/>
+        <Combo id="cmb_menu" taborder="5" text="Combo00" left="" top="10" width="150" height="25" right="10" bottom="" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" onitemchanged="Combo00_onitemchanged" innerdataset="@ds_data" codecolumn="MENU_ID" datacolumn="MENU_NAME"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_data" keystring="">
+        <ColumnInfo>
+          <Column id="MENU_ID" type="STRING" size="10"/>
+          <Column id="MENU_NAME" type="STRING" size="10"/>
+          <Column id="MENU_URL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="MENU_NAME">employees</Col>
+            <Col id="MENU_ID">0001</Col>
+            <Col id="MENU_URL">Mobile::Mobile_Work.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">camera</Col>
+            <Col id="MENU_ID">0002</Col>
+            <Col id="MENU_URL">Mobile::Mobile_Camera.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">0003</Col>
+            <Col id="MENU_NAME">step</Col>
+            <Col id="MENU_URL">Mobile::Mobile_Step.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">0004</Col>
+            <Col id="MENU_NAME">MLM</Col>
+            <Col id="MENU_URL">Form::Form_EmpMLM.xfdl</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.ds_data.filter("MENU_ID == '" + e.postvalue + "'");
+};
+
+this.btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn  = this.ds_data.getColumn(this.ds_data.rowposition, "MENU_ID") + "|";
+	    sRtn += this.ds_data.getColumn(this.ds_data.rowposition, "MENU_NAME") + "|";
+	    sRtn += this.ds_data.getColumn(this.ds_data.rowposition, "MENU_URL");
+
+	this.close(sRtn);
+};
+
+this.Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	this.btn_ok_onclick();
+};
+
+this.btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

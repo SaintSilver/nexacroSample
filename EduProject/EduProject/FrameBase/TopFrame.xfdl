@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="TopFrame" width="1022" height="50" titletext="New Form">
+    <Layouts>
+      <Layout height="50" mobileorientation="landscape" width="1022">
+        <Static id="Static00" taborder="3" left="201" top="0" height="50" cssclass="sta_TF_bg" right="0"/>
+        <Button id="Button00" taborder="1" left="201" top="10" width="30" height="30" cssclass="btn_TF_allmnu"/>
+        <Menu id="Menu00" taborder="2" left="231" top="10" height="30" cssclass="mnu_TF_menu" innerdataset="@gds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" levelcolumn="MENU_LEVEL" popupitemheight="24" right="10" onmenuclick="Menu00_onmenuclick" userdatacolumn="MENU_ID" iconcolumn="MENU_ICON" hotkeycolumn="MENU_KEY" enablecolumn="MENU_ENABLE"/>
+        <ImageViewer id="ImageViewer00" taborder="3" left="20" top="10" width="160" height="30" image="URL(&quot;theme://images/sta_TF_logo.png&quot;)"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.Menu00_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+//	var sID       = e.id;		    //메뉴ID Key
+	var sID       = e.userdata;		    //메뉴ID Key
+	var sName  = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "MENU_NAME");	//메뉴 명
+	var sURL     = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "FORM_URL");	    //화면 URL	
+	
+	nexacro.getApplication().mainframe.VFrameSet0.HFrameSet0.LeftFrame.form.fn_openForm(sID, sName, sURL);
+};
+]]></Script>
+  </Form>
+</FDL>

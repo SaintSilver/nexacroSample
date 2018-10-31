@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompCom_Event" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" width="800" stepcount="0">
+        <Grid id="Grid00" taborder="6" left="10" top="234" height="166" binddataset="ds_emp" enable="true" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" autofittype="col" width="440">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="FULL_NAME"/>
+                <Cell col="1" text="DEPT_CD"/>
+                <Cell col="2" text="HIRE_DATE"/>
+                <Cell col="3" text="MARRIED"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:FULL_NAME" edittype="text"/>
+                <Cell col="1" text="bind:DEPT_CD" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CD" combodatacol="DEPT_NAME"/>
+                <Cell col="2" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+                <Cell col="3" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static07" taborder="10" text="☞ Components" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="Event" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Static id="Static08" taborder="11" text="Edit" left="10" top="74" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static05" taborder="12" text="Combo" left="10" top="103" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Static id="Static14" taborder="13" text="Calendar" left="10" top="132" width="140" height="24" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Calendar id="cal_event" taborder="3" left="154" top="132" width="166" height="24" locale="" value="20170101" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" hotkey="" positionstep="0" oncloseup="cal_event_oncloseup" ondayclick="cal_event_ondayclick" oneditclick="cal_event_oneditclick"/>
+        <TextArea id="txt_log" taborder="14" left="460" top="65" positionstep="0" value="event log" bottom="10" right="10"/>
+        <Combo id="cmb_event" taborder="2" text="Combo00" left="154" top="103" width="166" height="24" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="innerdataset" itemheight="22" canitemchange="cmb_event_canitemchange" oncloseup="cmb_event_oncloseup" onitemchanged="cmb_event_onitemchanged" onitemclick="cmb_event_onitemclick" ondropdown="cmb_event_ondropdown">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Radio id="rdo_rtn" taborder="4" left="59" top="178" width="112" height="24" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" value="true" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">true</Col>
+                <Col id="datacolumn">true</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">false</Col>
+                <Col id="datacolumn">false</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static20" taborder="15" text="return" left="13" top="178" width="46" height="24" cssclass="sta_WF_label"/>
+        <Edit id="edt_event" taborder="1" left="154" top="74" width="166" height="24" canchange="edt_event_canchange" onchanged="edt_event_onchanged" oninput="edt_event_oninput" text="event log"/>
+        <Button id="btn_clear" taborder="9" text="Clear" left="txt_log:-43" top="65" width="43" height="22" onclick="btn_clear_onclick"/>
+        <Static id="Static00" taborder="16" text="☞ Dataset" left="10" top="208" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="17" text="Event enable" left="221" top="176" width="96" height="24" cssclass="sta_WF_label"/>
+        <Radio id="rdo_enable" taborder="5" left="327" top="176" width="112" height="24" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" value="true" index="0" onitemchanged="rdo_enable_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">true</Col>
+                <Col id="datacolumn">true</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">false</Col>
+                <Col id="datacolumn">false</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static02" taborder="18" text="☞ Event Handler" left="10" top="448" width="250" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_click" taborder="7" text="Click Event" left="16" top="482" width="120" height="30" onclick="btn_click_onclick"/>
+        <Button id="btn_addEvent" taborder="8" text="Add Event" left="141" top="482" width="120" height="30" onclick="btn_addEvent_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp" keystring="" cancolumnchange="ds_emp_cancolumnchange" canrowposchange="ds_emp_canrowposchange" oncolumnchanged="ds_emp_oncolumnchanged" onrowposchanged="ds_emp_onrowposchanged">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Dillon</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20150401</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">AA003</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Maia</Col>
+            <Col id="POS_CD">01</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">BB002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Ray</Col>
+            <Col id="POS_CD">01</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">CC002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Cameron</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20010303</Col>
+            <Col id="SALARY">86000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="EMPL_ID">CC003</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Tyler</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20060907</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">lightgray</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">DD001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">David</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010408</Col>
+            <Col id="SALARY">45000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">DD002</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.sLog = this.txt_log.value + "\n";
+
+this.edt_event_oninput = function(obj:nexacro.Edit,e:nexacro.InputEventInfo)
+{
+	this.sLog += "oninput \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.edt_event_canchange = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	this.sLog += "canchange \n";
+	this.txt_log.set_value(this.sLog);	
+	
+	return this.rdo_rtn.value;	
+};
+
+this.edt_event_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	this.sLog += "onchanged \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cmb_event_ondropdown = function(obj:nexacro.Combo,e:nexacro.EventInfo)
+{
+	this.sLog += "ondropdown \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cmb_event_onitemclick = function(obj:nexacro.Combo,e:nexacro.ItemClickEventInfo)
+{
+	this.sLog += "onitemclick \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cmb_event_canitemchange = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.sLog += "canitemchange \n";
+	this.txt_log.set_value(this.sLog);	
+
+	return this.rdo_rtn.value;
+};
+
+this.cmb_event_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.sLog += "onitemchanged : " + e.pretext + " >> " + e.posttext + " \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cmb_event_oncloseup = function(obj:nexacro.Combo,e:nexacro.ComboCloseUpEventInfo)
+{
+	this.sLog += "oncloseup \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cal_event_oncloseup = function(obj:nexacro.Calendar,e:nexacro.CalendarCloseUpEventInfo)
+{
+	this.sLog += "oncloseup \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cal_event_ondayclick = function(obj:nexacro.Calendar,e:nexacro.CalendarDayClickEventInfo)
+{
+	this.sLog += "ondayclick e.date : " + e.date + "\n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.cal_event_oneditclick = function(obj:nexacro.Calendar,e:nexacro.EditClickEventInfo)
+{
+	this.sLog += "oneditclick \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+
+
+this.btn_clear_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.sLog = "event log \n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.ds_emp_cancolumnchange = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	this.sLog += "cancolumnchange \n";
+	this.txt_log.set_value(this.sLog);	
+
+	return this.rdo_rtn.value;	
+};
+
+this.ds_emp_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	this.sLog += "oncolumnchanged " + e.oldvalue + " >> " + e.newvalue + "\n";
+	this.txt_log.set_value(this.sLog);	
+};
+
+this.ds_emp_canrowposchange = function(obj:nexacro.NormalDataset,e:nexacro.DSRowPosChangeEventInfo)
+{
+	this.sLog += "canrowposchange \n";
+	this.txt_log.set_value(this.sLog);	
+
+	return this.rdo_rtn.value;
+};
+
+this.ds_emp_onrowposchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSRowPosChangeEventInfo)
+{
+	this.sLog += "onrowposchanged " + e.oldrow + " >> " + e.newrow + "\n";
+	this.txt_log.set_value(this.sLog);	
+	
+};
+
+
+this.rdo_enable_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.ds_emp.set_enableevent(obj.value);
+};
+
+this.btn_click_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.alert("Hello nexacro");
+};
+
+this.btn_addEvent_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.btn_click.addEventHandler("onclick", this.fn_addEvent, this);
+};
+
+this.fn_addEvent = function()
+{
+	this.alert("Add Event - Hello World");
+}
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="edt_event" propid="value" datasetid="ds_emp" columnid="FULL_NAME"/>
+      <BindItem id="item1" compid="cmb_event" propid="value" datasetid="ds_emp" columnid="DEPT_CD"/>
+      <BindItem id="item2" compid="cal_event" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+    </Bind>
+  </Form>
+</FDL>

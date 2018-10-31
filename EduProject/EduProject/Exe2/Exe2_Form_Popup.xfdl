@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe2_Form_Popup" width="400" height="300" titletext="Exe2_Form_Popup" ontimer="Exe_Form_ontimer" onload="Exe2_Form_Popup_onload" border="1px solid #9c9c9c">
+    <Layouts>
+      <Layout height="300" width="400" stepcount="0">
+        <Static id="Static06" taborder="0" text="Exercise - Popup" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static07" taborder="1" text="☞ Exe3" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="-1"/>
+        <Button id="btn_Exe3_2" taborder="2" text="Exe3_2" left="10" top="244" width="80" height="25" positionstep="0" onclick="btn_Exe3_2_onclick"/>
+        <Button id="btn_Exe3_4" taborder="3" text="Exe3_4" left="100" top="244" width="80" height="25" positionstep="0" onclick="btn_Exe3_4_onclick"/>
+        <Edit id="Edit3_1" taborder="4" left="10" top="74" width="180" height="24" positionstep="0" text="nexacro"/>
+        <Edit id="Edit3_2" taborder="5" left="200" top="74" width="180" height="24" positionstep="0" text="platform"/>
+        <Grid id="Grid3" taborder="6" left="10" top="108" width="370" height="126" binddataset="Dataset3" autofittype="col" positionstep="0">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMPL_ID"/>
+                <Cell col="1" text="FULL_NAME"/>
+                <Cell col="2" text="DEPT_CD"/>
+                <Cell col="3" text="SALARY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" text="bind:FULL_NAME"/>
+                <Cell col="2" text="bind:DEPT_CD"/>
+                <Cell col="3" text="bind:SALARY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_del" taborder="7" text="-" left="356" top="237" width="20" height="20" onclick="btn_del_onclick"/>
+        <Button id="btn_add" taborder="8" text="+" left="331" top="237" width="20" height="20" onclick="btn_add_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_child"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Exe2_Form_Popup_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var strParam1 = this.parent.param1;
+	var strParam2 = this.parent.param2;
+	var objParam  = this.parent.param3;
+	
+	this.Edit3_1.set_value(strParam1);
+	this.Edit3_2.set_value(strParam2);	
+
+	this.ds_child.copyData(objParam);
+	this.Grid3.set_binddataset("ds_child");
+	this.Grid3.createFormat();
+};
+
+// Exe 3-2
+this.btn_Exe3_2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn1 = this.Edit3_1.value;
+	var sRtn2 = this.Edit3_2.value;
+	this.close(sRtn1 + ":" + sRtn2);
+	
+};
+
+this.btn_Exe3_4_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.opener.fn_return(this.ds_child);
+	this.close();
+};
+
+this.btn_add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_child.addRow();
+};
+
+this.btn_del_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_child.deleteRow();
+};
+
+]]></Script>
+  </Form>
+</FDL>

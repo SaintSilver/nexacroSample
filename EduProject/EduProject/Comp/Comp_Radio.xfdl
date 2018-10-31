@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Radio" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static04" taborder="5" text="☞ Basic Usage - innerdataset" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="Radio" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Static id="Static02" taborder="6" text="☞ Column Count &amp; Row Count" left="3" top="240" width="232" height="24" cssclass="sta_WF_label"/>
+        <Radio id="Radio01" taborder="4" left="13" top="264" width="203" height="112" codecolumn="codecolumn" datacolumn="datacolumn" value="SA" columncount="2" rowcount="4" innerdataset="innerdataset" index="6">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio02" taborder="2" left="154" top="64" width="134" height="130" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" value="03" innerdataset="@ds_dept" onitemchanged="Radio02_onitemchanged" index="2"/>
+        <Radio id="Radio03" taborder="1" left="20" top="64" width="101" height="56" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="innerdataset" index="0" value="M">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">M</Col>
+                <Col id="datacolumn">Male</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">W</Col>
+                <Col id="datacolumn">Female</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <CheckBox id="CheckBox00" taborder="3" text="vertical" left="218" top="240" width="150" height="24" onclick="CheckBox00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	if (e.postvalue == "readonly"){
+			this.cmb_type.set_readonly(true);
+	}
+	else{
+			this.cmb_type.set_readonly(false);
+			this.cmb_type.set_type(e.postvalue);
+	}
+	
+};
+
+
+this.CheckBox00_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	if(obj.value){
+		this.Radio01.set_direction("vertical");
+	}
+	else{
+		this.Radio01.set_direction("horizontal");
+	}
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

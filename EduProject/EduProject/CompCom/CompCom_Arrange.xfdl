@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompCom_Arrange" width="800" height="600" titletext="New Form" ondragmove="Form_ondragmove" ontimer="Form_ontimer">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800" stepcount="2">
+        <Button id="btn_retrieve" taborder="17" text="Retrieve" left="20" width="120" height="30" onclick="Button02_onclick" padding="0px 5px" positionstep="1" top="379"/>
+        <Button id="btn_add" taborder="18" text="Add" left="btn_retrieve:8" width="120" height="30" leftbase="Button02.right" padding="0px 5px" positionstep="1" top="379"/>
+        <Button id="btn_del" taborder="19" text="Delete" left="btn_add:8" width="120" height="30" leftbase="Button03.right" padding="0px 5px" positionstep="1" top="379"/>
+        <Button id="btn_save" taborder="20" text="Save" left="btn_del:8" width="120" height="30" leftbase="Button04.right" padding="0px 5px" positionstep="1" top="379"/>
+        <ImageViewer id="img_grip2" taborder="13" left="582" top="252" width="12" height="11" image="URL(&quot;theme://images/Statusbar_img_grip.png&quot;)" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" cursor="nw-resize" positionstep="1"/>
+        <Div id="div_base00" taborder="14" text="Div00" left="278" top="75" right="img_grip2:-8" bottom="img_grip2:-8" positionstep="1">
+          <Layouts>
+            <Layout>
+              <Button id="Button03" taborder="3" text="Comp1" left="2" top="2" right="2" height="20.2%"/>
+              <Button id="Button00" taborder="0" text="Comp2" left="2" top="Button03:2" width="22.2%" bottom="2"/>
+              <Button id="Button01" taborder="1" text="Comp3" left="Button00:2" top="Button03:2" width="45.81%" bottom="2"/>
+              <Button id="Button02" taborder="2" text="Comp4" top="Button03:2" bottom="2" left="Button01:2" right="2"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_hor" taborder="9" text="Div00" top="290" ondragmove="div_arrange_ondragmove" left="319" height="147" width="412">
+          <Layouts>
+            <Layout>
+              <Button id="btn_baseR" taborder="0" background="khaki" font="normal normal 10pt &quot;Verdana&quot;" top="35" width="60" height="30" positionstep="0" text="BASE" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" border="1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid red" left="150"/>
+              <Button id="Button00" taborder="1" top="35" height="30" border="1px solid #9c9c9c , 2px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c" positionstep="0" text="Move" right="btn_baseR:10" width="60"/>
+              <Button id="Button01" taborder="2" top="35" height="30" border="1px solid #9c9c9c , 2px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c" positionstep="0" left="10" text="Resize" maxwidth="" right="btn_baseR:80"/>
+              <Static id="Static02" taborder="3" text="Right position based on BASE Left" left="10" top="5" width="396" height="24"/>
+              <Button id="btn_baseL" taborder="4" background="khaki" font="normal normal 10pt &quot;Verdana&quot;" left="200" top="76" height="30" positionstep="0" text="BASE" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" width="60" border="1px solid #9c9c9c , 2px solid red , 1px solid #9c9c9c , 1px solid #9c9c9c"/>
+              <Button id="Button21" taborder="5" top="76" height="30" border="1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid blue" positionstep="0" left="btn_baseL:80" text="Resize" minwidth="" maxwidth="" right="10"/>
+              <Button id="Button22" taborder="6" top="76" width="60" height="30" border="1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid blue" positionstep="0" text="Move" left="btn_baseL:10"/>
+              <Static id="Static00" taborder="7" text="Left position based on BASE Right" left="8" top="113" width="396" height="24" textAlign="right"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_ver" taborder="10" text="Div00" top="290" ondragmove="div_arrange_ondragmove" left="21" height="297" width="282">
+          <Layouts>
+            <Layout>
+              <Button id="btn_baseB" taborder="0" background="khaki" font="normal normal 10pt &quot;Verdana&quot;" left="10" top="115" width="90" height="30" positionstep="0" text="BASE" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" border="2px solid red , 1px solid #9c9c9c , 1px solid #9c9c9c"/>
+              <Button id="Button17" taborder="1" width="90" border="1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid blue" positionstep="0" text="Move" left="10" bottom="btn_baseB:10" height="30"/>
+              <Button id="Button18" taborder="2" top="35" border="1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid blue" positionstep="0" left="10" text="Resize" maxheight="" width="90" bottom="btn_baseB:50"/>
+              <Button id="btn_baseT" taborder="3" background="khaki" font="normal normal 10pt &quot;Verdana&quot;" left="169" top="145" width="90" height="30" positionstep="0" text="BASE" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" border="1px solid #9c9c9c , 1px solid #9c9c9c , 2px solid red"/>
+              <Button id="Button19" taborder="4" top="btn_baseT:50" width="90" border="2px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c" positionstep="0" text="Resize" left="169" bottom="40"/>
+              <Button id="Button20" taborder="5" top="btn_baseT:10" border="2px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c" positionstep="0" left="169" text="Move" maxheight="" width="90" height="30"/>
+              <Static id="Static02" taborder="6" text="Bottom position based on BASE Top" left="10" top="5" width="256" height="24" wordWrap="english"/>
+              <Static id="Static00" taborder="7" text="Top position based on BASE Bottom" left="8" top="258" width="256" height="24" wordWrap="english" textAlign="right"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <ImageViewer id="img_grip1" taborder="12" left="132" top="167" width="12" height="11" image="URL(&quot;theme://images/Statusbar_img_grip.png&quot;)" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" cursor="nw-resize" positionstep="1"/>
+        <Static id="Static03" taborder="2" text="☞ Component Position - Anchor" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static01" taborder="4" text="☞ Arrangement Position" left="10" top="256" width="170" height="24" cssclass="sta_WF_label" positionstep="0"/>
+        <Button id="btn_baseSize" taborder="0" background="khaki" font="normal normal 10pt &quot;Verdana&quot;" left="20" top="75" text="BASE" positionstep="1" right="img_grip1:-8" bottom="img_grip1:-8"/>
+        <Button id="Button08" taborder="1" text="w: 50%&#13;&#10;h: 50%" left="btn_baseSize:10" width="btn_baseSize:50%" height="btn_baseSize:50%" positionstep="1" top="76"/>
+        <Static id="Static00" taborder="5" text="☞ Arrangement Size" left="15" top="46" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+        <ImageViewer id="img_grip" taborder="6" left="424" top="237" width="12" height="11" image="URL(&quot;theme://images/Statusbar_img_grip.png&quot;)" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" cursor="nw-resize"/>
+        <Button id="btn_start" taborder="7" left="180" top="259" width="20" height="20" text="▶" onclick="btn_start_onclick" font="normal 10px/normal &quot;Verdana&quot;"/>
+        <Button id="btn_stop" taborder="8" left="203" top="259" width="20" height="20" text="■" onclick="btn_stop_onclick" font="normal 10px/normal &quot;Verdana&quot;"/>
+        <Div id="div_base" taborder="3" text="Div00" left="20" top="70" right="img_grip:-8" bottom="img_grip:-8" border="1px solid red">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Left Top" left="10" top="10" width="100" height="30" border="1px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid blue"/>
+              <Button id="Button01" taborder="1" text="Right Top" top="10" width="100" height="30" right="10" border="1px solid blue , 1px solid blue , 1px solid #9c9c9c , 1px solid #9c9c9c"/>
+              <Button id="Button02" taborder="2" text="Left Bottom" left="10" width="100" height="30" bottom="10" border="1px solid #9c9c9c , 1px solid #9c9c9c , 1px solid blue , 1px solid blue"/>
+              <Button id="Button03" taborder="3" text="Right Bottom" width="100" height="30" right="10" bottom="10" border="1px solid #9c9c9c , 1px solid blue , 1px solid blue , 1px solid #9c9c9c"/>
+              <Button id="Button04" taborder="4" text="Left Top Right Bottom" left="10" top="50" right="10" bottom="50" border="1px solid blue"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static06" taborder="11" text="Position &amp; Arrangement" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <Static id="Static09" taborder="15" text="☞ Fit To Contents" left="10" width="146" height="24" cssclass="sta_WF_label" positionstep="1" top="346"/>
+        <Button id="btn_fit" taborder="16" text="Fit" left="140" width="40" height="24" onclick="btn_fit_onclick" positionstep="1" top="346"/>
+        <Button id="btn_fit_re" taborder="21" text="release" left="185" width="68" height="24" onclick="btn_fit_re_onclick" positionstep="1" top="346"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.obj_ondrag = function(obj:nexacro.Button,e:nexacro.DragEventInfo)
+{
+	return true;
+};
+
+this.obj_onlbuttondown = function(obj:nexacro.Button,e:nexacro.MouseEventInfo)
+{
+	obj.nX = e.clientx;
+	obj.nY = e.clienty;	
+};
+
+this.Form_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
+{
+	e.sourceobject.move(e.clientx-e.sourceobject.nX, e.clienty-e.sourceobject.nY);	
+	this.resetScroll();
+};
+
+this.btn_start_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.setTimer(1, 50);
+};
+
+this.btn_stop_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.killTimer(1);
+};
+
+this.Form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 1){
+		var arrObj = new Array();
+		arrObj[0] = this.div_hor.form.btn_baseR;
+		arrObj[1] = this.div_hor.form.btn_baseL;
+		arrObj[2] = this.div_ver.form.btn_baseB;
+		arrObj[3] = this.div_ver.form.btn_baseT;		
+		this.fn_move(arrObj);
+	}
+};
+
+this.nCnt = 0;
+this.sFlag = "A";
+this.fn_move = function(arrObj)
+{
+	if(this.nCnt == 100){
+		this.sFlag = "B";
+	}
+	else if(this.nCnt == 0){
+		this.sFlag = "A";
+	}
+	
+	if(this.sFlag == "A"){
+		arrObj[0].move(parseInt(arrObj[0].left)+1, parseInt(arrObj[0].top)  );
+		arrObj[1].move(parseInt(arrObj[1].left)-1, parseInt(arrObj[1].top)  );
+		arrObj[2].move(parseInt(arrObj[2].left)  , parseInt(arrObj[2].top)+1);
+		arrObj[3].move(parseInt(arrObj[3].left)  , parseInt(arrObj[3].top)-1);
+		this.nCnt ++;
+	}
+	else{
+		arrObj[0].move(parseInt(arrObj[0].left)-1, parseInt(arrObj[0].top)  );
+		arrObj[1].move(parseInt(arrObj[1].left)+1, parseInt(arrObj[1].top)  );
+		arrObj[2].move(parseInt(arrObj[2].left)  , parseInt(arrObj[2].top)-1);
+		arrObj[3].move(parseInt(arrObj[3].left)  , parseInt(arrObj[3].top)+1);
+		this.nCnt--;
+	}
+	this.div_hor.form.resetScroll();
+	this.div_ver.form.resetScroll();
+
+}
+
+this.btn_fit_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.btn_retrieve.set_fittocontents("width");
+	this.btn_add.set_fittocontents("width");
+	this.btn_del.set_fittocontents("width");
+	this.btn_save.set_fittocontents("width");	
+};
+
+this.btn_fit_re_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.btn_retrieve.set_fittocontents("none");
+	this.btn_add.set_fittocontents("none");
+	this.btn_del.set_fittocontents("none");
+	this.btn_save.set_fittocontents("none");	
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_emp" keystring="">
+        <ColumnInfo>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="DEPT_CD" type="STRING" size="10"/>
+          <Column id="POS_CD" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
+          <Column id="MEMO" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="FULL_NAME">Olivia</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="EMPL_ID">AA001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">John</Col>
+            <Col id="POS_CD">02</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">AA002</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="EMPL_ID">BB001</Col>
+          </Row>
+          <Row>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="EMPL_ID">CC001</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

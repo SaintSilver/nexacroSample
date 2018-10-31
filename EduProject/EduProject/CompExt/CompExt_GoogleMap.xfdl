@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompExt_GoogleMap" width="800" height="600" titletext="New Form" onload="CompExt_GoogleMap_onload">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static03" taborder="0" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="1" text="GoogleMap - 준비중..." left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <GoogleMap id="GoogleMap00" taborder="2" left="10" top="109" showzoom="" right="10" bottom="10"/>
+        <Radio id="rdo_mode" taborder="3" left="100" top="74" width="295" height="25" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="0" text="Default" index="0" onitemchanged="btn_load_onclick" columncount="-1" rowcount="-1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Default</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Mode1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Mode2</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">Mode3</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Button id="btn_marker" taborder="4" text="Marker Vislble" left="668" top="74" width="120" height="25" onclick="btn_marker_onclick"/>
+        <Button id="btn_load" taborder="5" text="Map Load" left="10" top="74" width="84" height="25" onclick="btn_load_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.MarkerFlag = false;
+
+this.btn_load_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.MarkerFlag)	this.fn_markerRemove();
+	
+	var iMode = parseInt(this.rdo_mode.value);
+	this.GoogleMap00.load(false, 37.572765, 126.976868, iMode);	//Gwanghwamun Plaza
+};
+
+this.fn_markerRemove = function()
+{
+	this.GoogleMap00.removeItem("Marker1");
+	this.GoogleMap00.removeItem("Marker2");
+	this.GoogleMap00.removeItem("Marker3");
+	this.GoogleMap00.removeItem("Marker4");
+	this.GoogleMap00.removeItem("Marker5");
+	this.MarkerFlag = false;
+}
+
+this.btn_marker_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.MarkerFlag == true){
+		this.fn_markerRemove();
+	}
+	else{	
+		var objMarker1 = new nexacro.GoogleMapMarker();	
+		objMarker1.set_latitude(37.565847);
+		objMarker1.set_longitude(126.975114);
+		objMarker1.set_text("Deoksugung Palace  ");
+		this.GoogleMap00.addItem("Marker1", objMarker1);
+		
+		var objMarker2 = new nexacro.GoogleMapMarker();	
+		objMarker2.set_latitude(37.578018);
+		objMarker2.set_longitude(126.976874);
+		objMarker2.set_text("Gyeongbokgung Palace");
+		this.GoogleMap00.addItem("Marker2", objMarker2);
+
+		var objMarker3 = new nexacro.GoogleMapMarker();	
+		objMarker3.set_latitude(37.579185);
+		objMarker3.set_longitude(126.990844);
+		objMarker3.set_text("Changdeokgung Palace");
+		this.GoogleMap00.addItem("Marker3", objMarker3);
+
+		var objMarker4 = new nexacro.GoogleMapMarker();	
+		objMarker4.set_latitude(37.576002);
+		objMarker4.set_longitude(126.976905);
+		objMarker4.set_text("Gwanghwamun Gate");
+		this.GoogleMap00.addItem("Marker4", objMarker4);
+
+		var objMarker5 = new nexacro.GoogleMapMarker();	
+		objMarker5.set_latitude(37.566654);
+		objMarker5.set_longitude(126.978425);
+		objMarker5.set_text("Seoul Metropolitan Government");
+		this.GoogleMap00.addItem("Marker5", objMarker5);
+
+
+		this.MarkerFlag = true;
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

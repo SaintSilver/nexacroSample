@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nexacro platform</title>
+<style>
+header, footer {
+	font:normal 700 12px/20px "Verdana";
+    color: #222222;
+	padding: 5px;
+
+}
+table,td {
+
+	border: 1px solid #bdc2c9;
+	font-family: verdana;
+	font-size: 9pt;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+th {
+	background-color: #e7eaee;
+	border: 1px solid #bdc2c9;
+	color: #222222;
+	font: normal 12px/normal "Verdana";
+	width: 120px;
+	height: 32px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+</style>
+<script type="text/javascript">
+    if(!window.NEXACROHTML){
+        window.NEXACROHTML = {};
+    }
+    window.NEXACROHTML.FireUserNotify = function(userdata){
+
+        if(window.NEXACROWEBBROWSER){// WebBRowser
+
+            window.NEXACROWEBBROWSER.on_fire_onusernotify(window.NEXACROWEBBROWSER, userdata);
+
+        } 
+		else if(window.nexacro){ // Android
+            window.nexacro.fireUserNotify(userdata);
+
+        } 
+		else{ // Runtime
+
+            window.document.title = userdata;
+        }         
+    }
+	function htmlFunction(arg)
+	{
+		alert(arg);
+	}
+    function sendContent()
+    {
+        var str = document.getElementById("full_name").value;
+        window.NEXACROHTML.FireUserNotify(str);        
+    }	
+</script>
+</head>
+<body>
+	<header>
+		html
+	</header>
+	<table width="400" style="border-collapse:collapse">
+		<tr>
+			<th>Name</th>
+			<td><input type="text" id="full_name" value="html"></td>
+		</tr>
+		<tr>
+			<th>Department</th>
+			<td>
+				<select id="dept_cd">
+					<option value="01">Accounting Team</option>
+					<option value="02" selected>HR Team</option>
+					<option value="03">Sales Team</option>
+					<option value="04">Design Team</option>
+					<option value="05">Education Team</option>
+				</select>
+			</td>	
+		</tr>
+		<tr>
+			<th>Hire Date</th>
+			<td><input type="date" id="hire_date" value="2018-02-01"></td>
+		</tr>
+		<tr>
+			<th>Memo</th>
+			<td><textarea cols="30" rows="4" id="memo">html page</textarea></td>
+		</tr>
+	</table>
+	<p>
+		<input type="button" value="Send" onclick="sendContent()">
+	</p>
+</body>
+</html>

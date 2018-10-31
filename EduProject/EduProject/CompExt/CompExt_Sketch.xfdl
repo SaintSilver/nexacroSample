@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompExt_Sketch" width="800" height="600" titletext="New Form" onload="CompExt_Sketch_onload" ontimer="CompExt_Sketch_ontimer">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static03" taborder="10" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="Sketch" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Sketch id="skc_base" taborder="4" text="skt_base" left="20" top="143" width="220" height="130" border="1px solid #9c9c9c"/>
+        <Static id="Static00" taborder="11" text="Brush Color" left="20" top="64" width="83" height="24"/>
+        <Radio id="rdo_color" taborder="1" left="118" top="64" width="242" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" value="red" onitemchanged="fn_setBrush" enable="true" innerdataset="innerdataset" columncount="-1" text="red" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">red</Col>
+                <Col id="datacolumn">red</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">blue</Col>
+                <Col id="datacolumn">blue</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">green</Col>
+                <Col id="datacolumn">green</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">yellow</Col>
+                <Col id="datacolumn">yellow</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static01" taborder="12" text="Brush Size" left="20" top="88" width="83" height="24"/>
+        <Radio id="rdo_size" taborder="2" left="118" top="88" width="242" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" value="3" onitemchanged="fn_setBrush" enable="true" innerdataset="innerdataset" columncount="-1" text="3px" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">3px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">5px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">7</Col>
+                <Col id="datacolumn">7px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">9</Col>
+                <Col id="datacolumn">9px</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static02" taborder="13" text="Brush Type" left="20" top="112" width="83" height="24"/>
+        <Radio id="rdo_type" taborder="3" left="118" top="112" width="242" height="24" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" value="round" onitemchanged="fn_setBrush" enable="true" innerdataset="innerdataset" columncount="-1" text="round" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">round</Col>
+                <Col id="datacolumn">round</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">square</Col>
+                <Col id="datacolumn">square</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">butt</Col>
+                <Col id="datacolumn">butt</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Button id="btn_undo" taborder="5" text="Undo" left="245" top="145" width="60" height="24" onclick="btn_undo_onclick"/>
+        <Button id="btn_redo" taborder="6" text="Redo" left="245" top="175" width="60" height="24" onclick="btn_redo_onclick"/>
+        <Static id="Static04" taborder="14" text="☞ Draw" left="390" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Sketch id="skc_draw" taborder="7" left="400" top="63" width="200" height="200" border="1px solid #9c9c9c"/>
+        <Button id="btn_draw" taborder="8" text="Draw" left="608" top="65" width="80" height="24" onclick="btn_draw_onclick"/>
+        <Button id="btn_erase" taborder="9" text="Erase" left="608" top="94" width="80" height="24" onclick="btn_erase_onclick"/>
+        <Button id="btn_text" taborder="15" text="Text" left="608" top="123" width="80" height="24" onclick="fn_text"/>
+        <Sketch id="skc_sign" taborder="18" left="136" top="355" width="202" height="93" onsuccess="skc_sign_onsuccess" border="1px solid #9c9c9c"/>
+        <Button id="btn_load" taborder="16" text="Image Load" left="20" top="354" width="110" height="24" onclick="btn_load_onclick"/>
+        <Button id="btn_save" taborder="17" text="Save &amp; View" left="20" top="380" width="110" height="24" onclick="btn_save_onclick"/>
+        <Sketch id="skc_view" taborder="19" left="20" top="479" width="201" height="91" border="1px solid #9c9c9c"/>
+        <ImageViewer id="ImageViewer00" taborder="20" left="229" top="480" width="201" height="91" border="1px solid #9c9c9c"/>
+        <Static id="Static05" taborder="21" text="☞ Sketch Save" left="10" top="320" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static07" taborder="22" text="Sketch" left="21" top="456" width="83" height="24"/>
+        <Static id="Static08" taborder="23" text="ImageViewer" left="229" top="456" width="103" height="24"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.CompExt_Sketch_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.fn_setBrush();
+};
+
+this.fn_setBrush = function ()
+{
+	this.skc_base.setBrushColor(this.rdo_color.value);
+	this.skc_base.setBrushSize(this.rdo_size.value);
+	this.skc_base.setBrushType(this.rdo_type.value);
+};
+
+this.btn_undo_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_base.undo();
+};
+
+this.btn_redo_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_base.redo();
+};
+
+this.btn_draw_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.idx = 0;
+	this.btn_draw.set_cursor("wait");
+	this.btn_erase.set_cursor("wait");
+	this.setTimer(1, 300);	
+};
+
+this.btn_erase_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.idx = 0;
+	this.btn_draw.set_cursor("wait");
+	this.btn_erase.set_cursor("wait");
+	this.setTimer(2, 300);	
+};
+
+this.CompExt_Sketch_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 1)
+	{
+		this.fn_draw();
+	}
+	else if(e.timerid == 2)
+	{
+		this.fn_erase();
+	}
+};
+
+this.idx = 0;
+this.fn_draw = function ()
+{
+	var arrX = [100,36,200,0,164,100];
+	var arrY = [0,200,73,73,200,0];
+
+	this.skc_draw.drawStroke(arrX[this.idx],arrY[this.idx], true);
+	this.idx++;
+	this.skc_draw.drawStroke(arrX[this.idx],arrY[this.idx]);	
+	if(this.idx == 6){
+		this.killTimer(1);
+		this.btn_draw.set_cursor("default");
+		this.btn_erase.set_cursor("default");
+	}
+};
+
+this.fn_erase = function (obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_draw.setEraseSize(3);
+
+	var arrX = [100,36,200,0,164,100];
+	var arrY = [0,200,73,73,200,0];
+
+	this.skc_draw.drawErase(arrX[this.idx],arrY[this.idx], true);
+	this.idx++;
+	this.skc_draw.drawErase(arrX[this.idx],arrY[this.idx]);	
+	if(this.idx == 6){
+		this.killTimer(2);
+		this.btn_draw.set_cursor("default");
+		this.btn_erase.set_cursor("default");
+	}
+};
+
+this.fn_text = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_draw.drawText(10, 10, "nexacro\nplatform", true);
+};
+
+this.btn_load_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_sign.loadSketch("Images::img_sign.png");
+};
+
+this.btn_save_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.skc_sign.saveSketch();
+	var skcValue = this.skc_sign.value;
+
+	this.skc_view.loadSketch(skcValue);
+	this.ImageViewer00.set_image(skcValue);
+};
+
+]]></Script>
+  </Form>
+</FDL>

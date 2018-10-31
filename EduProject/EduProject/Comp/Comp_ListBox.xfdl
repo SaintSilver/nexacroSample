@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_ListBox" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static04" taborder="7" text="☞ Basic Usage - innerdataset" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="ListBox" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <ListBox id="ListBox00" taborder="1" left="18" top="65" width="160" height="116" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <ListBox id="ListBox02" taborder="3" left="20" top="231" width="160" height="116" codecolumn="codecolumn" datacolumn="datacolumn" multiselect="true" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Static id="Static03" taborder="8" text="☞ Multi Select" left="12" top="206" width="146" height="24" cssclass="sta_WF_label"/>
+        <Button id="Button00" taborder="4" text="Get Selected List" left="185" top="231" width="146" height="24" onclick="Button00_onclick"/>
+        <ListBox id="ListBox03" taborder="2" left="185" top="65" width="190" height="116" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" innerdataset="@ds_dept"/>
+        <ListBox id="ListBox01" taborder="6" left="20" top="397" width="160" height="186" codecolumn="codecolumn" datacolumn="datacolumn" multiselect="true" innerdataset="innerdataset" itemheight="25">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SU</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MO</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TU</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WE</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TH</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FR</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">SA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Static id="Static00" taborder="9" text="☞ Item Height" left="12" top="372" width="146" height="24" cssclass="sta_WF_label"/>
+        <TextArea id="txt_rtn" taborder="5" left="185" top="258" width="230" height="89" positionstep="0" value=" "/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.txt_rtn.set_value("");	
+	var sRtn = "Selected Count: " + this.ListBox02.getSelectedCount() + "\n";
+	for(var i=0; i<this.ListBox02.getCount(); i++)
+	{
+		if(this.ListBox02.getSelect(i))
+		{
+			sRtn += "row index: " + i + "\n";
+		}
+	}
+	
+	sRtn += "\nArray Return: " + this.ListBox02.getSelectedItems();
+	this.txt_rtn.set_value(sRtn);
+};
+
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Sales 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">06</Col>
+            <Col id="DEPT_NAME">Sales 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">07</Col>
+            <Col id="DEPT_NAME">Sales 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">08</Col>
+            <Col id="DEPT_NAME">Sales Management Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">09</Col>
+            <Col id="DEPT_NAME">Consulting 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">10</Col>
+            <Col id="DEPT_NAME">Consulting 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">11</Col>
+            <Col id="DEPT_NAME">Consulting 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">12</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">13</Col>
+            <Col id="DEPT_NAME">Mobile Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">14</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">15</Col>
+            <Col id="DEPT_NAME">Technical Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">16</Col>
+            <Col id="DEPT_NAME">Technical Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">17</Col>
+            <Col id="DEPT_NAME">Technical Support 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">18</Col>
+            <Col id="DEPT_NAME">Customer Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">19</Col>
+            <Col id="DEPT_NAME">Customer Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">20</Col>
+            <Col id="DEPT_NAME">Customer Support 3 Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="ListBox01" propid="value" datasetid="gds_data" columnid="DEPT_CD"/>
+    </Bind>
+  </Form>
+</FDL>

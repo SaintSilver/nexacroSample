@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CompExt_WebBrowser" width="800" height="600" titletext="New Form" onload="CompExt_WebBrowser_onload">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800" stepcount="2">
+        <Static id="Static07" taborder="14" text="" left="554" top="242" width="230" height="72" background="" padding="" cssclass="sta_WF_tablebg" onclick="Div00_Static07_onclick"/>
+        <Static id="Static02" taborder="5" text="" left="554" top="143" width="230" height="34" background="" padding="" cssclass="sta_WF_tablebg"/>
+        <Static id="Static09" taborder="8" text="" left="554" top="176" width="230" height="34" background="" padding="" cssclass="sta_WF_tablebg"/>
+        <Static id="Static20" taborder="11" text="" left="554" top="209" width="230" height="34" background="" padding="" cssclass="sta_WF_tablebg"/>
+        <Static id="Static03" taborder="0" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="1" text="WebBrowser" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle" positionstep="-1"/>
+        <WebBrowser id="WebBrowser00" taborder="2" left="10" top="104" height="476" border="1px solid #bdc2c9" onusernotify="WebBrowser00_onusernotify" width="415"/>
+        <Static id="Static10" taborder="3" text="Name" left="435" top="143" width="120" height="34" background="" padding="" cssclass="sta_WF_tablelabel" onclick="div_detail_Static10_onclick"/>
+        <Edit id="edt_name" taborder="4" left="559" top="148" width="162" height="24" canchange="div_detail_edt_name_canchange" value="nexacro" text="nexacro"/>
+        <Static id="Static08" taborder="6" text="Department" left="435" top="176" width="120" height="34" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Combo id="cbo_dept" taborder="7" text="" left="559" top="181" width="162" height="24" innerdataset="@ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" value="01" index="-1"/>
+        <Static id="Static12" taborder="9" text="Hire Date" left="435" top="209" width="120" height="34" background="" padding="" cssclass="sta_WF_tablelabel"/>
+        <Calendar id="cal_date" taborder="10" left="559" top="214" width="162" height="24" value="20180101" dateformat="yyyy-MM-dd"/>
+        <Static id="Static05" taborder="12" text="Memo" left="435" top="242" width="120" height="72" background="" padding="" cssclass="sta_WF_tablelabel" onclick="Div00_Static05_onclick"/>
+        <TextArea id="txt_memo" taborder="13" left="559" top="247" width="219" height="62" value="nexacro platform 17"/>
+        <Static id="Static00" taborder="15" text="nexacro form" left="435" top="109" width="250" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_get" taborder="16" text="get" left="435" top="325" width="90" height="25" onclick="btn_get_onclick"/>
+        <Button id="btn_set" taborder="17" text="set" left="535" top="325" width="90" height="25" onclick="btn_set_onclick"/>
+        <Button id="btn_call" taborder="18" text="call" left="635" top="325" width="90" height="25" onclick="btn_call_onclick"/>
+        <Button id="btn_body" taborder="19" text="Body" left="470" top="292" width="100" height="30" positionstep="1" onclick="btn_body_onclick"/>
+        <TextArea id="txtBody" taborder="20" left="10" top="66" width="450" height="218" value="&lt;header&gt;inner HTML&lt;/header&gt;&#10;&lt;table width=&quot;400&quot; style=&quot;border-collapse:collapse&quot;&gt;&#10;    &lt;tr&gt;&#10;        &lt;th&gt;Name&lt;/th&gt;&#10;        &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;full_name&quot; value=&quot;html&quot;&gt;&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;    &lt;tr&gt;&#10;        &lt;th&gt;Department&lt;/th&gt;&#10;        &lt;td&gt;&#10;            &lt;select id=&quot;dept_cd&quot;&gt;&#10;                &lt;option value=&quot;01&quot;&gt;Accounting Team&lt;/option&gt;&#10;                &lt;option value=&quot;02&quot; selected&gt;HR Team&lt;/option&gt;&#10;                &lt;option value=&quot;03&quot;&gt;Sales Team&lt;/option&gt;&#10;                &lt;option value=&quot;04&quot;&gt;Design Team&lt;/option&gt;&#10;                &lt;option value=&quot;05&quot;&gt;Education Team&lt;/option&gt;&#10;            &lt;/select&gt;&#10;        &lt;/td&gt;&#9;&#10;    &lt;/tr&gt;&#10;    &lt;tr&gt;&#10;        &lt;th&gt;Hire Date&lt;/th&gt;&#10;        &lt;td&gt;&lt;input type=&quot;date&quot; id=&quot;hire_date&quot; value=&quot;2018-02-01&quot;&gt;&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;    &lt;tr&gt;&#10;        &lt;th&gt;Memo&lt;/th&gt;&#10;        &lt;td&gt;&lt;textarea cols=&quot;30&quot; rows=&quot;4&quot; id=&quot;memo&quot;&gt;html page&lt;/textarea&gt;&lt;/td&gt;&#10;    &lt;/tr&gt;&#10;&lt;/table&gt;" positionstep="1" readonly="true"/>
+        <Button id="btn_load" taborder="21" text="Load" left="365" top="75" width="60" height="24" onclick="btn_load_onclick"/>
+        <TextArea id="txtHead" taborder="22" left="470" top="67" width="320" height="218" value="&lt;style&gt;&#10;header, footer {&#10;&#9;font:normal 700 12px/20px &quot;Verdana&quot;;&#10;    color: #222222;&#10;&#9;padding: 5px;&#10;}&#10;table,td {&#10;&#9;border: 1px solid #bdc2c9;&#10;&#9;font-family: verdana;&#10;&#9;font-size: 9pt;&#10;&#9;padding-left: 5px;&#10;&#9;padding-top: 5px;&#10;&#9;padding-bottom: 5px;&#10;&#9;&#10;}&#10;&#10;th {&#10;&#9;background-color: #e7eaee;&#10;&#9;border: 1px solid #bdc2c9;&#10;&#9;color: #222222;&#10;&#9;font: normal 12px/normal &quot;Verdana&quot;;&#10;&#9;width: 120px;&#10;&#9;height: 32px;&#10;&#9;text-align: left;&#10;&#9;padding-left: 10px;&#10;}&#10;&#10;&lt;/style&gt;&#10;&lt;script type=&quot;text/javascript&quot;&gt;&#10;&#9;function htmlFunction(arg)&#10;&#9;{&#10;&#9;&#9;alert(arg);&#10;&#9;}&#10;&lt;/script&gt;" positionstep="1" onchanged="TextArea01_onchanged" readonly="true"/>
+        <WebBrowser id="WebBrowser01" taborder="23" left="10" top="291" width="450" height="250" border="1px solid #bdc2c9" onusernotify="WebBrowser00_onusernotify" onloadcompleted="WebBrowser00_onloadcompleted" positionstep="1"/>
+        <Combo id="cbo_url" taborder="24" text="http://www.tobesoft.com" left="10" top="74" width="352" height="24" value="http://www.tobesoft.com" index="0" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">http://www.tobesoft.com</Col>
+                <Col id="datacolumn">http://www.tobesoft.com</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">http://localhost:8080/EduProject/File/Html_Form.html</Col>
+                <Col id="datacolumn">http://localhost:8080/EduProject/File/Html_Form.html</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">http://demo.nexacro.com/EduProject/File/Html_Form.html</Col>
+                <Col id="datacolumn">http://demo.nexacro.com/EduProject/File/Html_Form.html</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="btn_head" taborder="25" text="Head" left="470" top="328" width="100" height="30" positionstep="1" onclick="btn_head_onclick"/>
+        <Static id="Static04" taborder="26" text="☞ inner HTML" left="10" top="40" width="250" height="24" cssclass="sta_WF_label" positionstep="1"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.btn_load_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sURL = this.cbo_url.value;
+	this.WebBrowser00.set_url(sURL);
+};
+
+this.btn_get_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objDoc = this.WebBrowser00.getProperty("document");
+	var objDom = objDoc.getProperty("all");
+
+	var strName = objDom.getProperty("full_name").getProperty("value");
+	var strDept = objDom.getProperty("dept_cd").getProperty("value");
+	var strDate = objDoc.callMethod("getElementById", "hire_date").getProperty("value");
+	var strText = objDoc.callMethod("getElementById", "memo").getProperty("value");
+
+	this.edt_name.set_value(strName);
+	this.cbo_dept.set_value(strDept);
+	this.cal_date.set_value(strDate.replace(/-/g,""));
+	this.txt_memo.set_value(strText);
+	
+	if(objDoc && objDom){
+		objDoc.destroy();
+		objDoc = null;
+		objDom.destroy();
+		objDom = null;		
+	}
+};
+
+this.btn_set_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strName = this.edt_name.value;
+	var strDept = this.cbo_dept.value;
+	var strDate = this.cal_date.text;
+	var strText = this.txt_memo.value;
+
+	var objDoc = this.WebBrowser00.getProperty("document");
+	var objDom = objDoc.getProperty("all");
+	objDom.getProperty("full_name").setProperty("value", strName);
+	objDom.getProperty("dept_cd").setProperty("value", strDept);
+	objDoc.callMethod("getElementById", "hire_date").setProperty("value", strDate);
+	objDoc.callMethod("getElementById", "memo").setProperty("value", strText);
+
+	if(objDoc && objDom){
+		objDoc.destroy();
+		objDoc = null;
+		objDom.destroy();
+		objDom = null;		
+	}
+	
+};
+
+this.btn_call_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objWin = this.WebBrowser00.getProperty("window");
+	objWin.callMethod("htmlFunction", "Function Parameter Value");
+	
+};
+
+this.WebBrowser00_onusernotify = function(obj:nexacro.WebBrowser,e:nexacro.WebUserNotifyEventInfo)
+{
+	this.alert("Send Data: " + e.userdata);
+};
+
+
+this.btn_body_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strHtml = this.txtBody.value;
+	var objWeb = this.WebBrowser01.getProperty("document").getProperty("body"); 
+	objWeb.setProperty("innerHTML", strHtml); 
+	
+};
+
+this.btn_head_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strHtml = this.txtHead.value;
+	var objWeb = this.WebBrowser01.getProperty("document").getProperty("head"); 
+	objWeb.setProperty("innerHTML", strHtml); 
+};
+
+
+
+/**********************************************************
+http://localhost:8080/EduProject/File/Html_Form.html
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nexacro platform</title>
+<style>
+header, footer {
+	font:normal 700 12px/20px "Verdana";
+    color: #222222;
+	padding: 5px;
+
+}
+table,td {
+
+	border: 1px solid #bdc2c9;
+	font-family: verdana;
+	font-size: 9pt;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+th {
+	background-color: #e7eaee;
+	border: 1px solid #bdc2c9;
+	color: #222222;
+	font: normal 12px/normal "Verdana";
+	width: 120px;
+	height: 32px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+</style>
+<script type="text/javascript">
+    if(!window.NEXACROHTML){
+        window.NEXACROHTML = {};
+    }
+    window.NEXACROHTML.FireUserNotify = function(userdata){
+
+        if(window.NEXACROWEBBROWSER){// WebBRowser
+
+            window.NEXACROWEBBROWSER.on_fire_onusernotify(window.NEXACROWEBBROWSER, userdata);
+
+        } 
+		else if(window.nexacro){ // Android
+            window.nexacro.fireUserNotify(userdata);
+
+        } 
+		else{ // Runtime
+
+            window.document.title = userdata;
+        }         
+    }
+	function htmlFunction(arg)
+	{
+		alert(arg);
+	}
+    function sendContent()
+    {
+        var str = document.getElementById("full_name").value;
+        window.NEXACROHTML.FireUserNotify(str);        
+    }	
+</script>
+</head>
+<body>
+	<header>
+		html
+	</header>
+	<table width="400" style="border-collapse:collapse">
+		<tr>
+			<th>Name</th>
+			<td><input type="text" id="full_name" value="html"></td>
+		</tr>
+		<tr>
+			<th>Department</th>
+			<td>
+				<select id="dept_cd">
+					<option value="01">Accounting Team</option>
+					<option value="02" selected>HR Team</option>
+					<option value="03">Sales Team</option>
+					<option value="04">Design Team</option>
+					<option value="05">Education Team</option>
+				</select>
+			</td>	
+		</tr>
+		<tr>
+			<th>Hire Date</th>
+			<td><input type="date" id="hire_date" value="2018-02-01"></td>
+		</tr>
+		<tr>
+			<th>Memo</th>
+			<td><textarea cols="30" rows="4" id="memo">html page</textarea></td>
+		</tr>
+	</table>
+	<p>
+		<input type="button" value="Send" onclick="sendContent()">
+	</p>
+</body>
+</html>
+****************************************************************/
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="edt_name" propid="value" datasetid="ds_emp" columnid="FULL_NAME"/>
+      <BindItem id="item1" compid="cbo_dept" propid="value" datasetid="ds_emp" columnid="DEPT_CD"/>
+      <BindItem id="item3" compid="cal_date" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+      <BindItem id="item4" compid="cbo_url" propid="value" datasetid="ds_emp" columnid="DEPT_CD"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">01</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">02</Col>
+            <Col id="DEPT_NAME">HR Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">03</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">04</Col>
+            <Col id="DEPT_NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">05</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

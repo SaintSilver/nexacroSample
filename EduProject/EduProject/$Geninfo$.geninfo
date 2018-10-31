@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <GenInfo version="1.1">
+    <Rule>
+      <ENV rule_version="1.05"/>
+      <ADL rule_version="1.14"/>
+      <FDL rule_version="1.04"/>
+      <XCSS rule_version="1.03"/>
+      <Script rule_version="1.02"/>
+    </Rule>
+    
+  <Info project="C:\EduProject\" generated="C:\Users\tube-edu09\Documents\nexacro\17\outputs\EduProject\"><File url="environment.xml" checksum="20180904140210" errormsg=""/><File url="typedefinition.xml" checksum="20181031163726" errormsg=""/><File url="appvariables.xml" checksum="20180329111852" errormsg=""/><File url="_resource_\_theme_\edu_theme_m\theme.xcss" checksum="20180223162628" errormsg=""/><File url="_resource_\_theme_\edu_theme_d\theme.xcss" checksum="20180903183200" errormsg=""/><File url="_resource_\_xcss_\EduProject.xcss" checksum="20180327100758" errormsg=""/><File url="App_Desktop.xadl" checksum="20180330133556" errormsg=""/><File url="App_Phone.xadl" checksum="20180330085054" errormsg=""/><File url="Exe\Exe_Dataset.xfdl" checksum="20181031140616" errormsg=""/><File url="Exe\Exe_Grid.xfdl" checksum="20181031154739" errormsg=""/><File url="Exe\Exe_Sample.xfdl" checksum="20181031153323" errormsg=""/><File url="Exe\Exe_Div_PopupDiv.xfdl" checksum="20181031161928" errormsg=""/><File url="Exe\Exe_Comp.xfdl" checksum="20181031162628" errormsg=""/><File url="Exe\Exe_Form.xfdl" checksum="20181031163240" errormsg=""/><File url="Exe\Exe_Form_Popup.xfdl" checksum="20181031163331" errormsg=""/><File url="Exe2\Exe2_Sample.xfdl" checksum="20181010225146" errormsg=""/></Info></GenInfo>
+</root>

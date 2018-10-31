@@ -1,0 +1,2567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_Org" left="0" top="0" width="800" height="512" titletext="New Form" onload="Form_onload">
+    <Layouts>
+      <Layout height="512" width="800">
+        <Static id="Static00" taborder="2" text="Organization" left="10" top="5" width="193" height="30" right="" bottom="" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_emptitle"/>
+        <Grid id="grd_tree" taborder="7" left="10" top="40" width="280" bottom="10" leftbase="" bottombase="" widthbase="" heightbase="" binddataset="ds_org" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false" oncellclick="grd_tree_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:ORG_NM" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:LEVEL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_detail" taborder="8" text="Div00" left="300" leftbase="" bottombase="" rightbase="" widthbase="" heightbase="" right="10" bottom="10" height="230">
+          <Layouts>
+            <Layout>
+              <Static id="Static20" taborder="7" text="" left="300" top="191" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static02" taborder="9" text="" left="300" top="5" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static01" taborder="10" text="" left="300" top="36" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static08" taborder="11" text="E-Mail" left="181" top="98" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static09" taborder="12" text="" left="300" top="98" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Static id="Static10" taborder="13" text="Name" left="181" top="5" width="120" height="32" right="" bottom="" background="" padding="" onclick="div_detail_Static10_onclick" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static12" taborder="14" text="Wedding Day" left="181" top="191" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static13" taborder="15" text="" left="300" top="160" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Edit id="edt_name" taborder="0" left="305" top="9" width="162" height="24" right="" bottom=""/>
+              <MaskEdit id="msk_id" taborder="1" left="305" top="40" width="78" height="24" type="string" format="AA-###"/>
+              <Calendar id="cal_wedd" taborder="6" left="305" top="195" width="162" height="24" right="" bottom=""/>
+              <Static id="Static16" taborder="18" text="Gender" left="181" top="67" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static17" taborder="19" text="" left="300" top="67" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Radio id="rdo_gender" taborder="4" left="305" top="71" width="139" height="24" right="" bottom="" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" innerdataset="innerdataset">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">Male</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">W</Col>
+                      <Col id="datacolumn">Female</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+              <Static id="Static00" taborder="21" text="Emp ID" left="181" top="36" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static03" taborder="22" text="Married" left="181" top="160" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <CheckBox id="chk_married" taborder="5" text="CheckBox00" left="305" top="164" width="21" height="24" right="" bottom=""/>
+              <Static id="Static06" taborder="11" text="Birth Day" left="181" top="129" width="120" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static11" taborder="12" text="" left="300" top="129" width="184" height="32" right="" bottom="" background="" padding="" cssclass="sta_WF_tablebg"/>
+              <Edit id="edt_mail" taborder="0" left="305" top="102" width="162" height="24" right="" bottom=""/>
+              <Calendar id="cal_birth" taborder="6" left="305" top="133" width="162" height="24" right="" bottom=""/>
+              <Static id="Static04" taborder="9" text="" left="6" top="5" width="176" height="218" right="" bottom="" background="" padding="" cssclass="sta_WF_line"/>
+              <ImageViewer id="ImageViewer00" taborder="23" left="6" top="5" width="169" height="218" image="URL(&quot;theme://images/ico_title.png&quot;)" border="1px solid #bdc2c9" stretch="fixaspectratio"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="grd_list" taborder="9" left="300" top="40" binddataset="ds_emp" autofittype="col" right="10" bottom="247">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="104"/>
+                <Column size="131"/>
+                <Column size="130"/>
+                <Column size="119"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Position"/>
+                <Cell col="2" text="Hire Date"/>
+                <Cell col="3" text="Phone No."/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_NAME"/>
+                <Cell col="1" text="bind:POS_CD" displaytype="combotext" combodataset="ds_pos" combocodecol="POS_CD" combodatacol="POS_NAME"/>
+                <Cell col="2" text="bind:HIRE_DATE" displaytype="date"/>
+                <Cell col="3" text="bind:PHONE_NO" displaytype="mask" maskeditformat="###-####-####" maskedittype="string"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="sta_org" taborder="10" top="15" width="640" height="20" cssclass="sta_WF_bold" textAlign="right" right="10"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp" keystring="">
+        <ColumnInfo>
+          <Column id="ORG_CD" type="STRING" size="256"/>
+          <Column id="EMPL_NAME" type="STRING" size="256"/>
+          <Column id="EMPL_ID" type="STRING" size="256"/>
+          <Column id="POS_CD" type="STRING" size="256"/>
+          <Column id="HIRE_DATE" type="DATE" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="PHONE_NO" type="STRING" size="256"/>
+          <Column id="E_MAIL" type="STRING" size="256"/>
+          <Column id="ZIP_CD" type="STRING" size="256"/>
+          <Column id="ADDR1" type="STRING" size="256"/>
+          <Column id="ADDR2" type="STRING" size="256"/>
+          <Column id="BIRTH_DAY" type="DATE" size="256"/>
+          <Column id="MARREID" type="STRING" size="256"/>
+          <Column id="WEDD_DAY" type="DATE" size="256"/>
+          <Column id="EMPL_COL" type="STRING" size="256"/>
+          <Column id="EMPL_PER" type="STRING" size="256"/>
+          <Column id="EMPL_IMG" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="ORG_CD">KR</Col>
+            <Col id="EMPL_NAME">Oleg</Col>
+            <Col id="EMPL_ID">KR000</Col>
+            <Col id="POS_CD">01</Col>
+            <Col id="HIRE_DATE">20040128</Col>
+            <Col id="SALARY">78470000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01053397559</Col>
+            <Col id="E_MAIL">Oleg@nexacro.com</Col>
+            <Col id="ZIP_CD">17925</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">179-7919 Placerat Ave</Col>
+            <Col id="BIRTH_DAY">19890325</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">23</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">antiquewhite</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR10</Col>
+            <Col id="EMPL_NAME">Aladdin</Col>
+            <Col id="EMPL_ID">KR010</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20061019</Col>
+            <Col id="SALARY">81220000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01074018299</Col>
+            <Col id="E_MAIL">Aladdin@nexacro.com</Col>
+            <Col id="ZIP_CD">14966</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">860-9435 Est. Road</Col>
+            <Col id="BIRTH_DAY">19700122</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20051004</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">37</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="EMPL_NAME">Cameron</Col>
+            <Col id="EMPL_ID">KR101</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20150721</Col>
+            <Col id="SALARY">64190000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01042935998</Col>
+            <Col id="E_MAIL">Cameron@nexacro.com</Col>
+            <Col id="ZIP_CD">17642</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">5578 Maecenas Road</Col>
+            <Col id="BIRTH_DAY">19781222</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19871015</Col>
+            <Col id="EMPL_COL">violet</Col>
+            <Col id="EMPL_PER">89</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">aquamarine</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="EMPL_NAME">Duncan</Col>
+            <Col id="EMPL_ID">KR102</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20120402</Col>
+            <Col id="SALARY">97460000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01077267633</Col>
+            <Col id="E_MAIL">Duncan@nexacro.com</Col>
+            <Col id="ZIP_CD">14772</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">P.O. Box 838, 761 Dapibus Road</Col>
+            <Col id="BIRTH_DAY">19640204</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19980502</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">azure</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="EMPL_NAME">September</Col>
+            <Col id="EMPL_ID">KR103</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20011217</Col>
+            <Col id="SALARY">74130000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01073140117</Col>
+            <Col id="E_MAIL">September@nexacro.com</Col>
+            <Col id="ZIP_CD">18363</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">P.O. Box 350, 8897 Ac Rd.</Col>
+            <Col id="BIRTH_DAY">19720513</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">violet</Col>
+            <Col id="EMPL_PER">2</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">beige</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="EMPL_NAME">Daquan</Col>
+            <Col id="EMPL_ID">KR104</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20060720</Col>
+            <Col id="SALARY">67960000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01043164615</Col>
+            <Col id="E_MAIL">Daquan@nexacro.com</Col>
+            <Col id="ZIP_CD">12254</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">P.O. Box 418, 9617 Porttitor Rd.</Col>
+            <Col id="BIRTH_DAY">19940512</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">97</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">bisque</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="EMPL_NAME">Channing</Col>
+            <Col id="EMPL_ID">KR105</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20020513</Col>
+            <Col id="SALARY">74080000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01023207950</Col>
+            <Col id="E_MAIL">Channing@nexacro.com</Col>
+            <Col id="ZIP_CD">17058</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">645-4418 Libero. St.</Col>
+            <Col id="BIRTH_DAY">19970926</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">silver</Col>
+            <Col id="EMPL_PER">79</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">blanchedalmond</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="EMPL_NAME">Curran</Col>
+            <Col id="EMPL_ID">KR106</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20151004</Col>
+            <Col id="SALARY">95210000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01063480860</Col>
+            <Col id="E_MAIL">Curran@nexacro.com</Col>
+            <Col id="ZIP_CD">19691</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">Ap #224-160 Justo Rd.</Col>
+            <Col id="BIRTH_DAY">19861119</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">97</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">blueviolet</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="EMPL_NAME">Idona</Col>
+            <Col id="EMPL_ID">KR107</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20100514</Col>
+            <Col id="SALARY">70080000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01012511073</Col>
+            <Col id="E_MAIL">Idona@nexacro.com</Col>
+            <Col id="ZIP_CD">13587</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">6431 Tellus, St.</Col>
+            <Col id="BIRTH_DAY">19790318</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">purple</Col>
+            <Col id="EMPL_PER">89</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">brown</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="EMPL_NAME">Sopoline</Col>
+            <Col id="EMPL_ID">KR108</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20140811</Col>
+            <Col id="SALARY">70160000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01044574292</Col>
+            <Col id="E_MAIL">Sopoline@nexacro.com</Col>
+            <Col id="ZIP_CD">19205</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">6579 Laoreet Rd.</Col>
+            <Col id="BIRTH_DAY">19600427</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19880505</Col>
+            <Col id="EMPL_COL">gold</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">burlywood</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="EMPL_NAME">Cedric</Col>
+            <Col id="EMPL_ID">KR109</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20030709</Col>
+            <Col id="SALARY">83470000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01098253169</Col>
+            <Col id="E_MAIL">Cedric@nexacro.com</Col>
+            <Col id="ZIP_CD">11497</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">Ap #875-7599 Habitant Road</Col>
+            <Col id="BIRTH_DAY">19691021</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19861022</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">61</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">cadetblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="EMPL_NAME">Lyle</Col>
+            <Col id="EMPL_ID">KR110</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20111018</Col>
+            <Col id="SALARY">76010000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01031734027</Col>
+            <Col id="E_MAIL">Lyle@nexacro.com</Col>
+            <Col id="ZIP_CD">13392</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 359, 4218 Tellus Rd.</Col>
+            <Col id="BIRTH_DAY">19700302</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19971030</Col>
+            <Col id="EMPL_PER">13</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">chartreuse</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="EMPL_NAME">Adam</Col>
+            <Col id="EMPL_ID">KR111</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20150601</Col>
+            <Col id="SALARY">94690000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01046437385</Col>
+            <Col id="E_MAIL">Adam@nexacro.com</Col>
+            <Col id="ZIP_CD">16486</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">9973 Tellus Ave</Col>
+            <Col id="BIRTH_DAY">19890618</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">purple</Col>
+            <Col id="EMPL_PER">29</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">chocolate</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="EMPL_NAME">Hyatt</Col>
+            <Col id="EMPL_ID">KR112</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20030306</Col>
+            <Col id="SALARY">50820000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01029890941</Col>
+            <Col id="E_MAIL">Hyatt@nexacro.com</Col>
+            <Col id="ZIP_CD">17837</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">846-3226 Dolor, St.</Col>
+            <Col id="BIRTH_DAY">19760227</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19910519</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">13</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">coral</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="EMPL_NAME">Melanie</Col>
+            <Col id="EMPL_ID">KR113</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20061219</Col>
+            <Col id="SALARY">96530000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01079565722</Col>
+            <Col id="E_MAIL">Melanie@nexacro.com</Col>
+            <Col id="ZIP_CD">16245</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">748-6621 Sit Road</Col>
+            <Col id="BIRTH_DAY">19780808</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20050203</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">61</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">cornflowerblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="EMPL_NAME">Isaiah</Col>
+            <Col id="EMPL_ID">KR114</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20060613</Col>
+            <Col id="SALARY">58450000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01079034769</Col>
+            <Col id="E_MAIL">Isaiah@nexacro.com</Col>
+            <Col id="ZIP_CD">19685</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">9007 Lacinia St.</Col>
+            <Col id="BIRTH_DAY">19770924</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20130416</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">13</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">cornsilk</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="EMPL_NAME">Dakota</Col>
+            <Col id="EMPL_ID">KR115</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20140625</Col>
+            <Col id="SALARY">62540000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01089385286</Col>
+            <Col id="E_MAIL">Dakota@nexacro.com</Col>
+            <Col id="ZIP_CD">12564</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">P.O. Box 764, 9571 Luctus. Av.</Col>
+            <Col id="BIRTH_DAY">19800206</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20050407</Col>
+            <Col id="EMPL_COL">ivory</Col>
+            <Col id="EMPL_PER">53</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">crimson</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="EMPL_NAME">Heather</Col>
+            <Col id="EMPL_ID">KR116</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20041105</Col>
+            <Col id="SALARY">99050000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01082344353</Col>
+            <Col id="E_MAIL">Heather@nexacro.com</Col>
+            <Col id="ZIP_CD">19708</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">Ap #355-626 Sagittis Street</Col>
+            <Col id="BIRTH_DAY">19610312</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">teal</Col>
+            <Col id="EMPL_PER">41</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">cyan</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="EMPL_NAME">Evelyn</Col>
+            <Col id="EMPL_ID">KR117</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20070111</Col>
+            <Col id="SALARY">85940000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01068515302</Col>
+            <Col id="E_MAIL">Evelyn@nexacro.com</Col>
+            <Col id="ZIP_CD">16665</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 895, 5570 Malesuada St.</Col>
+            <Col id="BIRTH_DAY">19641212</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19880623</Col>
+            <Col id="EMPL_COL">aqua</Col>
+            <Col id="EMPL_PER">37</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">deeppink</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="EMPL_NAME">Elizabeth</Col>
+            <Col id="EMPL_ID">KR118</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20140227</Col>
+            <Col id="SALARY">87340000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01082304824</Col>
+            <Col id="E_MAIL">Elizabeth@nexacro.com</Col>
+            <Col id="ZIP_CD">19154</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">2854 Imperdiet Avenue</Col>
+            <Col id="BIRTH_DAY">19751109</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">teal</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">deepskyblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="EMPL_NAME">Rae</Col>
+            <Col id="EMPL_ID">KR119</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20131226</Col>
+            <Col id="SALARY">87110000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01050532250</Col>
+            <Col id="E_MAIL">Rae@nexacro.com</Col>
+            <Col id="ZIP_CD">16114</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">Ap #621-1800 Ut Rd.</Col>
+            <Col id="BIRTH_DAY">19810531</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">lavender</Col>
+            <Col id="EMPL_PER">97</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">dimgray</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="EMPL_NAME">Ila</Col>
+            <Col id="EMPL_ID">KR120</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20021031</Col>
+            <Col id="SALARY">80790000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01072183514</Col>
+            <Col id="E_MAIL">Ila@nexacro.com</Col>
+            <Col id="ZIP_CD">16581</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">9122 Orci, St.</Col>
+            <Col id="BIRTH_DAY">19731019</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">lavender</Col>
+            <Col id="EMPL_PER">97</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">dimgrey</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="EMPL_NAME">Lester</Col>
+            <Col id="EMPL_ID">KR121</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20040821</Col>
+            <Col id="SALARY">54510000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01057841374</Col>
+            <Col id="E_MAIL">Lester@nexacro.com</Col>
+            <Col id="ZIP_CD">10500</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">Ap #749-3377 Aliquam Ave</Col>
+            <Col id="BIRTH_DAY">19821130</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">47</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">dodgerblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="EMPL_NAME">Lenore</Col>
+            <Col id="EMPL_ID">KR122</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20040327</Col>
+            <Col id="SALARY">91440000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01076424746</Col>
+            <Col id="E_MAIL">Lenore@nexacro.com</Col>
+            <Col id="ZIP_CD">13276</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">Ap #859-8988 Laoreet Rd.</Col>
+            <Col id="BIRTH_DAY">19790905</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19890505</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">31</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">firebrick</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="EMPL_NAME">Iris</Col>
+            <Col id="EMPL_ID">KR123</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20110316</Col>
+            <Col id="SALARY">83490000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01047945239</Col>
+            <Col id="E_MAIL">Iris@nexacro.com</Col>
+            <Col id="ZIP_CD">16831</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">209-7919 Lorem Street</Col>
+            <Col id="BIRTH_DAY">19970717</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20140720</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">67</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">floralwhite</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="EMPL_NAME">Felix</Col>
+            <Col id="EMPL_ID">KR124</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20020115</Col>
+            <Col id="SALARY">80350000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01022551312</Col>
+            <Col id="E_MAIL">Felix@nexacro.com</Col>
+            <Col id="ZIP_CD">13202</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">8123 Ac, St.</Col>
+            <Col id="BIRTH_DAY">19920531</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20150531</Col>
+            <Col id="EMPL_COL">lavender</Col>
+            <Col id="EMPL_PER">23</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">forestgreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="EMPL_NAME">Zelenia</Col>
+            <Col id="EMPL_ID">KR125</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20040422</Col>
+            <Col id="SALARY">85870000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01066389823</Col>
+            <Col id="E_MAIL">Zelenia@nexacro.com</Col>
+            <Col id="ZIP_CD">12042</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">559-7995 Laoreet, St.</Col>
+            <Col id="BIRTH_DAY">19730718</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">83</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">fuchsia</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR20</Col>
+            <Col id="EMPL_NAME">Fallon</Col>
+            <Col id="EMPL_ID">KR020</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20140302</Col>
+            <Col id="SALARY">84830000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01098632488</Col>
+            <Col id="E_MAIL">Fallon@nexacro.com</Col>
+            <Col id="ZIP_CD">15896</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">607-2069 Tellus Av.</Col>
+            <Col id="BIRTH_DAY">19730621</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20090305</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">5</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">gainsboro</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="EMPL_NAME">Elijah</Col>
+            <Col id="EMPL_ID">KR201</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20051203</Col>
+            <Col id="SALARY">51100000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01037863481</Col>
+            <Col id="E_MAIL">Elijah@nexacro.com</Col>
+            <Col id="ZIP_CD">15843</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">609-2044 Ligula. Av.</Col>
+            <Col id="BIRTH_DAY">19661021</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19971116</Col>
+            <Col id="EMPL_COL">khaki</Col>
+            <Col id="EMPL_PER">41</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">ghostwhite</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="EMPL_NAME">Evan</Col>
+            <Col id="EMPL_ID">KR202</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20130822</Col>
+            <Col id="SALARY">63030000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01082080102</Col>
+            <Col id="E_MAIL">Evan@nexacro.com</Col>
+            <Col id="ZIP_CD">10105</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">Ap #816-747 Malesuada Road</Col>
+            <Col id="BIRTH_DAY">19840814</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">lavender</Col>
+            <Col id="EMPL_PER">23</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="EMPL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">KR203</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20130625</Col>
+            <Col id="SALARY">98420000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01013302593</Col>
+            <Col id="E_MAIL">Jackson@nexacro.com</Col>
+            <Col id="ZIP_CD">10042</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">Ap #395-9451 Mollis Rd.</Col>
+            <Col id="BIRTH_DAY">19930402</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">83</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">goldenrod</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="EMPL_NAME">Justine</Col>
+            <Col id="EMPL_ID">KR204</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20120102</Col>
+            <Col id="SALARY">64590000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01022023301</Col>
+            <Col id="E_MAIL">Justine@nexacro.com</Col>
+            <Col id="ZIP_CD">14133</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">P.O. Box 499, 1369 Tellus. Road</Col>
+            <Col id="BIRTH_DAY">19961016</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">47</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">gray</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="EMPL_NAME">Samuel</Col>
+            <Col id="EMPL_ID">KR205</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20110419</Col>
+            <Col id="SALARY">63360000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01014419779</Col>
+            <Col id="E_MAIL">Samuel@nexacro.com</Col>
+            <Col id="ZIP_CD">12960</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">Ap #443-8150 Magna St.</Col>
+            <Col id="BIRTH_DAY">19640706</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19990315</Col>
+            <Col id="EMPL_COL">gold</Col>
+            <Col id="EMPL_PER">5</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">green</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="EMPL_NAME">Angela</Col>
+            <Col id="EMPL_ID">KR206</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20010731</Col>
+            <Col id="SALARY">67670000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01020333473</Col>
+            <Col id="E_MAIL">Angela@nexacro.com</Col>
+            <Col id="ZIP_CD">13249</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 813, 4075 Consectetuer Road</Col>
+            <Col id="BIRTH_DAY">19660105</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">2</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="EMPL_NAME">Byron</Col>
+            <Col id="EMPL_ID">KR207</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20160812</Col>
+            <Col id="SALARY">93720000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01037486471</Col>
+            <Col id="E_MAIL">Byron@nexacro.com</Col>
+            <Col id="ZIP_CD">17877</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">P.O. Box 574, 6963 Erat Rd.</Col>
+            <Col id="BIRTH_DAY">19870111</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19860512</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">grey</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="EMPL_NAME">Yetta</Col>
+            <Col id="EMPL_ID">KR208</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20141030</Col>
+            <Col id="SALARY">88160000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01044870616</Col>
+            <Col id="E_MAIL">Yetta@nexacro.com</Col>
+            <Col id="ZIP_CD">16398</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">7157 Id Rd.</Col>
+            <Col id="BIRTH_DAY">19790504</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">aqua</Col>
+            <Col id="EMPL_PER">29</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">honeydew</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="EMPL_NAME">Beau</Col>
+            <Col id="EMPL_ID">KR209</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20041004</Col>
+            <Col id="SALARY">87560000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01062998104</Col>
+            <Col id="E_MAIL">Beau@nexacro.com</Col>
+            <Col id="ZIP_CD">17873</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">P.O. Box 838, 1441 Metus Av.</Col>
+            <Col id="BIRTH_DAY">19890411</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">19</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">hotpink</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="EMPL_NAME">Deirdre</Col>
+            <Col id="EMPL_ID">KR210</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20040212</Col>
+            <Col id="SALARY">56000000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01022660382</Col>
+            <Col id="E_MAIL">Deirdre@nexacro.com</Col>
+            <Col id="ZIP_CD">18845</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">586-7347 Odio St.</Col>
+            <Col id="BIRTH_DAY">19670928</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19880808</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">indianred</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="EMPL_NAME">Rae</Col>
+            <Col id="EMPL_ID">KR211</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20120620</Col>
+            <Col id="SALARY">81990000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01013103622</Col>
+            <Col id="E_MAIL">Rae@nexacro.com</Col>
+            <Col id="ZIP_CD">14986</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">7753 Pede Road</Col>
+            <Col id="BIRTH_DAY">19970315</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">khaki</Col>
+            <Col id="EMPL_PER">23</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">indigo</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="EMPL_NAME">Len</Col>
+            <Col id="EMPL_ID">KR212</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20160611</Col>
+            <Col id="SALARY">92000000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01062093201</Col>
+            <Col id="E_MAIL">Len@nexacro.com</Col>
+            <Col id="ZIP_CD">10321</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">8202 Sodales Street</Col>
+            <Col id="BIRTH_DAY">19680213</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">violet</Col>
+            <Col id="EMPL_PER">2</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">ivory</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="EMPL_NAME">Kelsie</Col>
+            <Col id="EMPL_ID">KR213</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20030625</Col>
+            <Col id="SALARY">67450000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01071893031</Col>
+            <Col id="E_MAIL">Kelsie@nexacro.com</Col>
+            <Col id="ZIP_CD">12526</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">595-3930 Lorem, St.</Col>
+            <Col id="BIRTH_DAY">19950206</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="EMPL_NAME">Joseph</Col>
+            <Col id="EMPL_ID">KR214</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20060902</Col>
+            <Col id="SALARY">67390000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01068330089</Col>
+            <Col id="E_MAIL">Joseph@nexacro.com</Col>
+            <Col id="ZIP_CD">16466</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 552, 8941 Donec St.</Col>
+            <Col id="BIRTH_DAY">19721109</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20100702</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">29</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">lavender</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="EMPL_NAME">Ishmael</Col>
+            <Col id="EMPL_ID">KR215</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20111208</Col>
+            <Col id="SALARY">82790000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01071256092</Col>
+            <Col id="E_MAIL">Ishmael@nexacro.com</Col>
+            <Col id="ZIP_CD">10694</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 746, 2876 Elit. Av.</Col>
+            <Col id="BIRTH_DAY">19610704</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">5</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">lavenderblush</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="EMPL_NAME">Denton</Col>
+            <Col id="EMPL_ID">KR216</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20140418</Col>
+            <Col id="SALARY">65190000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01084141410</Col>
+            <Col id="E_MAIL">Denton@nexacro.com</Col>
+            <Col id="ZIP_CD">10067</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">505-9279 Montes, Street</Col>
+            <Col id="BIRTH_DAY">19921022</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">gold</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">lawngreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="EMPL_NAME">Scarlett</Col>
+            <Col id="EMPL_ID">KR217</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20130728</Col>
+            <Col id="SALARY">53160000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01086996586</Col>
+            <Col id="E_MAIL">Scarlett@nexacro.com</Col>
+            <Col id="ZIP_CD">17854</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">P.O. Box 265, 7463 Non St.</Col>
+            <Col id="BIRTH_DAY">19730412</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20020430</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">lemonchiffon</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="EMPL_NAME">Carly</Col>
+            <Col id="EMPL_ID">KR218</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20060710</Col>
+            <Col id="SALARY">53350000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01040262928</Col>
+            <Col id="E_MAIL">Carly@nexacro.com</Col>
+            <Col id="ZIP_CD">10515</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">907-5841 Risus. Av.</Col>
+            <Col id="BIRTH_DAY">19860809</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">79</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">lightblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="EMPL_NAME">Veda</Col>
+            <Col id="EMPL_ID">KR219</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20080623</Col>
+            <Col id="SALARY">95330000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01095908544</Col>
+            <Col id="E_MAIL">Veda@nexacro.com</Col>
+            <Col id="ZIP_CD">18712</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">779-6893 Nec, Avenue</Col>
+            <Col id="BIRTH_DAY">19940906</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20070304</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">31</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">lightcoral</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="EMPL_NAME">Maia</Col>
+            <Col id="EMPL_ID">KR220</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20051207</Col>
+            <Col id="SALARY">62930000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01018415288</Col>
+            <Col id="E_MAIL">Maia@nexacro.com</Col>
+            <Col id="ZIP_CD">18111</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">518-2697 Sem Rd.</Col>
+            <Col id="BIRTH_DAY">19900215</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19910330</Col>
+            <Col id="EMPL_COL">white</Col>
+            <Col id="EMPL_PER">11</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">lightcyan</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR30</Col>
+            <Col id="EMPL_NAME">Nora</Col>
+            <Col id="EMPL_ID">KR030</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20080725</Col>
+            <Col id="SALARY">67420000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01069835866</Col>
+            <Col id="E_MAIL">Nora@nexacro.com</Col>
+            <Col id="ZIP_CD">11790</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">9293 At, Av.</Col>
+            <Col id="BIRTH_DAY">19621023</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19950302</Col>
+            <Col id="EMPL_COL">khaki</Col>
+            <Col id="EMPL_PER">41</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">lightgoldenrodyellow</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="EMPL_NAME">Kaden</Col>
+            <Col id="EMPL_ID">KR301</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20120803</Col>
+            <Col id="SALARY">68880000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01080731587</Col>
+            <Col id="E_MAIL">Kaden@nexacro.com</Col>
+            <Col id="ZIP_CD">15539</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">465 Id St.</Col>
+            <Col id="BIRTH_DAY">19980113</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">olive</Col>
+            <Col id="EMPL_PER">5</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">lightgray</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="EMPL_NAME">Hayley</Col>
+            <Col id="EMPL_ID">KR302</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20050329</Col>
+            <Col id="SALARY">84130000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01079624593</Col>
+            <Col id="E_MAIL">Hayley@nexacro.com</Col>
+            <Col id="ZIP_CD">12731</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">P.O. Box 435, 2025 Purus Avenue</Col>
+            <Col id="BIRTH_DAY">19660413</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19961024</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">37</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">lightgreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="EMPL_NAME">Teegan</Col>
+            <Col id="EMPL_ID">KR303</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20070216</Col>
+            <Col id="SALARY">68620000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01043121680</Col>
+            <Col id="E_MAIL">Teegan@nexacro.com</Col>
+            <Col id="ZIP_CD">14263</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">9582 Per Rd.</Col>
+            <Col id="BIRTH_DAY">19910723</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20040119</Col>
+            <Col id="EMPL_COL">ivory</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">lightgrey</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="EMPL_NAME">Aurelia</Col>
+            <Col id="EMPL_ID">KR304</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20120510</Col>
+            <Col id="SALARY">93200000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01078791858</Col>
+            <Col id="E_MAIL">Aurelia@nexacro.com</Col>
+            <Col id="ZIP_CD">16370</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">949-1473 Lorem, St.</Col>
+            <Col id="BIRTH_DAY">19631015</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20120213</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="EMPL_NAME">Kato</Col>
+            <Col id="EMPL_ID">KR305</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20050221</Col>
+            <Col id="SALARY">76460000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01016286537</Col>
+            <Col id="E_MAIL">Kato@nexacro.com</Col>
+            <Col id="ZIP_CD">16674</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">1723 Ante, Av.</Col>
+            <Col id="BIRTH_DAY">19810301</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19940912</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">23</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">lightsalmon</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="EMPL_NAME">Adrian</Col>
+            <Col id="EMPL_ID">KR306</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20050101</Col>
+            <Col id="SALARY">58680000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01033393572</Col>
+            <Col id="E_MAIL">Adrian@nexacro.com</Col>
+            <Col id="ZIP_CD">18388</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">Ap #565-8338 Mattis Road</Col>
+            <Col id="BIRTH_DAY">19670531</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_PER">11</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">lightseagreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="EMPL_NAME">Jason</Col>
+            <Col id="EMPL_ID">KR307</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20020910</Col>
+            <Col id="SALARY">91150000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01030567543</Col>
+            <Col id="E_MAIL">Jason@nexacro.com</Col>
+            <Col id="ZIP_CD">19172</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">4377 A, Avenue</Col>
+            <Col id="BIRTH_DAY">19681226</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">gold</Col>
+            <Col id="EMPL_PER">59</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">lightskyblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="EMPL_NAME">Hanna</Col>
+            <Col id="EMPL_ID">KR308</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20041021</Col>
+            <Col id="SALARY">71770000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01023943275</Col>
+            <Col id="E_MAIL">Hanna@nexacro.com</Col>
+            <Col id="ZIP_CD">16282</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 227, 7103 Rutrum Road</Col>
+            <Col id="BIRTH_DAY">19690802</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19940422</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">lightslategray</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="EMPL_NAME">Iris</Col>
+            <Col id="EMPL_ID">KR309</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20170204</Col>
+            <Col id="SALARY">60860000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01053191526</Col>
+            <Col id="E_MAIL">Iris@nexacro.com</Col>
+            <Col id="ZIP_CD">13848</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">223-6824 A Av.</Col>
+            <Col id="BIRTH_DAY">19841104</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">olive</Col>
+            <Col id="EMPL_PER">59</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">lightslategrey</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="EMPL_NAME">Autumn</Col>
+            <Col id="EMPL_ID">KR310</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20150416</Col>
+            <Col id="SALARY">77140000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01067705311</Col>
+            <Col id="E_MAIL">Autumn@nexacro.com</Col>
+            <Col id="ZIP_CD">17750</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 965, 7699 Nec, Rd.</Col>
+            <Col id="BIRTH_DAY">19631204</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">53</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">lightsteelblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="EMPL_NAME">Ulric</Col>
+            <Col id="EMPL_ID">KR311</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20080303</Col>
+            <Col id="SALARY">72420000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01051822622</Col>
+            <Col id="E_MAIL">Ulric@nexacro.com</Col>
+            <Col id="ZIP_CD">14983</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">222-5016 Interdum. Rd.</Col>
+            <Col id="BIRTH_DAY">19720512</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19860907</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">19</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">lightyellow</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="EMPL_NAME">Nevada</Col>
+            <Col id="EMPL_ID">KR312</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20100120</Col>
+            <Col id="SALARY">67570000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01030992947</Col>
+            <Col id="E_MAIL">Nevada@nexacro.com</Col>
+            <Col id="ZIP_CD">11515</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">Ap #619-4668 Dolor. Avenue</Col>
+            <Col id="BIRTH_DAY">19950614</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19980717</Col>
+            <Col id="EMPL_COL">navy</Col>
+            <Col id="EMPL_PER">61</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">lime</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="EMPL_NAME">Grant</Col>
+            <Col id="EMPL_ID">KR313</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20080229</Col>
+            <Col id="SALARY">65030000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01095993131</Col>
+            <Col id="E_MAIL">Grant@nexacro.com</Col>
+            <Col id="ZIP_CD">18755</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">304-4819 Adipiscing Avenue</Col>
+            <Col id="BIRTH_DAY">19710805</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19880131</Col>
+            <Col id="EMPL_PER">17</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">limegreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="EMPL_NAME">Mercedes</Col>
+            <Col id="EMPL_ID">KR314</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20140904</Col>
+            <Col id="SALARY">85890000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01084337465</Col>
+            <Col id="E_MAIL">Mercedes@nexacro.com</Col>
+            <Col id="ZIP_CD">12079</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">Ap #970-3503 Placerat St.</Col>
+            <Col id="BIRTH_DAY">19760821</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">13</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">linen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="EMPL_NAME">Calista</Col>
+            <Col id="EMPL_ID">KR315</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20051108</Col>
+            <Col id="SALARY">87360000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01071898176</Col>
+            <Col id="E_MAIL">Calista@nexacro.com</Col>
+            <Col id="ZIP_CD">19657</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 223, 9558 Aliquam Rd.</Col>
+            <Col id="BIRTH_DAY">19631111</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20140813</Col>
+            <Col id="EMPL_PER">47</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">magenta</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="EMPL_NAME">Veronica</Col>
+            <Col id="EMPL_ID">KR316</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20011213</Col>
+            <Col id="SALARY">52070000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01086917526</Col>
+            <Col id="E_MAIL">Veronica@nexacro.com</Col>
+            <Col id="ZIP_CD">13624</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">P.O. Box 983, 9564 Volutpat. Avenue</Col>
+            <Col id="BIRTH_DAY">19911222</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20010212</Col>
+            <Col id="EMPL_COL">silver</Col>
+            <Col id="EMPL_PER">37</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">maroon</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="EMPL_NAME">Anne</Col>
+            <Col id="EMPL_ID">KR317</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20010730</Col>
+            <Col id="SALARY">86250000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01012982478</Col>
+            <Col id="E_MAIL">Anne@nexacro.com</Col>
+            <Col id="ZIP_CD">11346</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">880-6241 Amet St.</Col>
+            <Col id="BIRTH_DAY">19640827</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19930101</Col>
+            <Col id="EMPL_COL">red</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">mediumaquamarine</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="EMPL_NAME">Maris</Col>
+            <Col id="EMPL_ID">KR318</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20040803</Col>
+            <Col id="SALARY">71670000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01067669165</Col>
+            <Col id="E_MAIL">Maris@nexacro.com</Col>
+            <Col id="ZIP_CD">13701</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">4102 Nunc Av.</Col>
+            <Col id="BIRTH_DAY">19861005</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20100326</Col>
+            <Col id="EMPL_COL">red</Col>
+            <Col id="EMPL_PER">5</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">mediumblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="EMPL_NAME">Aladdin</Col>
+            <Col id="EMPL_ID">KR319</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20130813</Col>
+            <Col id="SALARY">75630000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01030158120</Col>
+            <Col id="E_MAIL">Aladdin@nexacro.com</Col>
+            <Col id="ZIP_CD">14148</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">686-9047 Sodales Ave</Col>
+            <Col id="BIRTH_DAY">19640711</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20080818</Col>
+            <Col id="EMPL_COL">silver</Col>
+            <Col id="EMPL_PER">19</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">mediumorchid</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="EMPL_NAME">Cade</Col>
+            <Col id="EMPL_ID">KR320</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20150809</Col>
+            <Col id="SALARY">55040000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01070015599</Col>
+            <Col id="E_MAIL">Cade@nexacro.com</Col>
+            <Col id="ZIP_CD">11016</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">P.O. Box 614, 7903 Tempus, Avenue</Col>
+            <Col id="BIRTH_DAY">19700625</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">97</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">mediumpurple</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR40</Col>
+            <Col id="EMPL_NAME">Phyllis</Col>
+            <Col id="EMPL_ID">KR040</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20070907</Col>
+            <Col id="SALARY">68350000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01091763188</Col>
+            <Col id="E_MAIL">Phyllis@nexacro.com</Col>
+            <Col id="ZIP_CD">19137</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">8072 Id Ave</Col>
+            <Col id="BIRTH_DAY">19870429</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20011221</Col>
+            <Col id="EMPL_COL">silver</Col>
+            <Col id="EMPL_PER">17</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">mediumseagreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="EMPL_NAME">Ray</Col>
+            <Col id="EMPL_ID">KR401</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20060501</Col>
+            <Col id="SALARY">61220000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01020560711</Col>
+            <Col id="E_MAIL">Ray@nexacro.com</Col>
+            <Col id="ZIP_CD">13953</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">Ap #132-387 Lectus, Avenue</Col>
+            <Col id="BIRTH_DAY">19700326</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19931102</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">89</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">mediumslateblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="EMPL_NAME">Chester</Col>
+            <Col id="EMPL_ID">KR402</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20040527</Col>
+            <Col id="SALARY">88520000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01074037853</Col>
+            <Col id="E_MAIL">Chester@nexacro.com</Col>
+            <Col id="ZIP_CD">12906</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">299-3959 Ante St.</Col>
+            <Col id="BIRTH_DAY">19701219</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20070211</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">13</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">mediumspringgreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="EMPL_NAME">MacKensie</Col>
+            <Col id="EMPL_ID">KR403</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20081202</Col>
+            <Col id="SALARY">95600000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01068908027</Col>
+            <Col id="E_MAIL">MacKensie@nexacro.com</Col>
+            <Col id="ZIP_CD">14151</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">7501 Egestas St.</Col>
+            <Col id="BIRTH_DAY">19880804</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">white</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">mediumturquoise</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="EMPL_NAME">Hayley</Col>
+            <Col id="EMPL_ID">KR404</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20131207</Col>
+            <Col id="SALARY">92000000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01033587012</Col>
+            <Col id="E_MAIL">Hayley@nexacro.com</Col>
+            <Col id="ZIP_CD">15994</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">P.O. Box 675, 4070 Tempor Road</Col>
+            <Col id="BIRTH_DAY">19670320</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">lime</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">mediumvioletred</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="EMPL_NAME">Azalia</Col>
+            <Col id="EMPL_ID">KR405</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20120514</Col>
+            <Col id="SALARY">63750000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01089087823</Col>
+            <Col id="E_MAIL">Azalia@nexacro.com</Col>
+            <Col id="ZIP_CD">18448</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">932-9339 Lorem, Rd.</Col>
+            <Col id="BIRTH_DAY">19671205</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">silver</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">midnightblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4020</Col>
+            <Col id="EMPL_NAME">Bryar</Col>
+            <Col id="EMPL_ID">KR406</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20150128</Col>
+            <Col id="SALARY">87360000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01023282896</Col>
+            <Col id="E_MAIL">Bryar@nexacro.com</Col>
+            <Col id="ZIP_CD">10721</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">136-1743 Suspendisse Street</Col>
+            <Col id="BIRTH_DAY">19951026</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19870616</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">79</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">mintcream</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4020</Col>
+            <Col id="EMPL_NAME">Blake</Col>
+            <Col id="EMPL_ID">KR407</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20070718</Col>
+            <Col id="SALARY">58400000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01066643601</Col>
+            <Col id="E_MAIL">Blake@nexacro.com</Col>
+            <Col id="ZIP_CD">18920</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">Ap #415-263 Ridiculus Ave</Col>
+            <Col id="BIRTH_DAY">19650419</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20101122</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">83</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">mistyrose</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4020</Col>
+            <Col id="EMPL_NAME">Pearl</Col>
+            <Col id="EMPL_ID">KR408</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20020720</Col>
+            <Col id="SALARY">50800000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01011658362</Col>
+            <Col id="E_MAIL">Pearl@nexacro.com</Col>
+            <Col id="ZIP_CD">15524</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">7184 Tincidunt Street</Col>
+            <Col id="BIRTH_DAY">19810926</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19840603</Col>
+            <Col id="EMPL_COL">yellow</Col>
+            <Col id="EMPL_PER">53</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">moccasin</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4020</Col>
+            <Col id="EMPL_NAME">Dante</Col>
+            <Col id="EMPL_ID">KR409</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20160827</Col>
+            <Col id="SALARY">97960000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01080855977</Col>
+            <Col id="E_MAIL">Dante@nexacro.com</Col>
+            <Col id="ZIP_CD">15842</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 399, 8183 Scelerisque Street</Col>
+            <Col id="BIRTH_DAY">19740914</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">khaki</Col>
+            <Col id="EMPL_PER">29</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">navajowhite</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4030</Col>
+            <Col id="EMPL_NAME">Willow</Col>
+            <Col id="EMPL_ID">KR410</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20050720</Col>
+            <Col id="SALARY">92750000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01069835830</Col>
+            <Col id="E_MAIL">Willow@nexacro.com</Col>
+            <Col id="ZIP_CD">10068</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">Ap #212-5965 Neque. Avenue</Col>
+            <Col id="BIRTH_DAY">19840907</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">pink</Col>
+            <Col id="EMPL_PER">31</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">navy</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4030</Col>
+            <Col id="EMPL_NAME">Rosalyn</Col>
+            <Col id="EMPL_ID">KR411</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20030410</Col>
+            <Col id="SALARY">59730000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01047555975</Col>
+            <Col id="E_MAIL">Rosalyn@nexacro.com</Col>
+            <Col id="ZIP_CD">11798</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">9317 Quisque Av.</Col>
+            <Col id="BIRTH_DAY">19770502</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">83</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">oldlace</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4030</Col>
+            <Col id="EMPL_NAME">Aileen</Col>
+            <Col id="EMPL_ID">KR412</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20100415</Col>
+            <Col id="SALARY">70460000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01031674126</Col>
+            <Col id="E_MAIL">Aileen@nexacro.com</Col>
+            <Col id="ZIP_CD">18200</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">Ap #669-4527 Taciti Rd.</Col>
+            <Col id="BIRTH_DAY">19860423</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20110220</Col>
+            <Col id="EMPL_COL">coral</Col>
+            <Col id="EMPL_PER">43</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">olive</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4030</Col>
+            <Col id="EMPL_NAME">Madaline</Col>
+            <Col id="EMPL_ID">KR413</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20100522</Col>
+            <Col id="SALARY">76170000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01037029926</Col>
+            <Col id="E_MAIL">Madaline@nexacro.com</Col>
+            <Col id="ZIP_CD">16003</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">P.O. Box 319, 9473 Risus. Road</Col>
+            <Col id="BIRTH_DAY">19880810</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">lavender</Col>
+            <Col id="EMPL_PER">47</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">olivedrab</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4040</Col>
+            <Col id="EMPL_NAME">Amena</Col>
+            <Col id="EMPL_ID">KR414</Col>
+            <Col id="POS_CD">06</Col>
+            <Col id="HIRE_DATE">20071014</Col>
+            <Col id="SALARY">72750000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01072145959</Col>
+            <Col id="E_MAIL">Amena@nexacro.com</Col>
+            <Col id="ZIP_CD">12707</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 878, 5851 Scelerisque St.</Col>
+            <Col id="BIRTH_DAY">19800905</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19841105</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">53</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4040</Col>
+            <Col id="EMPL_NAME">Dillon</Col>
+            <Col id="EMPL_ID">KR415</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20060603</Col>
+            <Col id="SALARY">60520000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01062037260</Col>
+            <Col id="E_MAIL">Dillon@nexacro.com</Col>
+            <Col id="ZIP_CD">16178</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">P.O. Box 321, 7885 At, Road</Col>
+            <Col id="BIRTH_DAY">19801017</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19990205</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">73</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">orangered</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4040</Col>
+            <Col id="EMPL_NAME">Avram</Col>
+            <Col id="EMPL_ID">KR416</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20101112</Col>
+            <Col id="SALARY">84750000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01059590942</Col>
+            <Col id="E_MAIL">Avram@nexacro.com</Col>
+            <Col id="ZIP_CD">18819</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">615-6655 Metus. St.</Col>
+            <Col id="BIRTH_DAY">19670804</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20050301</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">orchid</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR4040</Col>
+            <Col id="EMPL_NAME">Cairo</Col>
+            <Col id="EMPL_ID">KR417</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20051123</Col>
+            <Col id="SALARY">76170000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01096706210</Col>
+            <Col id="E_MAIL">Cairo@nexacro.com</Col>
+            <Col id="ZIP_CD">19506</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">Ap #998-6126 Justo Ave</Col>
+            <Col id="BIRTH_DAY">19940920</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">teal</Col>
+            <Col id="EMPL_PER">41</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">palegoldenrod</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR50</Col>
+            <Col id="EMPL_NAME">Caleb</Col>
+            <Col id="EMPL_ID">KR050</Col>
+            <Col id="POS_CD">03</Col>
+            <Col id="HIRE_DATE">20110706</Col>
+            <Col id="SALARY">54270000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01050245097</Col>
+            <Col id="E_MAIL">Caleb@nexacro.com</Col>
+            <Col id="ZIP_CD">17200</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">2743 Facilisis Ave</Col>
+            <Col id="BIRTH_DAY">19920424</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">violet</Col>
+            <Col id="EMPL_PER">59</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">palegreen</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5010</Col>
+            <Col id="EMPL_NAME">Lance</Col>
+            <Col id="EMPL_ID">KR501</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20110228</Col>
+            <Col id="SALARY">57800000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01071006381</Col>
+            <Col id="E_MAIL">Lance@nexacro.com</Col>
+            <Col id="ZIP_CD">19987</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">9378 Eget, St.</Col>
+            <Col id="BIRTH_DAY">19710714</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20000211</Col>
+            <Col id="EMPL_COL">khaki</Col>
+            <Col id="EMPL_PER">53</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">paleturquoise</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5010</Col>
+            <Col id="EMPL_NAME">Allegra</Col>
+            <Col id="EMPL_ID">KR502</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20100220</Col>
+            <Col id="SALARY">96000000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01089970156</Col>
+            <Col id="E_MAIL">Allegra@nexacro.com</Col>
+            <Col id="ZIP_CD">18673</Col>
+            <Col id="ADDR1">Incheon</Col>
+            <Col id="ADDR2">663-7021 Orci, Rd.</Col>
+            <Col id="BIRTH_DAY">19871217</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19961128</Col>
+            <Col id="EMPL_COL">olive</Col>
+            <Col id="EMPL_PER">31</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">palevioletred</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5010</Col>
+            <Col id="EMPL_NAME">Selma</Col>
+            <Col id="EMPL_ID">KR503</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20040420</Col>
+            <Col id="SALARY">93020000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01025816934</Col>
+            <Col id="E_MAIL">Selma@nexacro.com</Col>
+            <Col id="ZIP_CD">11313</Col>
+            <Col id="ADDR1">Daegu</Col>
+            <Col id="ADDR2">P.O. Box 415, 7592 Dapibus Avenue</Col>
+            <Col id="BIRTH_DAY">19790429</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">olive</Col>
+            <Col id="EMPL_PER">79</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">papayawhip</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5010</Col>
+            <Col id="EMPL_NAME">Blythe</Col>
+            <Col id="EMPL_ID">KR504</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20140311</Col>
+            <Col id="SALARY">84200000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01020737498</Col>
+            <Col id="E_MAIL">Blythe@nexacro.com</Col>
+            <Col id="ZIP_CD">19524</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">3446 Vitae Road</Col>
+            <Col id="BIRTH_DAY">19910910</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">purple</Col>
+            <Col id="EMPL_PER">37</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">peachpuff</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5020</Col>
+            <Col id="EMPL_NAME">Zephania</Col>
+            <Col id="EMPL_ID">KR505</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20030314</Col>
+            <Col id="SALARY">66180000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01073154889</Col>
+            <Col id="E_MAIL">Zephania@nexacro.com</Col>
+            <Col id="ZIP_CD">18412</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">Ap #397-4314 Ridiculus Rd.</Col>
+            <Col id="BIRTH_DAY">19971120</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19911223</Col>
+            <Col id="EMPL_COL">navy</Col>
+            <Col id="EMPL_PER">2</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">peru</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5020</Col>
+            <Col id="EMPL_NAME">Oleg</Col>
+            <Col id="EMPL_ID">KR506</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20161208</Col>
+            <Col id="SALARY">56980000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01030031452</Col>
+            <Col id="E_MAIL">Oleg@nexacro.com</Col>
+            <Col id="ZIP_CD">11113</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">Ap #913-2734 Libero Avenue</Col>
+            <Col id="BIRTH_DAY">19610131</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">19960629</Col>
+            <Col id="EMPL_COL">blue</Col>
+            <Col id="EMPL_PER">67</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">pink</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5020</Col>
+            <Col id="EMPL_NAME">Oprah</Col>
+            <Col id="EMPL_ID">KR507</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20040417</Col>
+            <Col id="SALARY">91260000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01025120238</Col>
+            <Col id="E_MAIL">Oprah@nexacro.com</Col>
+            <Col id="ZIP_CD">16194</Col>
+            <Col id="ADDR1">Gwangju</Col>
+            <Col id="ADDR2">924-630 Nisi Rd.</Col>
+            <Col id="BIRTH_DAY">19870930</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">white</Col>
+            <Col id="EMPL_PER">1</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">plum</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5020</Col>
+            <Col id="EMPL_NAME">Sylvia</Col>
+            <Col id="EMPL_ID">KR508</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20061016</Col>
+            <Col id="SALARY">88450000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01097853719</Col>
+            <Col id="E_MAIL">Sylvia@nexacro.com</Col>
+            <Col id="ZIP_CD">18488</Col>
+            <Col id="ADDR1">Seoul</Col>
+            <Col id="ADDR2">P.O. Box 785, 1229 Maecenas Street</Col>
+            <Col id="BIRTH_DAY">19820302</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20100519</Col>
+            <Col id="EMPL_COL">orange</Col>
+            <Col id="EMPL_PER">71</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">powderblue</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5030</Col>
+            <Col id="EMPL_NAME">Thane</Col>
+            <Col id="EMPL_ID">KR509</Col>
+            <Col id="POS_CD">07</Col>
+            <Col id="HIRE_DATE">20100323</Col>
+            <Col id="SALARY">65750000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01055736407</Col>
+            <Col id="E_MAIL">Thane@nexacro.com</Col>
+            <Col id="ZIP_CD">10417</Col>
+            <Col id="ADDR1">Daejeon</Col>
+            <Col id="ADDR2">462 Curabitur St.</Col>
+            <Col id="BIRTH_DAY">19910923</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20100725</Col>
+            <Col id="EMPL_COL">violet</Col>
+            <Col id="EMPL_PER">19</Col>
+            <Col id="EMPL_IMG">Images::img_na_korea_b.png</Col>
+            <Col id="MEMO">purple</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5030</Col>
+            <Col id="EMPL_NAME">Florence</Col>
+            <Col id="EMPL_ID">KR510</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20060819</Col>
+            <Col id="SALARY">78190000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01042090867</Col>
+            <Col id="E_MAIL">Florence@nexacro.com</Col>
+            <Col id="ZIP_CD">13664</Col>
+            <Col id="ADDR1">Busan</Col>
+            <Col id="ADDR2">7009 Proin St.</Col>
+            <Col id="BIRTH_DAY">19770211</Col>
+            <Col id="MARREID">1</Col>
+            <Col id="WEDD_DAY">20140523</Col>
+            <Col id="EMPL_COL">brown</Col>
+            <Col id="EMPL_PER">67</Col>
+            <Col id="EMPL_IMG">Images::img_na_canada_b.png</Col>
+            <Col id="MEMO">red</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5030</Col>
+            <Col id="EMPL_NAME">Tiger</Col>
+            <Col id="EMPL_ID">KR511</Col>
+            <Col id="POS_CD">04</Col>
+            <Col id="HIRE_DATE">20070908</Col>
+            <Col id="SALARY">82920000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="PHONE_NO">01077065035</Col>
+            <Col id="E_MAIL">Tiger@nexacro.com</Col>
+            <Col id="ZIP_CD">19513</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">P.O. Box 757, 5340 Vitae Rd.</Col>
+            <Col id="BIRTH_DAY">19960718</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">navy</Col>
+            <Col id="EMPL_PER">7</Col>
+            <Col id="EMPL_IMG">Images::img_na_china_b.png</Col>
+            <Col id="MEMO">rosybrown</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_CD">KR5030</Col>
+            <Col id="EMPL_NAME">Shaeleigh</Col>
+            <Col id="EMPL_ID">KR512</Col>
+            <Col id="POS_CD">05</Col>
+            <Col id="HIRE_DATE">20011019</Col>
+            <Col id="SALARY">72290000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01049269634</Col>
+            <Col id="E_MAIL">Shaeleigh@nexacro.com</Col>
+            <Col id="ZIP_CD">15555</Col>
+            <Col id="ADDR1">Ulsan</Col>
+            <Col id="ADDR2">4096 Congue Rd.</Col>
+            <Col id="BIRTH_DAY">19881202</Col>
+            <Col id="MARREID">0</Col>
+            <Col id="EMPL_COL">olive</Col>
+            <Col id="EMPL_PER">89</Col>
+            <Col id="EMPL_IMG">Images::img_na_usa_b.png</Col>
+            <Col id="MEMO">royalblue</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="POS_CD" type="string" size="32"/>
+          <Column id="POS_NAME" type="string" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="POS_CD">07</Col>
+            <Col id="POS_NAME">Officer</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">06</Col>
+            <Col id="POS_NAME">Supervisor</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">05</Col>
+            <Col id="POS_NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">04</Col>
+            <Col id="POS_NAME">Department Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">03</Col>
+            <Col id="POS_NAME">Division Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">02</Col>
+            <Col id="POS_NAME">President</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CD">01</Col>
+            <Col id="POS_NAME">Chairman</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_org" onrowposchanged="ds_org_onrowposchanged">
+        <ColumnInfo>
+          <Column id="ORG_NM" type="STRING" size="256"/>
+          <Column id="ORG_CD" type="STRING" size="256"/>
+          <Column id="P_ORG_CD" type="STRING" size="256"/>
+          <Column id="LEVEL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="ORG_NM">nexacro</Col>
+            <Col id="ORG_CD">0</Col>
+            <Col id="LEVEL">0</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Korea Corporation</Col>
+            <Col id="ORG_CD">KR</Col>
+            <Col id="P_ORG_CD">0</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Management Group</Col>
+            <Col id="ORG_CD">KR10</Col>
+            <Col id="P_ORG_CD">KR</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Financial Accounting</Col>
+            <Col id="ORG_CD">KR1010</Col>
+            <Col id="P_ORG_CD">KR10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Human Resource</Col>
+            <Col id="ORG_CD">KR1020</Col>
+            <Col id="P_ORG_CD">KR10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">General affairs</Col>
+            <Col id="ORG_CD">KR1030</Col>
+            <Col id="P_ORG_CD">KR10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Strategy Planning</Col>
+            <Col id="ORG_CD">KR1040</Col>
+            <Col id="P_ORG_CD">KR10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Marketing</Col>
+            <Col id="ORG_CD">KR1050</Col>
+            <Col id="P_ORG_CD">KR10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sales Group</Col>
+            <Col id="ORG_CD">KR20</Col>
+            <Col id="P_ORG_CD">KR</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sales 1 Team</Col>
+            <Col id="ORG_CD">KR2010</Col>
+            <Col id="P_ORG_CD">KR20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sales 2 Team</Col>
+            <Col id="ORG_CD">KR2020</Col>
+            <Col id="P_ORG_CD">KR20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sales 3 Team</Col>
+            <Col id="ORG_CD">KR2030</Col>
+            <Col id="P_ORG_CD">KR20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sales Support</Col>
+            <Col id="ORG_CD">KR2040</Col>
+            <Col id="P_ORG_CD">KR20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Consulting Group</Col>
+            <Col id="ORG_CD">KR30</Col>
+            <Col id="P_ORG_CD">KR</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Product Consulting</Col>
+            <Col id="ORG_CD">KR3010</Col>
+            <Col id="P_ORG_CD">KR30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Server Consulting</Col>
+            <Col id="ORG_CD">KR3020</Col>
+            <Col id="P_ORG_CD">KR30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Mobile Consulting</Col>
+            <Col id="ORG_CD">KR3030</Col>
+            <Col id="P_ORG_CD">KR30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Design Consulting</Col>
+            <Col id="ORG_CD">KR3040</Col>
+            <Col id="P_ORG_CD">KR30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Support Group</Col>
+            <Col id="ORG_CD">KR40</Col>
+            <Col id="P_ORG_CD">KR</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Technical Support </Col>
+            <Col id="ORG_CD">KR4010</Col>
+            <Col id="P_ORG_CD">KR40</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Server Support</Col>
+            <Col id="ORG_CD">KR4020</Col>
+            <Col id="P_ORG_CD">KR40</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Mobile Support</Col>
+            <Col id="ORG_CD">KR4030</Col>
+            <Col id="P_ORG_CD">KR40</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Design Support</Col>
+            <Col id="ORG_CD">KR4040</Col>
+            <Col id="P_ORG_CD">KR40</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Research Group</Col>
+            <Col id="ORG_CD">KR50</Col>
+            <Col id="P_ORG_CD">KR</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Architecture</Col>
+            <Col id="ORG_CD">KR5010</Col>
+            <Col id="P_ORG_CD">KR50</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Development</Col>
+            <Col id="ORG_CD">KR5020</Col>
+            <Col id="P_ORG_CD">KR50</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Quality Assurance</Col>
+            <Col id="ORG_CD">KR5030</Col>
+            <Col id="P_ORG_CD">KR50</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Japen Corporation</Col>
+            <Col id="ORG_CD">JP</Col>
+            <Col id="P_ORG_CD">0</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Management Group</Col>
+            <Col id="ORG_CD">JP10</Col>
+            <Col id="P_ORG_CD">JP</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Business Strategy</Col>
+            <Col id="ORG_CD">JP1010</Col>
+            <Col id="P_ORG_CD">JP10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Financial Accounting</Col>
+            <Col id="ORG_CD">JP1020</Col>
+            <Col id="P_ORG_CD">JP10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Management</Col>
+            <Col id="ORG_CD">JP1030</Col>
+            <Col id="P_ORG_CD">JP10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Domestic Salse Group</Col>
+            <Col id="ORG_CD">JP20</Col>
+            <Col id="P_ORG_CD">JP</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Domestic Salse 1</Col>
+            <Col id="ORG_CD">JP2010</Col>
+            <Col id="P_ORG_CD">JP20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Domestic Salse 2</Col>
+            <Col id="ORG_CD">JP2020</Col>
+            <Col id="P_ORG_CD">JP20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Domestic Salse 3</Col>
+            <Col id="ORG_CD">JP2030</Col>
+            <Col id="P_ORG_CD">JP20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Overseas Salse Group</Col>
+            <Col id="ORG_CD">JP30</Col>
+            <Col id="P_ORG_CD">JP</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Overseas Salse 1</Col>
+            <Col id="ORG_CD">JP3010</Col>
+            <Col id="P_ORG_CD">JP30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Overseas Salse 2</Col>
+            <Col id="ORG_CD">JP3020</Col>
+            <Col id="P_ORG_CD">JP30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Overseas Salse 3</Col>
+            <Col id="ORG_CD">JP3030</Col>
+            <Col id="P_ORG_CD">JP30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Chana Corporation</Col>
+            <Col id="ORG_CD">CN</Col>
+            <Col id="P_ORG_CD">0</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Management Group</Col>
+            <Col id="ORG_CD">CN10</Col>
+            <Col id="P_ORG_CD">CN</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Business Strategy</Col>
+            <Col id="ORG_CD">CN1010</Col>
+            <Col id="P_ORG_CD">CN10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Accounting</Col>
+            <Col id="ORG_CD">CN1020</Col>
+            <Col id="P_ORG_CD">CN10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Human Resource</Col>
+            <Col id="ORG_CD">CN1030</Col>
+            <Col id="P_ORG_CD">CN10</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Business Group</Col>
+            <Col id="ORG_CD">CN20</Col>
+            <Col id="P_ORG_CD">CN</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Marketing</Col>
+            <Col id="ORG_CD">CN2010</Col>
+            <Col id="P_ORG_CD">CN20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Sale Planning</Col>
+            <Col id="ORG_CD">CN2020</Col>
+            <Col id="P_ORG_CD">CN20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Domestic Salse</Col>
+            <Col id="ORG_CD">CN2030</Col>
+            <Col id="P_ORG_CD">CN20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Overseas Sales</Col>
+            <Col id="ORG_CD">CN2040</Col>
+            <Col id="P_ORG_CD">CN20</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Support Group</Col>
+            <Col id="ORG_CD">CN30</Col>
+            <Col id="P_ORG_CD">CN</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Technical Support </Col>
+            <Col id="ORG_CD">CN3010</Col>
+            <Col id="P_ORG_CD">CN30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Customer Support</Col>
+            <Col id="ORG_CD">CN3020</Col>
+            <Col id="P_ORG_CD">CN30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="ORG_NM">Design Support</Col>
+            <Col id="ORG_CD">CN3030</Col>
+            <Col id="P_ORG_CD">CN30</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.grd_tree_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var sTreePath = obj.getTreePath(e.row);
+	sTreePath = nexacro.replaceAll(sTreePath, ".", " > ");
+	this.sta_org.set_text(sTreePath);
+	
+	this.ds_emp.filter("ORG_CD == '" + this.ds_org.getColumn(e.row, "ORG_CD") + "'");
+	this.ds_emp.set_rowposition(0);
+};]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="div_detail.form.edt_name" propid="value" datasetid="ds_emp" columnid="EMPL_NAME"/>
+      <BindItem id="item1" compid="div_detail.form.msk_id" propid="value" datasetid="ds_emp" columnid="EMPL_ID"/>
+      <BindItem id="item2" compid="div_detail.form.rdo_gender" propid="value" datasetid="ds_emp" columnid="GENDER"/>
+      <BindItem id="item3" compid="div_detail.form.edt_mail" propid="value" datasetid="ds_emp" columnid="E_MAIL"/>
+      <BindItem id="item4" compid="div_detail.form.cal_birth" propid="value" datasetid="ds_emp" columnid="BIRTH_DAY"/>
+      <BindItem id="item5" compid="div_detail.form.chk_married" propid="value" datasetid="ds_emp" columnid="MARREID"/>
+      <BindItem id="item6" compid="div_detail.form.cal_wedd" propid="value" datasetid="ds_emp" columnid="WEDD_DAY"/>
+      <BindItem id="item7" compid="div_detail.form.cal_wedd" propid="enable" datasetid="ds_emp" columnid="MARREID"/>
+      <BindItem id="item8" compid="div_detail.form.ImageViewer00" propid="image" datasetid="ds_emp" columnid="EMPL_IMG"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::edu_theme_d" scrollbarsize="10" onload="Environment_onload">
+    <ScreenDefinition>
+      <Screen id="Phone_screen" type="mobile_small" themeid="theme::edu_theme_m" specifiedlocale="ar_AE"/>
+      <Screen id="Desktop_screen" type="desktop" themeid="theme::edu_theme_d"/>
+    </ScreenDefinition>
+    <Variables>
+      <Variable id="Env_Var1" initval="Env Variable Value1"/>
+      <Variable id="Env_Var2" initval="Env Variable Value2"/>
+      <Variable id="Env_Var3" initval="Env Variable Value3"/>
+      <Variable id="ev_runMode" initval="L"/>
+    </Variables>
+    <Cookies>
+      <Cookie id="Env_Cookie1" initval="Env Cookie Value1"/>
+      <Cookie id="Env_Cookie2" initval="Env Cookie Value2"/>
+      <Cookie id="Env_Cookie3" initval="Env Cookie Value3"/>
+    </Cookies>
+    <httpheader>
+      <Variable id="Env_Http1" initval="Env HTTP Header Value1"/>
+      <Variable id="Env_Http2" initval="Env HTTP Header Value2"/>
+      <Variable id="Env_Http3" initval="Env HTTP Header Value3"/>
+    </httpheader>
+  </Environment>
+  <Script type="xscript5.1"><![CDATA[this.Env_Script = function()
+{
+	return "Env Script Call";
+}
+this.Environment_onload = function(obj:nexacro.Environment,e:nexacro.LoadEventInfo)
+{
+	var sPath = nexacro.getProjectPath();
+
+	if(sPath.indexOf("demo.nexacro.com") > -1)
+	{
+		// ev_runMode L:Local, S:Server
+		nexacro.setEnvironmentVariable("ev_runMode", "S");
+	}
+};
+]]></Script>
+</ENV>

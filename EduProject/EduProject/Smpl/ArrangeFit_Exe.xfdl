@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="ArrangeFit_Exe" width="800" height="600" titletext="New Form" onbindingvaluechanged="Form_onbindingvaluechanged">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800" stepcount="0">
+        <Static id="Static06" taborder="0" text="Fit to Contents &amp; Arrangement" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Grid id="grd_list" taborder="1" left="10" top="50" width="240" binddataset="ds_movie" autofittype="col" bottom="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="50"/>
+                <Column size="180"/>
+              </Columns>
+              <Rows>
+                <Row size="30"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="body">
+                <Cell rowspan="2" text="bind:MOVIE_IMG" displaytype="imagecontrol" imagestretch="fixaspectratio"/>
+                <Cell col="1" text="bind:TITEL"/>
+                <Cell row="1" col="1" text="bind:DIRECTOR"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="st_summary" taborder="5" text="" left="402" top="154" width="388" background="" padding="5px" wordWrap="english" height="80" maxheight="" cssclass="sta_WF_tablebg"/>
+        <ImageViewer id="img_image" taborder="6" left="grd_list:10" top="50" height="184" border="1px solid #bdc2c9" stretch="fixaspectratio" width="132"/>
+        <Static id="st_title" taborder="2" left="img_image:10" top="50" width="143" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_emptitle" border="1px solid #bdc2c9"/>
+        <Static id="Static01" taborder="4" text="" left="402" top="105" width="190" height="24" background="" padding="" cssclass="sta_WF_tablebg"/>
+        <Static id="Static02" taborder="3" text="" left="597" top="105" width="180" height="24" background="" padding="" cssclass="sta_WF_tablebg"/>
+        <Div id="Div00" taborder="7" text="Div00" left="260" width="530" height="164" top="242">
+          <Layouts>
+            <Layout>
+              <Static id="Static08" taborder="0" text="Runtime" left="9" top="8" width="100" height="30" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static00" taborder="1" text="Starring" left="9" top="37" width="100" height="30" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static01" taborder="2" text="Genres" left="9" top="66" width="100" height="30" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static02" taborder="3" text="Direction" left="9" top="95" width="100" height="30" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static03" taborder="4" text="Writer" left="9" top="124" width="100" height="30" background="" padding="" cssclass="sta_WF_tablelabel"/>
+              <Static id="Static04" taborder="5" text="" left="108" top="8" width="410" height="30" background="" padding="5px" cssclass="sta_WF_tablebg"/>
+              <Static id="Static05" taborder="6" text="" left="108" top="37" width="410" height="30" background="" padding="5px" cssclass="sta_WF_tablebg"/>
+              <Static id="Static06" taborder="7" text="" left="108" top="66" width="410" height="30" background="" padding="5px" cssclass="sta_WF_tablebg"/>
+              <Static id="Static07" taborder="8" text="" left="108" top="95" width="410" height="30" background="" padding="5px" cssclass="sta_WF_tablebg"/>
+              <Static id="Static09" taborder="9" text="" left="108" top="124" width="410" height="30" background="" padding="5px" cssclass="sta_WF_tablebg"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static05" taborder="8" left="404" width="290" height="20" text="* Production / Year" top="85" color="darkblue" font="normal bold 10pt &quot;Verdana&quot;"/>
+        <Static id="Static00" taborder="9" left="402" width="290" height="20" text="* Summary" top="134" font="normal bold 10pt &quot;Verdana&quot;" color="darkblue"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Form_onbindingvaluechanged = function(obj:nexacro.Form,e:nexacro.BindingValueChangedEventInfo)
+{
+	this.resetScroll();
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_movie" onrowsetchanged="Dataset00_onrowsetchanged">
+        <ColumnInfo>
+          <Column id="TITEL" type="STRING" size="256"/>
+          <Column id="PRODUCTION" type="STRING" size="256"/>
+          <Column id="STARRING" type="STRING" size="256"/>
+          <Column id="YEAR" type="STRING" size="256"/>
+          <Column id="SUMMARY" type="STRING" size="256"/>
+          <Column id="DIRECTOR" type="STRING" size="256"/>
+          <Column id="WRITER" type="STRING" size="256"/>
+          <Column id="GENRE" type="STRING" size="256"/>
+          <Column id="SITE" type="STRING" size="256"/>
+          <Column id="RUNTIME" type="STRING" size="256"/>
+          <Column id="MOVIE_IMG" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="TITEL">Avatar</Col>
+            <Col id="STARRING">Michelle Rodriguez, Sam Worthington, Sigourney Weaver</Col>
+            <Col id="YEAR">2009</Col>
+            <Col id="SUMMARY">Jake Sully is a former Marine confined to a wheelchair. But despite his broken body, Jake is still a warrior at heart. He is recruited to travel light years to the human outpost on Pandora, where a corporate consortium is mining a rare mineral that is the key to solving Earth's energy crisis. Because Pandora's atmosphere is toxic, they have created the Avatar Program, in which human "drivers" have their consciousness linked to an avatar, a remotely-controlled biological body that can survive in the lethal air. These avatars are genetically engineered hybrids of human DNA mixed with DNA from the natives of Pandora... the Na'vi. Reborn in his avatar form, Jake can walk again. He is given a mission to infiltrate the Na'vi, who have become a major obstacle to mining the precious ore. But a beautiful Na'vi female, Neytiri, saves Jake's life, and this changes everything. Jake is taken in by her clan, and learns to become one of them, which involves many tests and adventures. As Jake's relationship with his reluctant teacher Neytiri deepens, he learns to respect the Na'vi way and finally takes his place among them. Soon he will face the ultimate test as he leads them in an epic battle that will decide the fate of an entire world</Col>
+            <Col id="PRODUCTION"> Twentieth Century Fox Film Corporation</Col>
+            <Col id="DIRECTOR">James Cameron</Col>
+            <Col id="GENRE">Action, Adventure, Sci-Fi, Fantasy</Col>
+            <Col id="RUNTIME">162 min</Col>
+            <Col id="WRITER">James Cameron</Col>
+            <Col id="SITE">http://www.avatarmovie.com/</Col>
+            <Col id="MOVIE_IMG">Images::m_avata.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="TITEL">Titanic</Col>
+            <Col id="STARRING">Kate Winslet, Leonardo DiCaprio</Col>
+            <Col id="YEAR">1997</Col>
+            <Col id="SUMMARY">A fictional romantic tale of a rich girl (Winslet) and a poor bohemian boy (DiCaprio) who meet on the ill-fated voyage of the 'unsinkable' ship.</Col>
+            <Col id="PRODUCTION">Paramount Pictures</Col>
+            <Col id="RUNTIME">194 min</Col>
+            <Col id="GENRE">Drama, Romance</Col>
+            <Col id="DIRECTOR">James Cameron</Col>
+            <Col id="WRITER">James Cameron</Col>
+            <Col id="MOVIE_IMG">Images::m_titanic.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="TITEL">FROZEN</Col>
+            <Col id="STARRING">Idina Menzel, Josh Gad, Kristen Bell</Col>
+            <Col id="SUMMARY">Anna sets off on an epic journey—teaming up with rugged mountain man Kristoff and his loyal reindeer Sven—to find her sister Elsa, whose icy powers have trapped the kingdom of Arendelle in eternal winter. Encountering Everest-like conditions, mystical trolls and a hilarious snowman named Olaf, Anna and Kristoff battle the elements in a race to save the kingdom</Col>
+            <Col id="YEAR">2013</Col>
+            <Col id="PRODUCTION"> Walt Disney Studios Motion Pictures</Col>
+            <Col id="DIRECTOR">Chris Buck and Jennifer Lee</Col>
+            <Col id="GENRE">Action, Adventure, Mystery, Thriller, Fantasy, Comedy, Romance, Animation, Family, Musical</Col>
+            <Col id="RUNTIME">102 min</Col>
+            <Col id="SITE">http://movies.disney.com/frozen</Col>
+            <Col id="WRITER">Chris Buck and Dean Wellins</Col>
+            <Col id="MOVIE_IMG">Images::m_frozen.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="TITEL">Iron Man 3</Col>
+            <Col id="STARRING">Don Cheadle, Guy Pearce, Gwyneth Paltrow, Robert Downey Jr.</Col>
+            <Col id="PRODUCTION"> Walt Disney Studios Motion Pictures</Col>
+            <Col id="YEAR">2013</Col>
+            <Col id="SUMMARY">Iron Man 3 pits brash-but-brilliant industrialist Tony Stark/Iron Man against an enemy whose reach knows no bounds. When Stark finds his personal world destroyed at his enemy’s hands, he embarks on a harrowing quest to find those responsible. This journey, at every turn, will test his mettle. With his back against the wall, Stark is left to survive by his own devices, relying on his ingenuity and instincts to protect those closest to him. As he fights his way back, Stark discovers the answer to the question that has secretly haunted him: does the man make the suit or does the suit make the man?</Col>
+            <Col id="DIRECTOR">Shane Black</Col>
+            <Col id="GENRE">Action, Adventure, Sci-Fi, Thriller, Fantasy</Col>
+            <Col id="RUNTIME">130 min</Col>
+            <Col id="WRITER">Adi Granov</Col>
+            <Col id="SITE">http://marvel.com/ironman3</Col>
+            <Col id="MOVIE_IMG">Images::m_ironman.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="TITEL">Star Wars</Col>
+            <Col id="PRODUCTION"> Twentieth Century Fox Film Corporation</Col>
+            <Col id="STARRING">Ewan McGregor, Liam Neeson, Natalie Portman</Col>
+            <Col id="YEAR">1999</Col>
+            <Col id="SUMMARY">Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin Skywalker, a young slave unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.</Col>
+            <Col id="DIRECTOR">George Lucas</Col>
+            <Col id="GENRE">Action, Adventure, Sci-Fi, Fantasy</Col>
+            <Col id="RUNTIME">136 min</Col>
+            <Col id="SITE">http://www.starwars.com/films/star-wars-episode-i-the-phantom-menace</Col>
+            <Col id="WRITER">George Lucas</Col>
+            <Col id="MOVIE_IMG">Images::m_starwars.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="TITEL">Inception</Col>
+            <Col id="STARRING">Ellen Page, Joseph Gordon-Levitt, Ken Watanabe, Leonardo DiCaprio</Col>
+            <Col id="PRODUCTION">Warner Bros. Pictures</Col>
+            <Col id="SUMMARY">Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible—inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming. This summer, your mind is the scene of the crime</Col>
+            <Col id="YEAR">2010</Col>
+            <Col id="DIRECTOR">Christopher Nolan</Col>
+            <Col id="GENRE">Action, Sci-Fi, Drama, Mystery, Thriller</Col>
+            <Col id="RUNTIME">148 min</Col>
+            <Col id="WRITER">Christopher Nolan</Col>
+            <Col id="MOVIE_IMG">Images::m_inception.jpg</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="img_image" propid="image" datasetid="ds_movie" columnid="MOVIE_IMG"/>
+      <BindItem id="item1" compid="st_title" propid="text" datasetid="ds_movie" columnid="TITEL"/>
+      <BindItem id="item2" compid="Static01" propid="text" datasetid="ds_movie" columnid="PRODUCTION"/>
+      <BindItem id="item3" compid="Static02" propid="text" datasetid="ds_movie" columnid="YEAR"/>
+      <BindItem id="item4" compid="st_summary" propid="text" datasetid="ds_movie" columnid="SUMMARY"/>
+      <BindItem id="item5" compid="Div00.form.Static04" propid="text" datasetid="ds_movie" columnid="RUNTIME"/>
+      <BindItem id="item6" compid="Div00.form.Static05" propid="text" datasetid="ds_movie" columnid="STARRING"/>
+      <BindItem id="item7" compid="Div00.form.Static06" propid="text" datasetid="ds_movie" columnid="GENRE"/>
+      <BindItem id="item8" compid="Div00.form.Static07" propid="text" datasetid="ds_movie" columnid="DIRECTOR"/>
+      <BindItem id="item9" compid="Div00.form.Static09" propid="text" datasetid="ds_movie" columnid="WRITER"/>
+    </Bind>
+  </Form>
+</FDL>

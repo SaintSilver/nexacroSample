@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_ProgreessBar" width="800" height="600" titletext="New Form" ontimer="Form_ontimer">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static08" taborder="0" text="ProgressBar" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Static id="Static11" taborder="7" text="☞ Direction" left="10" top="120" width="162" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static07" taborder="8" text="☞ Default" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <ProgressBar id="ProgressBar01" taborder="5" max="100" min="0" text="" left="10" top="144" width="256" height="24" pos="50"/>
+        <ProgressBar id="ProgressBar00" taborder="1" max="100" min="0" text="" left="10" top="64" width="256" height="24" pos="50"/>
+        <Button id="Button00" taborder="2" text="Start" left="274" top="64" width="80" height="24" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="6" text="Start" left="274" top="144" width="80" height="24" onclick="Button01_onclick"/>
+        <Radio id="Radio00" taborder="3" left="104" top="120" width="160" height="24" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" value="forward" innerdataset="innerdataset">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">forward</Col>
+                <Col id="datacolumn">forward</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">backward</Col>
+                <Col id="datacolumn">backward</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <CheckBox id="CheckBox00" taborder="4" text="smooth" left="272" top="120" width="78" height="24" value="true"/>
+      </Layout>
+    </Layouts>
+    <Bind/>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar00.set_pos(0);
+	
+	this.setTimer(1, 30);
+};
+
+
+
+this.Form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 1)
+	{
+		if(this.ProgressBar00.pos == 100)
+		{
+			this.killTimer(1);
+		}
+		this.ProgressBar00.getNumSetter("pos").postInc();
+	}
+	else if(e.timerid == 2)
+	{
+		if(this.ProgressBar01.pos == 100)
+		{
+			this.killTimer(1);
+		}
+		this.ProgressBar01.getNumSetter("pos").postInc();
+	}
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar01.set_pos(0);
+	this.ProgressBar01.set_direction(this.Radio00.value);
+	this.ProgressBar01.set_smooth(this.CheckBox00.value);
+	this.setTimer(2, 30);
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Button01" propid="text" datasetid="gds_dept" columnid="DEPT_NM"/>
+    </Bind>
+    <Objects/>
+  </Form>
+</FDL>

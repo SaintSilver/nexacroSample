@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe_Sample_Detail" width="380" height="180" titletext="Sample Emp Detail" onload="Exe_Sample_Detail_onload">
+    <Layouts>
+      <Layout height="180" width="380" stepcount="0">
+        <ImageViewer id="ImageViewer00" taborder="0" left="11" top="26" width="128" height="128" image="URL(&quot;imagerc::img_emp20.png&quot;)"/>
+        <Static id="Static04" taborder="1" text="Name" left="145" top="19" width="71" height="24" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static05" taborder="2" text="Dept" left="145" top="49" width="71" height="24" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static06" taborder="3" text="Position" left="145" top="79" width="71" height="24" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static07" taborder="4" text="Phone No" left="145" top="109" width="71" height="24" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static08" taborder="5" text="E Mail" left="145" top="139" width="71" height="24" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Edit id="edt_name" taborder="6" left="217" top="19" width="141" height="24" border="0px none" readonly="true"/>
+        <Combo id="cmb_dept" taborder="7" text="Combo00" left="217" top="49" width="141" height="24" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME" buttonsize="0 0" border="0px none" readonly="true"/>
+        <Combo id="cmb_pos" taborder="8" text="Combo00" left="217" top="79" width="141" height="24" innerdataset="ds_pos" codecolumn="POS_CODE" datacolumn="POS_NAME" buttonsize="0 0" border="0px none" readonly="true"/>
+        <Edit id="edt_mail" taborder="9" left="217" top="139" width="141" height="24" border="0px none" readonly="true"/>
+        <Edit id="edt_phone" taborder="10" left="217" top="109" width="141" height="24" border="0px none" readonly="true"/>
+        <Static id="Static01" taborder="11" left="0" top="0" width="5" height="100%" background="#333333" padding="0px 0px 0px 10px"/>
+        <Static id="Static03" taborder="12" width="100%" height="5" background="#333333" padding="0px 0px 0px 10px" left="0" bottom="0"/>
+        <Static id="Static02" taborder="13" top="0" height="100%" background="#333333" padding="0px 0px 0px 10px" right="0" width="5"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+          <Column id="CORP_CODE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">KR20</Col>
+            <Col id="DEPT_NAME">Marketing(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">KR30</Col>
+            <Col id="DEPT_NAME">Sales(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">JP10</Col>
+            <Col id="DEPT_NAME">Education(JP)</Col>
+            <Col id="CORP_CODE">JP</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">JP20</Col>
+            <Col id="DEPT_NAME">Sales(JP)</Col>
+            <Col id="CORP_CODE">JP</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">CN10</Col>
+            <Col id="DEPT_NAME">Education(CN)</Col>
+            <Col id="CORP_CODE">CN</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">CN20</Col>
+            <Col id="DEPT_NAME">Marketing(CN)</Col>
+            <Col id="CORP_CODE">CN</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pop" keystring="a"/>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="POS_CODE" type="string" size="32"/>
+          <Column id="POS_NAME" type="string" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="POS_CODE">10</Col>
+            <Col id="POS_NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CODE">20</Col>
+            <Col id="POS_NAME">Staff</Col>
+          </Row>
+          <Row>
+            <Col id="POS_CODE">30</Col>
+            <Col id="POS_NAME">Intern</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Exe_Sample_Detail_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objDs = this.parent.param1;
+    var nRow  = this.parent.parma2;    
+
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="ImageViewer00" propid="image" datasetid="ds_pop" columnid="IMG_URL"/>
+      <BindItem id="item1" compid="edt_name" propid="value" datasetid="ds_pop" columnid="FULL_NAME"/>
+      <BindItem id="item2" compid="cmb_dept" propid="value" datasetid="ds_pop" columnid="DEPT_CODE"/>
+      <BindItem id="item3" compid="cmb_pos" propid="value" datasetid="ds_pop" columnid="POS_CODE"/>
+      <BindItem id="item4" compid="edt_mail" propid="value" datasetid="ds_pop" columnid="E_MAIL"/>
+      <BindItem id="item5" compid="edt_phone" propid="value" datasetid="ds_pop" columnid="PHONE_NO"/>
+    </Bind>
+  </Form>
+</FDL>

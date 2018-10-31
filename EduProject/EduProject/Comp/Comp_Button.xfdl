@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Button" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Button id="Button00" taborder="1" text="Button" left="20" top="64" width="150" height="30"/>
+        <Static id="Static03" taborder="17" text="☞ Basic Usage" left="10" top="40" width="250" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static06" taborder="0" text="Button" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Static id="Static00" taborder="18" text="☞ Expression" left="10" top="248" width="146" height="24" cssclass="sta_WF_label"/>
+        <Button id="Button06" taborder="9" text="Dept Name" left="20" top="272" width="248" height="30" expr="expr:&quot;Current time : &quot; + comp.parent.fn_getTime()"/>
+        <Button id="Button01" taborder="2" text="Button disable" left="178" top="64" width="150" height="30" enable="false"/>
+        <Static id="Static02" taborder="19" text="☞ Image &amp; Icon" left="10" top="134" width="146" height="24" cssclass="sta_WF_label"/>
+        <Static id="Static04" taborder="20" text="☞ Status" left="10" top="342" width="146" height="24" cssclass="sta_WF_label"/>
+        <Button id="btn_sun" taborder="10" text="Sun" left="20" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_mon" taborder="11" text="Mon" left="62" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_tue" taborder="12" text="Tue" left="104" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_wed" taborder="13" text="Wed" left="146" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_thu" taborder="14" text="Thu" left="188" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_fri" taborder="15" text="Fri" left="230" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="btn_sat" taborder="16" text="Sat" left="272" top="366" width="37" height="30" onclick="fn_status"/>
+        <Button id="Button02" taborder="3" text="Retrieve" left="15" top="158" width="110" height="35" icon="URL(&quot;Images::img_b_select.png&quot;)" textPadding="0px 0px 0px 10px"/>
+        <Button id="Button03" taborder="4" text="AddRow" left="133" top="158" width="110" height="35" icon="URL(&quot;Images::img_b_insert.png&quot;)" textPadding="0px 0px 0px 10px"/>
+        <Button id="Button04" taborder="5" text="Delete" left="251" top="158" width="110" height="35" icon="URL(&quot;Images::img_b_delete.png&quot;)" textPadding="0px 0px 0px 10px"/>
+        <Button id="Button05" taborder="6" text="Save" left="369" top="158" width="110" height="35" icon="URL(&quot;Images::img_b_save.png&quot;)" textPadding="0px 0px 0px 10px"/>
+        <Button id="Button07" taborder="7" left="495" top="163" width="30" height="25" textPadding="0px 0px 0px 10px" background="url(&quot;Images::img_b_Print.png&quot;) no-repeat center center" border="0px none"/>
+        <Button id="Button08" taborder="8" left="525" top="163" width="30" height="25" background="url(&quot;Images::img_b_setting.png&quot;) no-repeat center center" border="0px none"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_getTime = function()
+{
+	var objDate = new Date();
+	var sTime  = objDate.getHours().toString().padLeft(2, "0")   + ":";
+		sTime += objDate.getMinutes().toString().padLeft(2, "0") + ":";
+		sTime += objDate.getSeconds().toString().padLeft(2, "0");
+
+	return sTime;
+}
+
+this.fn_status = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bStatus = obj.getSelectStatus();
+	if(bStatus){
+		obj.setSelectStatus(false);
+	}
+	else{
+		obj.setSelectStatus(true);
+	}
+};]]></Script>
+  </Form>
+</FDL>

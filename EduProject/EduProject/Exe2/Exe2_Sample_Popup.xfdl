@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Exe2_Sample_Popup" width="380" height="231" titletext="Sample Emp Popup" border="1px solid #9c9c9c" onload="Exe2_Sample_Popup_onload">
+    <Layouts>
+      <Layout height="231" width="380" stepcount="0">
+        <Button id="btn_confirm" taborder="0" text="Confirm" left="100" top="196" width="80" height="25" positionstep="0" onclick="btn_confirm_onclick"/>
+        <Button id="btn_cancel" taborder="1" text="Cancel" left="190" top="196" width="80" height="25" positionstep="0" onclick="btn_cancel_onclick"/>
+        <Grid id="Grid00" taborder="2" left="10" top="40" height="146" binddataset="ds_pop" autofittype="col" right="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="ID"/>
+                <Cell col="2" text="Dept"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:FULL_NAME"/>
+                <Cell col="1" text="bind:EMPL_ID"/>
+                <Cell col="2" text="bind:DEPT_NAME" combodataset="ds_dept" combocodecol="DEPT_CD" combodatacol="DEPT_NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Combo id="cmb_dept" taborder="3" text="Combo00" left="170" top="10" width="153" height="25" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME" onitemchanged="cmb_dept_onitemchanged"/>
+        <Combo id="cmb_corp" taborder="4" text="Combo00" left="10" top="10" width="153" height="25" innerdataset="ds_corp" codecolumn="CORP_CODE" datacolumn="CORP_NAME"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+          <Column id="CORP_CODE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">KR20</Col>
+            <Col id="DEPT_NAME">Marketing(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">KR30</Col>
+            <Col id="DEPT_NAME">Sales(KR)</Col>
+            <Col id="CORP_CODE">KR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">JP10</Col>
+            <Col id="DEPT_NAME">Education(JP)</Col>
+            <Col id="CORP_CODE">JP</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">JP20</Col>
+            <Col id="DEPT_NAME">Sales(JP)</Col>
+            <Col id="CORP_CODE">JP</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">CN10</Col>
+            <Col id="DEPT_NAME">Education(CN)</Col>
+            <Col id="CORP_CODE">CN</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">CN20</Col>
+            <Col id="DEPT_NAME">Marketing(CN)</Col>
+            <Col id="CORP_CODE">CN</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pop" keystring="a">
+        <ColumnInfo>
+          <Column id="CORP_CODE" type="STRING" size="10"/>
+          <Column id="CORP_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_CODE" type="STRING" size="10"/>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="FULL_NAME" type="STRING" size="50"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="FULL_NAME">Melon</Col>
+            <Col id="EMPL_ID">AA010</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR30</Col>
+            <Col id="FULL_NAME">Elsa</Col>
+            <Col id="EMPL_ID">BB010</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Sales(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR30</Col>
+            <Col id="FULL_NAME">Bts</Col>
+            <Col id="EMPL_ID">AA110</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Sales(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">CN</Col>
+            <Col id="DEPT_CODE">CN20</Col>
+            <Col id="FULL_NAME">Ted </Col>
+            <Col id="EMPL_ID">BB201</Col>
+            <Col id="CORP_NAME">China Corp.</Col>
+            <Col id="DEPT_NAME">Marketing(CN)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">JP</Col>
+            <Col id="DEPT_CODE">JP10</Col>
+            <Col id="FULL_NAME">Diana</Col>
+            <Col id="EMPL_ID">CC220</Col>
+            <Col id="CORP_NAME">Japen Corp.</Col>
+            <Col id="DEPT_NAME">Education(JP)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">CN</Col>
+            <Col id="DEPT_CODE">CN10</Col>
+            <Col id="FULL_NAME">Issac</Col>
+            <Col id="EMPL_ID">DD221</Col>
+            <Col id="CORP_NAME">China Corp.</Col>
+            <Col id="DEPT_NAME">Education(CN)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">CN</Col>
+            <Col id="DEPT_CODE">CN20</Col>
+            <Col id="FULL_NAME">Henry </Col>
+            <Col id="EMPL_ID">BB405</Col>
+            <Col id="CORP_NAME">China Corp.</Col>
+            <Col id="DEPT_NAME">Marketing(CN)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="FULL_NAME">Kate </Col>
+            <Col id="EMPL_ID">BB203</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR20</Col>
+            <Col id="FULL_NAME">Twice</Col>
+            <Col id="EMPL_ID">AA560</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Marketing(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">JP</Col>
+            <Col id="DEPT_CODE">JP20</Col>
+            <Col id="FULL_NAME">Dennis </Col>
+            <Col id="EMPL_ID">AA700</Col>
+            <Col id="CORP_NAME">Japen Corp.</Col>
+            <Col id="DEPT_NAME">Sales(JP)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">CN</Col>
+            <Col id="DEPT_CODE">CN10</Col>
+            <Col id="FULL_NAME">Max </Col>
+            <Col id="EMPL_ID">CC600</Col>
+            <Col id="CORP_NAME">China Corp.</Col>
+            <Col id="DEPT_NAME">Education(CN)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="FULL_NAME">Jackson</Col>
+            <Col id="EMPL_ID">DD300</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="DEPT_CODE">KR10</Col>
+            <Col id="FULL_NAME">Adam</Col>
+            <Col id="EMPL_ID">DD200</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+            <Col id="DEPT_NAME">Education(KR)</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_corp">
+        <ColumnInfo>
+          <Column id="CORP_CODE" type="STRING" size="32"/>
+          <Column id="CORP_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="CORP_NAME">Korea Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">JP</Col>
+            <Col id="CORP_NAME">Japen Corp.</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">CN</Col>
+            <Col id="CORP_NAME">China Corp.</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Exe2_Sample_Popup_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+    var sCorp = this.parent.pCorp;
+    var sDept = this.parent.pDept;
+    trace(sCorp + " : " + sDept);
+    this.cmb_corp.set_value(sCorp);
+    this.cmb_dept.set_value(sDept);
+};
+
+this.cmb_dept_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+    this.ds_pop.filter("DEPT_CODE == '" + e.postvalue + "'");    
+    this.ds_pop.set_rowposition(0);
+};
+
+this.btn_confirm_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sID   = this.ds_pop.getColumn(this.ds_pop.rowposition, "EMPL_ID");
+    var sName = this.ds_pop.getColumn(this.ds_pop.rowposition, "FULL_NAME");	
+    this.close(sID+":"+sName);
+};
+
+this.btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close("");
+};
+]]></Script>
+  </Form>
+</FDL>

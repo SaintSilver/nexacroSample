@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="LeftFrame" width="160" height="663" titletext="New Form" onload="LeftFrame_onload">
+    <Layouts>
+      <Layout height="663" mobileorientation="landscape" width="160">
+        <Div id="Div00" taborder="2" left="0" top="0" cssclass="div_LF_bg" bottom="0" right="0">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="0" left="0" top="30" cssclass="grd_LF_mnutree" binddataset="gds_menu" autofittype="col" treeusecheckbox="false" treeinitstatus="expand,all" treeuseimage="true" treeuseline="false" bottom="0" oncelldblclick="Div00_Grid00_oncelldblclick" right="0">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="body">
+                      <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LEVEL"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Button id="Button00" taborder="1" text="Menu" left="0" top="0" width="50%" height="29" cssclass="btn_LF_mnu"/>
+              <Button id="Button01" taborder="1" text="Bookmark" left="Button00:0" top="0" width="50%" height="30" cssclass="btn_LF_mnu"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_grd">
+        <ColumnInfo>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+          <Column id="formurl" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="data">Environment</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">ScreenDefinition</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Variables</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Cookies</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Script</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">TypeDefinition</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">Objects</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Protocols</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Update</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">App Information</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">AppVariables</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Temp</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">Template01</Col>
+            <Col id="level">1</Col>
+            <Col id="formurl">Temp::Template01.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="data">Template02</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">CompGuide</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="data">CompGuide01</Col>
+            <Col id="level">1</Col>
+            <Col id="formurl">CompGuide::CompGuide01.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="data">CompGuide02</Col>
+            <Col id="level">1</Col>
+            <Col id="formurl">CompGuide::CompGuide02.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="data">CompGuide03</Col>
+            <Col id="level">1</Col>
+            <Col id="formurl">CompGuide::CompGuide03.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="data">CompGuide04</Col>
+            <Col id="level">1</Col>
+            <Col id="formurl">CompGuide::CompGuide04.xfdl</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.LeftFrame_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.Div00.form.Button00.setSelectStatus(true);
+};
+
+this.Div00_Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var objDs = obj.getBindDataset();
+	
+	var sID   = objDs.getColumn(e.row, "MENU_ID");		//메뉴ID Key
+	var sName = objDs.getColumn(e.row, "MENU_NAME");	//메뉴 명
+	var sURL  = objDs.getColumn(e.row, "FORM_URL");	    //화면 URL	
+	
+	this.fn_openForm(sID, sName, sURL);
+};
+
+this.fn_openForm = function(sID, sName, sURL)
+{
+	if(sURL.length <= 0) return;
+
+	var objApp = nexacro.getApplication();
+	var nCnt = objApp.gds_openForm.getRowCount();
+	if(nCnt >= 10){
+		this.alert("The Form can be opened up to 10.");
+		return;
+	}
+	
+	//업무영역 Size, application.av_WorkFrame --> WorkFrame Path
+	var nWidth  = objApp.av_WorkFrame.getOffsetWidth();
+	var nHeight = objApp.av_WorkFrame.getOffsetHeight();
+
+	//화면 ID 생성("FORM_" + 메뉴ID + random)
+	var sFormID = "FORM_" + sID + "_" + parseInt(Math.random() * 1000);
+
+	var objChildFrame = new ChildFrame();	
+	objChildFrame.init(sFormID, 0, 0, nWidth, nHeight);
+
+	objApp.av_WorkFrame.addChild(sFormID, objChildFrame);
+	
+	objChildFrame.set_resizable(true);
+ 	objChildFrame.set_openstatus("maximize");
+	objChildFrame.set_border("1px solid #5d6468");
+
+	var oParam = { FORM_ID : sFormID, 
+                   MENU_ID : sID, 
+                   MENU_NM : sName, 
+                   FORM_URL : sURL,
+                   FORM_TYPE : "ADD" };	
+	
+	//Work Frame에 필요한 정보 Set
+	objChildFrame.param = oParam;
+ 	objChildFrame.set_formurl("FrameBase::WorkFrame.xfdl");	
+	objChildFrame.show();
+
+	//열린 화면 Tab 생성
+	nexacro.getApplication().mainframe.VFrameSet0.HFrameSet0.VFrameSet1.MDIFrame.form.fn_addTab(oParam);
+
+}
+]]></Script>
+  </Form>
+</FDL>

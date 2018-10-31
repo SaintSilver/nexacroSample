@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Comp_Base_Sub" width="320" height="200" titletext="New Form">
+    <Layouts>
+      <Layout height="200" width="320">
+        <Static id="Static04" taborder="4" text="Button" left="10" top="89" width="80" height="50" border="" background="" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static03" taborder="5" text="" left="89" top="89" height="50" right="50" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static05" taborder="6" text="Edit" left="10" top="138" width="80" height="50" border="" background="" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static06" taborder="7" text="" left="89" top="138" height="50" right="50" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static11" taborder="8" text="Static" left="10" top="40" width="80" height="50" border="" cssclass="sta_WF_tablelabel" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static12" taborder="9" text="" left="89" top="40" height="50" right="50" border="" background="" padding="" cssclass="sta_WF_tablebg" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Static id="Static00" taborder="0" text="Linked Form" left="10" top="10" width="250" height="20" cssclass="sta_WF_subtitle"/>
+        <Button id="Button00" taborder="2" text="Save" left="99" top="98" width="100" height="32" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase=""/>
+        <Edit id="Edit00" taborder="3" left="99" top="151" width="Static06:90%" height="24" value="nexacro platform"/>
+        <Static id="Static25" taborder="1" text="nexacro platform" left="99" top="53" width="180" height="24"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+
+this.fn_open = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+/*
+	var sID    = obj.user_MID;
+	var sName  = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "MENU_NAME");
+	var sURL   = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "FORM_URL");	
+	
+	nexacro.getApplication().mainframe.VFrameSet0.HFrameSet0.LeftFrame.form.fn_openForm(sID, sName, sURL);
+*/	
+};
+]]></Script>
+  </Form>
+</FDL>
