@@ -1,0 +1,22 @@
+<ColumnInfo>
+  <Column id="POS_CD" type="string" size="32"/>
+  <Column id="POS_NAME" type="string" size="32"/>
+</ColumnInfo>
+<Rows>
+  <Row>
+    <Col id="POS_CD">04</Col>
+    <Col id="POS_NAME">Officer</Col>
+  </Row>
+  <Row>
+    <Col id="POS_CD">03</Col>
+    <Col id="POS_NAME">Assistant Manager</Col>
+  </Row>
+  <Row>
+    <Col id="POS_CD">02</Col>
+    <Col id="POS_NAME">Division Manager</Col>
+  </Row>
+  <Row>
+    <Col id="POS_CD">01</Col>
+    <Col id="POS_NAME">Chairman</Col>
+  </Row>
+</Rows>

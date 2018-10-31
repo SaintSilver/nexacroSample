@@ -1,0 +1,26 @@
+<ColumnInfo>
+  <Column id="DEPT_CD" type="STRING" size="32"/>
+  <Column id="DEPT_NAME" type="STRING" size="32"/>
+</ColumnInfo>
+<Rows>
+  <Row>
+    <Col id="DEPT_CD">01</Col>
+    <Col id="DEPT_NAME">Accounting Team</Col>
+  </Row>
+  <Row>
+    <Col id="DEPT_CD">02</Col>
+    <Col id="DEPT_NAME">HR Team</Col>
+  </Row>
+  <Row>
+    <Col id="DEPT_CD">03</Col>
+    <Col id="DEPT_NAME">Sales Team</Col>
+  </Row>
+  <Row>
+    <Col id="DEPT_CD">04</Col>
+    <Col id="DEPT_NAME">Design Team</Col>
+  </Row>
+  <Row>
+    <Col id="DEPT_CD">05</Col>
+    <Col id="DEPT_NAME">Education Team</Col>
+  </Row>
+</Rows>
